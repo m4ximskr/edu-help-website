@@ -1,0 +1,86 @@
+.section-wrapper {
+
+  .join-team-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    margin-top: 70px;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 550px) {
+      grid-row-gap: 50px;
+    }
+
+    .left-section {
+      @media (max-width: 900px) {
+        display: grid;
+        justify-content: center;
+      }
+
+      .warranties {
+        display: grid;
+        grid-auto-flow: row;
+        grid-row-gap: 30px;
+        margin-top: 30px;
+
+        .warranty {
+          display: grid;
+          grid-template-columns: max-content auto;
+          grid-column-gap: 15px;
+          align-items: flex-start;
+
+          mat-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .body-2 {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    .join-team-form-wrapper {
+      width: 400px;
+      border-radius: 15px;
+      padding: 30px 40px;
+      background-color: white;
+      box-shadow: 0 20px 20px rgb(0 0 0 / 10%);
+
+      @media (max-width: 900px) {
+        width: auto;
+        max-width: 100%;
+      }
+
+      @media (max-width: 550px) {
+        padding: 30px 20px;
+      }
+
+      form {
+        display: grid;
+        margin: 20px 0 40px 0;
+
+        textarea {
+          height: 70px;
+        }
+
+        button {
+          width: 100%;
+          margin-top: 5px;
+        }
+      }
+
+      mat-icon {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

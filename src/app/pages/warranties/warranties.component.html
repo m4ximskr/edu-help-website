@@ -1,0 +1,25 @@
+<div class="page-wrapper">
+  <div class="section-wrapper">
+    <div class="section-content warranties">
+      <div class="title">
+        <h1>Garantijas</h1>
+        <p class="sub-title">Garantijas, kuras mēs sniedzam katram no mūsu klientiem!</p>
+      </div>
+
+      <div class="warranties-list">
+        <div *ngFor="let warranty of warrantiesList" class="warranty-box">
+          <div class="info">
+            <h3 [innerHTML]="warranty.title"></h3>
+            <p>{{warranty.text}}</p>
+          </div>
+<!--          <mat-icon class="material-icons-outlined">{{warranty.icon}}</mat-icon>-->
+          <div class="icon">{{warranty.icon}}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!--  <contacts></contacts>-->
+
+</div>

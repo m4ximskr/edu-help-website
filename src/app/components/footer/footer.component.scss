@@ -1,0 +1,85 @@
+.section-wrapper {
+
+  &.upper {
+    .section-content {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .upper-footer-wrapper {
+        border-top: 1px solid #132c56;
+        border-bottom: 1px solid #132c56;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px 40px;
+
+        @media (max-width: 800px) {
+          grid-template-columns: 1fr;
+        }
+
+        .logo {
+          width: 150px;
+        }
+
+        .heading-4 {
+          align-self: end;
+          @media (max-width: 800px) {
+            margin-top: 20px;
+          }
+        }
+
+        .main {
+          @media (max-width: 800px) {
+            grid-row: 2;
+          }
+        }
+
+        .column {
+          display: grid;
+          grid-auto-rows: max-content;
+          grid-row-gap: 5px;
+        }
+
+        .contacts {
+          @media (max-width: 800px) {
+            grid-row: 4;
+          }
+
+          .social-icons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 35px);
+            grid-gap: 10px;
+            margin-top: 10px;
+
+            mat-icon {
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+
+        .bank-details {
+          @media (max-width: 800px) {
+            grid-row: 6;
+          }
+        }
+      }
+    }
+  }
+
+  &.lower {
+    .section-content {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .lower-footer-wrapper {
+        display: flex;
+        align-items: center;
+        //justify-content: center;
+        //padding: 20px 0;
+        //background-color: #031b43;
+      }
+    }
+  }
+}

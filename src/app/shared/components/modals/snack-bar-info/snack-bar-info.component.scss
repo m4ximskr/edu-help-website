@@ -1,0 +1,26 @@
+.snack-bar-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 30px;
+
+  .info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 5px;
+    align-items: baseline;
+
+    img {
+      width: 30px;
+    }
+
+    p {
+      color: #e5e5e5;
+    }
+  }
+
+  mat-icon {
+    color: var(--white);
+  }
+}

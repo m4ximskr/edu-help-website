@@ -1,0 +1,25 @@
+<div class="file-attachment-wrapper"
+     [ngClass]="{'drop-zone-active': dropZoneActive}"
+     (dragenter)="dropZoneActive = true"
+     (dragleave)="dropZoneActive = false"
+     (drop)="dropZoneActive = false">
+  <input #fileUploadInput
+         type="file"
+         [accept]="extensions"
+         (change)="fileUploaded($event)">
+  <button mat-flat-button color="primary" (click)="uploadFile($event)">
+    <mat-spinner *ngIf="loadingFile"
+                 [diameter]="30"></mat-spinner>
+    <span *ngIf="!loadingFile">+ Pievienot failus</span>
+  </button>
+
+  <div class="files">
+    <div *ngFor="let file of filesFormArray.controls; index as i"
+         class="file">
+      <div class="name">{{file.value.filename}}</div>
+      <mat-icon class="pointer" (click)="$event.preventDefault(); removeFile(i)">close</mat-icon>
+    </div>
+
+  </div>
+</div>
+

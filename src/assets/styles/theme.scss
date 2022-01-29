@@ -1,0 +1,109 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$edu-help-primary: (
+  50 : #e0ecff,
+  100 : #b3cfff,
+  200 : #80afff,
+  300 : #4d8fff,
+  400 : #2677ff,
+  500 : #005fff,
+  600 : #0057ff,
+  700 : #004dff,
+  800 : #0043ff,
+  900 : #0032ff,
+  A100 : #ffffff,
+  A200 : #f2f4ff,
+  A400 : #bfc8ff,
+  A700 : #a6b2ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$edu-help-accent: (
+  50 : #fbfcfd,
+  100 : #f6f8fb,
+  200 : #f0f3f8,
+  300 : #e9eef5,
+  400 : #e5eaf3,
+  500 : #e0e6f1,
+  600 : #dce3ef,
+  700 : #d8dfed,
+  800 : #d3dbeb,
+  900 : #cbd5e7,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #ffffff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$edu-help-warn: (
+  50 : #fde5e5,
+  100 : #fbbfbf,
+  200 : #f99494,
+  300 : #f66969,
+  400 : #f44848,
+  500 : #f22828,
+  600 : #f02424,
+  700 : #ee1e1e,
+  800 : #ec1818,
+  900 : #e80f0f,
+  A100 : #ffffff,
+  A200 : #ffe1e1,
+  A400 : #ffaeae,
+  A700 : #ff9595,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$edu-help-primary-palette: mat-palette($edu-help-primary);
+$edu-help-accent-palette: mat-palette($edu-help-accent);
+$edu-help-warn-palette: mat-palette($edu-help-warn);
+
+$edu-help-theme: mat-light-theme($edu-help-primary-palette, $edu-help-accent-palette, $edu-help-warn-palette);
+
+@include angular-material-theme($edu-help-theme);

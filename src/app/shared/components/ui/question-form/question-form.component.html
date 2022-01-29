@@ -1,0 +1,37 @@
+<div class="question-form-wrapper">
+  <div class="title-3 color-dark-blue">Uzzini izmaksas</div>
+
+  <div class="text-2 color-dark-grey mt-10">Uzraksti šeit informāciju par savu darbu, un mēs tev atbildēsim dienās laikā!</div>
+
+  <form class="mt-20" [formGroup]="questionForm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput
+             placeholder="name@example.com"
+             required
+
+             [formControl]="questionForm.controls.email">
+      <mat-error *ngIf="questionForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Darba apraksts</mat-label>
+      <textarea matInput
+                required
+                placeholder="Priekšmeta nosaukums, klase, izpildes termiņi utt."
+                [formControl]="questionForm.controls.question"></textarea>
+      <mat-hint align="end">{{questionForm.controls.question.value.length}} / 256</mat-hint>
+      <mat-error *ngIf="questionForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
+    </mat-form-field>
+
+    <button color="primary"
+            mat-flat-button
+            (click)="sendMail()">Uzzināt izmaksas -></button>
+  </form>
+
+  <div class="text-10 color-dark-grey text-align-center mt-20">
+    Vēlies sniegt pilnu aprakstu?<br>
+    <a class="link" routerLink="pasutit">Azpildi pieteikumu</a>
+  </div>
+</div>

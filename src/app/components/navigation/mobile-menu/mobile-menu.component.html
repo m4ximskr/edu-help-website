@@ -1,0 +1,48 @@
+<div class="burger-menu-wrapper bg-color-white"
+     [@slideContent]="animationState"
+     (@slideContent.start)="onAnimationStart($event)"
+     (@slideContent.done)="onAnimationDone($event)">
+  <div class="menu-content">
+
+    <div class="lang">
+      <a mat-stroked-button href="/lv/"><mat-icon svgIcon="lv"></mat-icon>Latviešu</a>
+      <a mat-stroked-button href="/ru/"><mat-icon svgIcon="ru"></mat-icon>Русский</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="/">
+        <mat-icon class="social-icon" svgIcon="edu:fb"></mat-icon>
+      </a>
+      <a href="/">
+        <mat-icon class="social-icon" svgIcon="edu:instagram"></mat-icon>
+      </a>
+      <a href="/">
+        <mat-icon class="social-icon" svgIcon="edu:vk"></mat-icon>
+      </a>
+      <a href="/">
+        <mat-icon class="social-icon" svgIcon="edu:tiktok"></mat-icon>
+      </a>
+      <a href="/">
+        <mat-icon class="social-icon" svgIcon="edu:whatsapp"></mat-icon>
+      </a>
+      <a href="/">
+        <mat-icon class="social-icon" svgIcon="edu:discord"></mat-icon>
+      </a>
+    </div>
+
+    <div class="nav-buttons">
+      <div class="contact"><mat-icon>email</mat-icon><a class="heading-4 link" href="mailto:info@eduhelp.lv">info@eduhelp.lv</a></div>
+      <div class="contact"><mat-icon>local_phone</mat-icon><a class="heading-4 link" href="tel:+371 28857299">+371 25324951</a></div>
+    </div>
+
+    <a mat-flat-button color="primary" class="action-button" [routerLink]="'pasutit'" (click)="close()">Atstāt pieteikumu</a>
+
+<!--    <div class="sm-list">-->
+<!--      <social-media-icon name="vk"></social-media-icon>-->
+<!--      <social-media-icon name="fb"></social-media-icon>-->
+<!--      <social-media-icon name="instagram"></social-media-icon>-->
+<!--    </div>-->
+
+  </div>
+
+</div>

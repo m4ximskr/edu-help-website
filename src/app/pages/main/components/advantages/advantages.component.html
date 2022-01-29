@@ -1,0 +1,23 @@
+<div class="section-wrapper bg-color-light-blue">
+  <div class="section-content">
+    <div class="heading-2 color-dark-blue text-align-center">Kāpēc izvēlēties mūs</div>
+    <div class="advantages-list">
+      <ng-container *ngFor="let advantage of advantages; let i = index">
+        <div class="advantage-box">
+          <mat-icon fontSet="material-icons-round">{{advantage.icon}}</mat-icon>
+          <div class="info">
+            <div class="heading-4 color-dark-blue">{{advantage.title}}</div>
+            <div class="body-2 color-dark-grey">{{advantage.text}}</div>
+          </div>
+        </div>
+        <div *ngIf="i === 2" class="advantage-box image">
+          <mat-icon class="illustration" svgIcon="experts_image"></mat-icon>
+          <div class="heading-3 color-dark-blue">100+</div>
+          <div class="heading-4 color-dark-blue">Ekspertu ir gatavi palīdzēt tev katru dienu!</div>
+          <mat-icon class="blob" svgIcon="blob_image"></mat-icon>
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

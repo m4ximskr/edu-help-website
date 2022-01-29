@@ -1,0 +1,49 @@
+$-helper-map: (
+  //display: (
+  //  inline-flex,
+  //  flex,
+  //  none,
+  //  block,
+  //  inline-block,
+  //),
+  //justify-content: (
+  //  space-around,
+  //  space-between,
+  //  space-evenly,
+  //  center,
+  //),
+  //align-items: (
+  //  start,
+  //  center,
+  //  end,
+  //),
+  //flex-direction: (
+  //  column,
+  //  row,
+  //  revert,
+  //),
+  //position: (
+  //  absolute,
+  //  fixed,
+  //  sticky,
+  //  relative,
+  //),
+  align-self: (
+    baseline,
+    center,
+    end,
+  ),
+  text-align: (
+    center,
+    left,
+    right,
+  )
+);
+
+@each $index, $values in $-helper-map {
+  @each $value in $values {
+    .#{$index}-#{$value} {
+      #{$index}: #{$value};
+    }
+  }
+}

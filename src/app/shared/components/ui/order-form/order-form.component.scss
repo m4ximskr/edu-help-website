@@ -1,0 +1,45 @@
+.client-form-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 20px 20px rgb(0 0 0 / 10%);
+
+  @media (max-width: 550px) {
+    padding: 30px 20px;
+  }
+
+  .client-form {
+    display: grid;
+    grid-auto-flow: row;
+
+    textarea {
+      height: 70px;
+    }
+  }
+
+  button {
+    margin-top: 25px;
+    width: 100%;
+
+    mat-spinner {
+      margin: 0 auto;
+
+      ::ng-deep circle {
+        stroke: white;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .client-form {
+    grid-template-columns: 1fr !important;
+    grid-column-gap: 0 !important;
+
+    mat-form-field {
+      grid-column: 1 !important;
+    }
+  }
+}

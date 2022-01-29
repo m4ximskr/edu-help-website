@@ -1,0 +1,115 @@
+<div class="page-wrapper">
+
+  <!--  <div class="section-wrapper">-->
+  <!--    <div class="section-content">-->
+  <!--      <h1 class="color-white">Katram darbam vienmēr tiek izvēlēts atbilstošais speciālists</h1>-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <!--  <div class="left-section">-->
+
+  <!--  </div>-->
+  <!--  <div class="right-section"></div>-->
+<!--  <div class="bg-image">-->
+<!--    <div class="image"></div>-->
+<!--    <div class="overlay"></div>-->
+<!--  </div>-->
+
+
+
+
+<!--  <div class="image">-->
+<!--    <img src="../../../assets/images2/town-2-01.png">-->
+<!--  </div>-->
+
+
+  <div class="section-wrapper">
+
+<!--    <mat-icon svgIcon="edu:town" class="image"></mat-icon>-->
+
+
+    <div #content class="section-content">
+
+      <div class="make-order-wrapper"
+            [style.padding-top.px]="isCentered ? 0 : 140"
+            [style.padding-bottom.px]="isCentered ? 0 : 100">
+        <div class="heading-1 color-dark-blue text-align-center">Pasūti darba izpildīšanu</div>
+<!--          <div class="body-1 color-dark-grey text-align-center">Dienas laikā mēs apstrādāsim pieteikumu un mūsu speciālists sazināsies ar tevi! 👩‍🔧</div>-->
+        <mat-icon class="arrow" svgIcon="edu:arrow"></mat-icon>
+
+        <div class="order-content">
+          <div class="info">
+            <div class="heading-3 color-dark-blue">
+              Pasūti darba izpildīšanu un saņem garantēto rezultātu! 🤓
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="body-2 color-dark-grey text-align-center">Cena par darbu</div>
+                <div class="box">
+                  no<span>2</span>eur
+                </div>
+              </div>
+              <div class="stat">
+                <div class="body-2 color-dark-grey text-align-center">Izpildīšanas laiks</div>
+                <div class="box">
+                  no<span>1</span>stundas
+                </div>
+              </div>
+            </div>
+            <div class="factors">
+              <div class="heading-4 color-dark-blue">Atstājot pieteikumu, lūdzam norādīt sekojošas detaļas:</div>
+              <div class="list">
+                <div class="item" *ngFor="let factor of factors">
+                  <div class="circle">
+                    <div class="icon">{{factor.icon}}</div>
+                  </div>
+                  <!--                <mat-icon svgIcon="edu:check"></mat-icon>-->
+                  <!--                              <i class="material-icons-round">check_circle</i>-->
+                  <div class="body-1 color-dark-grey">{{factor.name}}</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="order-form">
+            <order-form></order-form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--  <div class="section-wrapper">-->
+  <!--    <div class="section-content">-->
+  <!--      <div class="protected-line bg-color-light-blue">-->
+  <!--        <div class="shield">🛡</div>-->
+  <!--        <p>Jūsu personīgā informācija tiek izmantota tikai mūsu servisa ietvaros un netiek sniegta trešajai-->
+  <!--          personai.</p>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="section-wrapper bg-color-light-blue">-->
+  <!--    <div class="section-content protected">-->
+
+  <!--      <div class="left">-->
+  <!--        <div class="emoji-icon">🛡</div>-->
+  <!--        <div class="desc">-->
+  <!--          <h2 class="color-white">Aizsardzība</h2>-->
+  <!--          <p class="paragraph-2 color-white">Tava personīgā informācija tiek izmantota tikai mūsu servisa ietvaros un-->
+  <!--            netiek sniegta trešajai-->
+  <!--            personai. Vairāk informācijas vari atrast mūsu lietošanas noteikumos sadaļā "Klienta datu aizsardzība".</p>-->
+  <!--        </div>-->
+  <!--      </div>-->
+
+  <!--      <div class="right">-->
+  <!--        <a target="_blank" routerLink="../noteikumi" class="big" mat-stroked-button>Skatīt vairāk →</a>-->
+  <!--      </div>-->
+
+  <!--    </div>-->
+  <!--  </div>-->
+
+</div>

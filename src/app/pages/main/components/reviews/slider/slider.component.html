@@ -1,0 +1,22 @@
+<div class="slider-wrapper">
+  <div #sliderWrapperRef class="slider" [style.height.px]="480">
+    <div #slidesRef class="slides" [style.left.px]="slidesLeftPadding" [class.shifting]="shifting">
+      <div *ngFor="let slide of slides" class="slide" [style.width.px]="slideWidth">
+        <div *ngFor="let img of slide.images" class="image-container">
+          <img [src]="pathBase + img.src"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button mat-flat-button color="primary" class="round" (click)="handleSliderAction(-1)"><mat-icon>arrow_back</mat-icon></button>
+      <button mat-flat-button color="primary" class="round" (click)="handleSliderAction(+1)"><mat-icon>arrow_forward</mat-icon></button>
+    </div>
+
+  </div>
+  <div class="slide-circles">
+    <div *ngFor="let item of items; let i = index"
+         class="circle"
+         [ngClass]="i === itemIndex ? 'bg-color-blue' : 'bg-color-light-blue'"></div>
+  </div>
+</div>

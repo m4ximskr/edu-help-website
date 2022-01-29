@@ -1,0 +1,56 @@
+<div class="carousel-container">
+  <div class="upper">
+    <button *ngIf="showSlideControls"
+            mat-mini-fab
+            (click)="onPreviousClick()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="carousel">
+      <ng-container *ngFor="let slide of slides; let i = index">
+        <div *ngIf="i === currentSlide"
+             class="slide"
+             @carouselAnimation>
+          <div class="image-box"
+               *ngFor="let img of slide.images"
+               (click)="zoomInImage(img.src)">
+            <img [src]="pathBase + img.src" loading="lazy"/>
+            <div class="hover-overlay">
+              <div class="white-bg"></div>
+              <div class="zoom-icon">
+                <mat-icon>zoom_in</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <button *ngIf="showSlideControls"
+            mat-mini-fab
+            (click)="onNextClick()">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="showSlideControls" class="lower">
+    <div class="slide-circle" *ngFor="let slide of slides; let i = index"
+         [ngStyle]="{'background-color': i === currentSlide ? 'var(--dark-blue)' : 'var(--white)'}"></div>
+  </div>
+
+</div>
+
+<!--<div class="section-wrapper gray">-->
+<!--  <div class="section-content">-->
+<!--    <div class="images-container">-->
+<!--      <div class="images-scroll">-->
+<!--        <div *ngFor="let review of reviews" class="review-box"-->
+<!--            (click)="zoomInImage(review.src)">-->
+<!--          <img [src]="pathBase + review.src" loading="lazy"/>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+
+

@@ -1,0 +1,48 @@
+<div class="section-wrapper">
+  <div class="section-content">
+
+    <div class="about-content">
+
+      <div class="left-section">
+        <mat-icon svgIcon="edu:about-illustration"></mat-icon>
+      </div>
+
+      <div class="right-section">
+        <div class="heading-2 color-dark-blue">Par mums</div>
+        <div class="body-1 mt-30 color-dark-grey">Mūsdienās skolēnu un studentu slodze ir diezgan liela, tāpēc ne
+          visiem uzdevumiem
+          pietiek laika un enerģijas. Šādos gadījumos palīgā nāk mūsu mācību palīdzības serviss. Kvalificētā komanda
+          EDUHELP ir gatava Jums palīdzēt jebkurā dienā un minūtē. Mēs veiksim jebkurus mācību darbus Jūsu vietā,
+          noteiktā laikā un par pieņemamām cenām bez priekšapmaksas! Šeit Jūs vienmēr varat paļauties uz kompetentu
+          izpildīšanu, jo mūsu komandā atrodas īstie izglītības jomas profesionāļi.
+        </div>
+        <div class="body-1 mt-10 color-dark-grey">EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā.
+          Mēs sākām savu
+          darbību 2019. gadā, un esam palīdzējuši jau vairāk nekā 1000 klientiem.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="heading-3 text-align-center color-dark-blue">Mūsu sniegto pakalpojumu saraksts ir ļoti plašs:</div>
+
+    <div class="services">
+      <div *ngFor="let service of services" class="service">
+        <div class="main">
+          <mat-icon svgIcon="edu:check"></mat-icon>
+          <div class="heading-4 color-dark-blue">{{service.title}}</div>
+        </div>
+        <div *ngIf="service.parts as parts" class="parts">
+          <div *ngFor="let part of parts" class="part">
+            <div class="dash">-</div>
+            <div class="body-2 color-dark-grey">{{part}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-3 text-align-center color-dark-grey">
+      ❗️Ja neesi atradis vajadzīgo pakalpojumu sarakstā, neuzstraucies, visticemāk tas vienkārši vēl nav pievienots
+    </div>
+  </div>
+</div>

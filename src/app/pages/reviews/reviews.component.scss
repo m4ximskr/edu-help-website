@@ -1,0 +1,174 @@
+.intro {
+  position: relative;
+  //height: 400px;
+
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+  .bg-image {
+    background-image: url('../../../assets/images/new/reviews-bg.jpeg');
+    //background-color: #031b43;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  .section-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    text-align: center;
+
+    .headline {
+      max-width: 700px;
+      margin: 0 auto;
+
+      p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+
+
+.reviews {
+  padding-bottom: 0;
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px,320px));
+    //grid-auto-flow: row;
+    justify-content: center;
+    grid-gap: 50px;
+    //text-align: left;
+    //margin-top: 50px;
+
+    .box {
+      display: grid;
+      grid-template-columns: max-content auto;
+      grid-gap: 20px;
+      align-items: center;
+      max-width: 320px;
+
+      @media (max-width: 500px) {
+        grid-template-columns: max-content;
+        justify-content: center;
+
+        .text {
+          text-align: center;
+        }
+      }
+      p {
+        font-weight: 500;
+        color: var(--dark-blue);
+      }
+    }
+
+    .emoji {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      padding: 20px;
+      background-color: var(--light-grey);
+      border-radius: 50%;
+      font-size: 70px;
+
+      @media (max-width: 500px) {
+        font-size: 50px;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.carousel {
+  a {
+    margin: 60px auto 0 auto;
+    width: 200px;
+  }
+}
+
+.inst-reviews-line {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 20px;
+  padding: 10px 20px;
+  background-color: var(--white);
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  box-shadow: rgba(0, 23, 55, 0.1) 0px 8px 24px;
+
+  @media(max-width:800px) {
+    grid-auto-flow: row;
+    justify-content: center;
+
+    a {
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+
+  .info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50px;
+    align-items: center;
+
+    @media(max-width:800px) {
+      grid-auto-flow: row;
+      text-align: center;
+    }
+
+    .star {
+      font-size: 50px;
+    }
+
+    p {
+      color: var(--dark-blue);
+      font-weight: 500;
+    }
+  }
+}
+
+
+.ig-reviews {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-gap: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  .left {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50px;
+    align-items: center;
+
+    p {
+      margin-top: 10px;
+      max-width: 600px;
+    }
+  }
+
+}

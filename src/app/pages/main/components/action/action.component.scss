@@ -1,0 +1,40 @@
+.section-wrapper {
+  background-color: #031b43;
+
+  .section-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .action-wrapper {
+    //padding: 50px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 50px 100px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 800px) {
+      grid-auto-flow: row;
+    }
+
+    .message {
+      //max-width: 700px;
+
+      .body-2 {
+        margin-top: 10px;
+      }
+    }
+
+    a {
+      span {
+        margin-top: 2px;
+      }
+
+      mat-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

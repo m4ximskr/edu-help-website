@@ -1,0 +1,66 @@
+<div class="section-wrapper bg-color-light-blue">
+  <div class="section-content">
+    <div class="heading-2 color-dark-blue text-align-center">Pievienojies mūsu komandai</div>
+    <div class="body-1 mt-30 color-dark-grey text-align-center">
+      Kļūsti par Eduhelp ekspertu un nopelni ar savām zināšanām jebkurā sev ērtā laikā 🤝
+    </div>
+
+    <div class="join-team-content">
+      <div class="left-section">
+        <div class="heading-3 color-dark-blue">No mūsu puses mēs garantējam:</div>
+        <div class="warranties">
+          <div *ngFor="let warranty of warranties" class="warranty">
+            <mat-icon svgIcon="edu:check"></mat-icon>
+            <div class="desc">
+              <div class="heading-4 color-dark-blue">{{warranty.title}}</div>
+              <div class="body-2 color-dark-grey">{{warranty.desc}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="join-team-form-wrapper">
+
+        <div class="heading-3 color-dark-blue text-align-center">Atstāj pieteikumu</div>
+
+        <form [formGroup]="joinTeamForm" (ngSubmit)="onFormSubmit()">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Pilnais vārds</mat-label>
+            <input matInput
+                   placeholder="Andris Liepa"
+                   required
+                   [formControl]="joinTeamForm.controls.name">
+            <mat-error *ngIf="joinTeamForm.controls.name.invalid">{{getNameErrorMessage}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput
+                   placeholder="andrisliepa@gmail.com"
+                   required
+                   [formControl]="joinTeamForm.controls.email">
+            <mat-error *ngIf="joinTeamForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Pastāsti par sevi</mat-label>
+            <textarea matInput
+                      required
+                      placeholder="Priekšmeta nosaukums, klase, izpildes termiņi utt."
+                      [formControl]="joinTeamForm.controls.question"></textarea>
+            <mat-hint align="end">{{joinTeamForm.controls.question.value.length}} / 256</mat-hint>
+            <mat-error *ngIf="joinTeamForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
+          </mat-form-field>
+
+          <button color="primary" mat-flat-button>Nosūtīt &#8594;</button>
+        </form>
+
+        <mat-icon svgIcon="edu:team"></mat-icon>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

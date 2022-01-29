@@ -1,0 +1,185 @@
+.section-wrapper {
+
+  &.main {
+    padding-top: 70px;
+    //background-image:
+    //  url('../../../../../assets/images2/svg/figures2-01.svg');
+    background-image: url("~src/assets/images2/svg/figures-big.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1000px) {
+      background-image: url("~src/assets/images2/svg/figures-small.svg");
+    }
+
+    @media (max-width: 500px) {
+      background-image: url("~src/assets/images2/svg/figures-xsmall.svg");
+    }
+  }
+
+  .section-content {
+
+    .intro-wrapper {
+
+      .upper {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: end;
+        grid-row-gap: 50px;
+
+        @media (max-width: 1000px) {
+          grid-auto-flow: row;
+        }
+
+        .main-section {
+          @media (max-width: 1000px) {
+            display: grid;
+            justify-content: center;
+          }
+
+          .heading-1 {
+            margin-bottom: 30px;
+          }
+
+          .typewriter {
+            ::ng-deep {
+              span {
+                animation: 1s blinker step-end infinite;
+              }
+            }
+          }
+
+          //.buttons {
+          //  margin-top: 50px;
+          //  display: grid;
+          //  grid-template-columns: max-content max-content;
+          //  grid-gap: 20px;
+          //
+          //  @media (max-width: 1000px) {
+          //    justify-content: center;
+          //  }
+          //
+          //  @media (max-width: 450px) {
+          //    grid-template-columns: max-content;
+          //  }
+          //}
+        }
+
+        .buttons {
+          grid-row: 2;
+          display: grid;
+          grid-template-columns: max-content max-content;
+          grid-gap: 20px;
+
+          @media (max-width: 1000px) {
+            grid-row: 3;
+            justify-content: center;
+          }
+
+          @media (max-width: 450px) {
+            grid-template-columns: max-content;
+
+            .primary-button {
+              margin: 0 auto;
+            }
+          }
+        }
+
+        .illustration {
+          width: auto;
+          height: 350px;
+
+          grid-column: 2;
+          grid-row: 1 / span 2;
+
+          @media (max-width: 1000px) {
+            grid-column: 1;
+            grid-row: auto;
+            height: 100%;
+            max-height: 400px;
+          }
+        }
+
+        .costs-form-wrapper {
+          //grid-row: 2;
+          grid-column: 1 / span 2;
+          margin-top: 50px;
+          border-radius: 15px;
+          background-color: white;
+          padding: 30px;
+          box-shadow: 0 10px 15px 0 rgb(35 35 35 / 14%);
+
+          @media (max-width: 450px) {
+            padding: 30px 20px;
+          }
+
+          @media (max-width: 1000px) {
+            grid-row: 2;
+            grid-column: 1;
+            margin-top: 0;
+          }
+
+          form {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr max-content;
+            grid-column-gap: 30px;
+
+            @media (max-width: 1000px) {
+              grid-template-columns: 1fr;
+            }
+
+            button {
+              margin-top: 4px;
+              @media (max-width: 1000px) {
+                width: 100%;
+              }
+            }
+          }
+
+          .body-3 {
+            @media (max-width: 1000px) {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .advantages-wrapper {
+
+      .advantages-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px 100px;
+        justify-content: space-between;
+
+        @media (max-width: 900px) {
+          grid-template-columns: auto;
+          justify-content: center;
+        }
+
+        .advantage {
+          display: grid;
+          grid-template-columns: max-content auto;
+          grid-column-gap: 20px;
+          align-items: center;
+
+          mat-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@keyframes blinker {
+  50%{
+    opacity: 0;
+  }
+}

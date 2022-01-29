@@ -1,0 +1,93 @@
+//.section-content {
+//  //padding: 0;
+//  //border-top: 1px solid var(--border-light-grey);
+//  //border-bottom: 1px solid var(--border-light-grey);
+//
+//  .platforms {
+//    //border-top: 1px solid var(--border-light-grey);
+//    //border-bottom: 1px solid var(--border-light-grey);
+//    display: grid;
+//    grid-auto-flow: column;
+//    justify-content: space-between;
+//    align-items: center;
+//    grid-column-gap: 100px;
+//
+//    .title {
+//      max-width: 500px;
+//
+//      p {
+//        margin-top: 10px;
+//      }
+//    }
+//
+//    .platforms-list {
+//      display: grid;
+//      grid-template-columns: 1fr 1fr;
+//      align-items: center;
+//      justify-content: center;
+//      grid-gap: 100px 70px;
+//
+//      img {
+//        pointer-events: none;
+//        width: 200px;
+//      }
+//    }
+//
+//  }
+//
+//}
+
+
+.section-wrapper {
+  //background-color: #425d8d;
+  //background-image:
+  //  //url('../../../../../assets/images2/noise.png'),
+  //  linear-gradient(
+  //      -90deg, rgb(191, 228, 255) 0%, rgb(243, 250, 255) 89.79%);
+
+  .strength-wrapper {
+    padding: 70px 0;
+
+    .icon {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .title {
+      color: #031b43;
+      font-size: 50px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .strengths-list {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 40px;
+      justify-content: center;
+
+      .strength {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 10px;
+        align-items: flex-start;
+
+        img {
+          width: 60px;
+          height: 60px;
+        }
+
+        .text {
+          color: #031b43;
+          font-size: 22px;
+          font-weight: 500;
+          letter-spacing: -0.5px;
+        }
+      }
+
+
+    }
+  }
+}

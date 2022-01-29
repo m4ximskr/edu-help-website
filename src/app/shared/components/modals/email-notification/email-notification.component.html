@@ -1,0 +1,24 @@
+<div>
+  <mat-dialog-content>
+
+    <ng-container *ngIf="data.status === emailStatus.SUCCESS">
+      <mat-icon class="success">check_circle_outline</mat-icon>
+      <div class="info">
+        <h2>Paldies!</h2>
+        <p>Jūsu {{data.type === emailType.ORDER ? 'pieteikums' : 'jautājums'}} ir veiksmīgi nosūtīts.</p>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="data.status === emailStatus.ERROR">
+      <mat-icon class="error">error_outline</mat-icon>
+      <div class="info">
+        <h2>Oops...</h2>
+        <p>Notika servera kļūda. Mēģiniet vēlreiz.</p>
+      </div>
+    </ng-container>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close cdkFocusInitial>Aizvert</button>
+  </mat-dialog-actions>
+</div>

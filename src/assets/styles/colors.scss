@@ -1,0 +1,54 @@
+//:root {
+//  --white: #ffffff;
+//  --black: #000000;
+//
+//  --dark-blue: #1e1f33;
+//  --light-blue: #005fff;
+//  --default-blue: #405169;
+//
+//  --green: #46d7ac;
+//  --red: #f62e4b;
+//
+//  --dark-grey: #5a5961;
+//  --light-grey: #f2f3f5;
+//  --very-light-grey: #7f8a9a;
+//
+//  --border-light-grey: #e5e5e4;
+//  --border-dark-grey: #9b9b9b;
+//
+//  --dark-blue-button: #30315d;
+//}
+
+
+$colorMap: (
+  white: #ffffff,
+  black: #000000,
+  //sapphire-blue: #031b43,
+  //dark-blue: #1e1f33,
+  //dark-grey: #5a5961,
+  //light-blue: #0069ff,
+  //light-grey: #f2f3f5,
+  dark-blue: #031b43,
+  light-blue: rgb(232, 245, 255),
+  dark-grey: #445b78,
+  light-grey: #92a0b3,
+  extra-light-grey: #cdd6df,
+  blue: #1267f4,
+  blue-hover: #2976f5,
+  //extra-light-grey: #cdd6df,
+  //light-grey:
+);
+
+:root {
+  @each $index, $value in $colorMap {
+    --#{"" + $index}: #{$value};
+
+    .color-#{'' + $index} {
+      color: var(--#{$index});
+    }
+
+    .bg-color-#{'' + $index} {
+      background-color: var(--#{$index});
+    }
+  }
+}

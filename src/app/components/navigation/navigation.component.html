@@ -1,0 +1,88 @@
+<div class="nav-wrapper" #navigationRef>
+  <div class="upper">
+
+    <div class="nav-left">
+      <a [routerLink]="''">
+        <img class="logo" src="../../../assets/images/logo_dark_lv.png">
+<!--        <img class="logo" src="../images2/../src/assets/images/logo_dark_lv.png">-->
+      </a>
+    </div>
+
+<!--    <div class="nav-buttons">-->
+<!--      <a mat-button *ngFor="let nav of navigation"-->
+<!--        [routerLink]="nav.path" routerLinkActive="active">{{nav.title}}</a>-->
+<!--    </div>-->
+
+
+
+
+    <div class="nav-right">
+
+      <div class="contacts">
+        <div class="contact">
+          <!--        <div class="circle">-->
+          <mat-icon>email</mat-icon>
+          <!--        </div>-->
+
+          <a class="heading-4 link-2">info@eduhelp.lv</a>
+        </div>
+
+        <div class="contact">
+          <!--        <div class="circle">-->
+          <mat-icon>local_phone</mat-icon>
+          <!--        </div>-->
+          <a class="heading-4 link-2">+371 25324951</a>
+        </div>
+      </div>
+
+      <div class="splitter"></div>
+
+      <div class="lang-button" [matMenuTriggerFor]="menu">
+        <mat-icon svgIcon="lv"></mat-icon>
+        <mat-icon class="icon-expand">expand_more</mat-icon>
+      </div>
+
+<!--      <button class="lang-button" mat-button [matMenuTriggerFor]="menu">-->
+<!--        &lt;!&ndash;          <mat-icon svgIcon="{{localeId}}"></mat-icon>&ndash;&gt;-->
+<!--        <mat-icon svgIcon="lv"></mat-icon>-->
+<!--        <mat-icon class="icon-expand">expand_more</mat-icon>-->
+<!--      </button>-->
+
+      <a mat-flat-button class="small" color="primary" [routerLink]="'pasutit'">Atstāt pieteikumu</a>
+
+    </div>
+
+    <div class="burger">
+      <button mat-icon-button
+        (click)="handleToggleMenu()">
+        <mat-icon>{{menuOpened ? 'menu_open' : 'menu'}}</mat-icon>
+      </button>
+    </div>
+
+  </div>
+  <div *ngIf="!hideTabs" class="lower">
+    <div class="tabs">
+      <div *ngFor="let tab of tabTitles; let i = index" [class.hidden]="i === 7"
+           #tabs
+           class="tab color-dark-blue body-2"
+           (click)="handleTabClick(i)">
+        {{tab}}
+      </div>
+      <span class="tab-slider"
+            [style.left.px]="tabSliderLeft"
+            [style.width.px]="tabSliderWidth"
+      ></span>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <a class="menu-link body-2 color-dark-grey" href="/lv/"><mat-icon svgIcon="lv">lv</mat-icon>Latviešu
+    </a>
+  </button>
+  <button mat-menu-item>
+    <a class="menu-link body-2 color-dark-grey" href="/ru/"><mat-icon svgIcon="ru">ru</mat-icon>Русский
+    </a>
+  </button>
+</mat-menu>

@@ -1,0 +1,200 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #0e151f !important;
+}
+
+.mat-button-base {
+
+  //&.mat-stroked-button {
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //  width: max-content;
+  //  height: 50px;
+  //  font-size: 16px;
+  //}
+
+  &.mat-flat-button,&.mat-stroked-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: normal;
+
+    &.small {
+      font-size: 14px;
+      height: 40px;
+    }
+
+    &.round {
+      border-radius: 50%;
+      min-width: 50px;
+      padding: 0;
+    }
+
+    .mat-button-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &.mat-flat-button:not(.mat-button-disabled) {
+    &:hover {
+      background-color: var(--blue-hover);
+    }
+  }
+
+  &.mat-stroked-button:not(.mat-button-disabled) {
+    border-color: #1267f4;
+    color: #1267f4;
+
+    &:hover {
+      .mat-button-focus-overlay {
+        opacity: .08;
+      }
+    }
+
+    .mat-button-focus-overlay {
+      opacity: 0;
+    }
+  }
+
+  .mat-button-focus-overlay {
+    opacity: .08;
+    background: #1267f4;
+  }
+
+  //&.dark {
+  //  $dark-blue: #1e1f33;
+  //  background-color: $dark-blue;
+  //  color: var(--white);
+  //
+  //  &:hover {
+  //    background-color: lighten($dark-blue, 10%);
+  //  }
+  //}
+}
+
+mat-form-field,.mat-form-field {
+  &.mat-form-field-appearance-outline {
+
+    &.mat-form-field-can-float.mat-form-field-should-float {
+
+      .mat-form-field-outline {
+        .mat-form-field-outline-gap {
+          border-top: transparent;
+        }
+      }
+
+      .mat-form-field-label {
+        transform: translateY(-22px) scale(0.75);
+      }
+    }
+
+    &.mat-focused:not(.mat-form-field-invalid) {
+      .mat-form-field-required-marker {
+        color: #005fff;
+      }
+    }
+
+    &:not(.mat-focused,.mat-form-field-invalid) {
+
+      &:hover {
+        .mat-form-field-outline {
+          &-start {
+            border-color: #c2dce9;
+            border-width: 1px;
+          }
+          &-gap {
+            border-color: #c2dce9;
+            border-width: 1px;
+          }
+          &-end {
+            border-color: #c2dce9;
+            //border-color: #b0bdcf;
+            border-width: 1px;
+          }
+        }
+      }
+
+      .mat-form-field-outline {
+        background-color: #F7F8FF;
+        &.mat-form-field-outline-thick {
+          color: #445b78;
+        }
+
+        &-start {
+          border-width: 0;
+        }
+        &-gap {
+          border-width: 0;
+        }
+        &-end {
+          border-width: 0;
+        }
+
+        //&:hover {
+        //  .mat-form-field-outline-start, .mat-form-field-outline-end, .mat-form-field-outline-gap {
+        //    border-color: #445b78;
+        //  }
+        //}
+
+
+        //.mat-form-field-outline-start,.mat-form-field-outline-end,.mat-form-field-outline-gap {
+        //  //border-color: #ced6e0;
+        //  border: none;
+        //}
+      }
+
+      .mat-form-field-label {
+        color: #92a0b3;
+      }
+    }
+
+    .mat-form-field-outline {
+      min-height: 50px;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    .mat-form-field-infix {
+      padding: 15px 0;
+      border-top: 4px solid transparent;
+
+      input,textarea {
+        color: #031b43;
+        font-size: 16px;
+        line-height: 20px;
+
+        &::placeholder {
+          color: #92a0b3;
+          font-size: 16px;
+        }
+      }
+
+      .mat-form-field-label-wrapper {
+        top: -10px;
+        padding-top: 10px;
+      }
+    }
+
+    .mat-form-field-subscript-wrapper {
+      margin-top: 5px;
+
+      .mat-hint {
+        color: #445b78;
+      }
+    }
+
+  }
+}
+

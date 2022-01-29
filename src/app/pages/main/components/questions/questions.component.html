@@ -1,0 +1,61 @@
+<div class="section-wrapper">
+  <div class="section-content">
+
+    <mat-icon class="illustration" svgIcon="edu:chat-illustration"></mat-icon>
+
+
+    <div class="heading-2 text-align-center color-dark-blue">Palika jautājumi?</div>
+    <div class="body-1 text-align-center mt-30">Sazinies ar mums jebkurā laikā 👩‍💻</div>
+
+    <div class="questions-content">
+
+      <div class="left-section">
+
+        <div class="heading-4 color-dark-blue">Aizpildi un atsūti šo formu:</div>
+
+        <form [formGroup]="questionForm" (ngSubmit)="onFormSubmit()">
+
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput
+                   placeholder="andrisliepa@gmail.com"
+                   required
+                   [formControl]="questionForm.controls.email">
+            <mat-error *ngIf="questionForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Jūsu jautājumus</mat-label>
+            <textarea matInput
+
+                      placeholder="Jebkas, kur jums ir radušas neskaidrības"
+                      [formControl]="questionForm.controls.question"></textarea>
+            <mat-hint align="end">{{questionForm.controls.question.value.length}} / 256</mat-hint>
+            <mat-error *ngIf="questionForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
+          </mat-form-field>
+
+          <button color="primary" mat-flat-button>Nosūtīt &#8594;</button>
+        </form>
+
+      </div>
+
+      <div class="right-section">
+        <div class="heading-4 color-dark-blue">Vai arī uzdod savu jautājumu uz tiešo:</div>
+
+        <div class="contacts">
+          <div class="contact heading-3">
+            <mat-icon>email</mat-icon>
+            <a class="link-2" href="mailto:info@eduhelp.lv">info@eduhelp.lv</a></div>
+          <div class="contact heading-3">
+            <mat-icon>local_phone</mat-icon>
+            <a class="link-2" href="tel:+371 28857299">+371 25324951</a></div>
+          <div class="contact heading-3">
+            <mat-icon svgIcon="edu:whatsapp-simple"></mat-icon>
+            <a class="link-2" href="tel:+371 28857299">Whatsapp</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
