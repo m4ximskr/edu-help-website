@@ -1,14 +1,10 @@
-export const navigationList = [
-  {
-    title: 'Galvenā',
-  },
-  {
-    title: 'Atsauksmes',
-  },
-  {
-    title: 'Priekšrocības',
-  },
-  {
-    title: 'Process',
-  }
+export const tabTitles = [
+  'Galvenā',
+  'Atsauksmes',
+  'Priekšrocības',
+  'Process',
+  'Sociālie tīkli',
+  'Par mums',
+  'Komanda',
+  '',
 ];

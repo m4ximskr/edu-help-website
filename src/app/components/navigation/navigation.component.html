@@ -1,4 +1,4 @@
-<div class="nav-wrapper" #navigationRef>
+<div class="nav-wrapper" #navigation>
   <div class="upper">
 
     <div class="nav-left">
@@ -54,18 +54,18 @@
 
     <div class="burger">
       <button mat-icon-button
-        (click)="handleToggleMenu()">
-        <mat-icon>{{menuOpened ? 'menu_open' : 'menu'}}</mat-icon>
+        (click)="openMobileMenu()">
+        <mat-icon>menu</mat-icon>
       </button>
     </div>
 
   </div>
   <div *ngIf="!hideTabs" class="lower">
     <div class="tabs">
-      <div *ngFor="let tab of tabTitles; let i = index" [class.hidden]="i === 7"
+      <div *ngFor="let tab of tabs; let i = index" [class.hidden]="i === 7"
            #tabs
            class="tab color-dark-blue body-2"
-           (click)="handleTabClick(i)">
+           (click)="scrollToIndex(i)">
         {{tab}}
       </div>
       <span class="tab-slider"

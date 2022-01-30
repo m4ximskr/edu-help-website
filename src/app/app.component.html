@@ -16,30 +16,41 @@
 <!--    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>-->
 <!--    <h1 class="example-app-name">Responsive App</h1>-->
 <!--  </mat-toolbar>-->
-  <edu-info-block></edu-info-block>
 
-  <edu-navigation #nav (toggleMenu)="toggleSideNav(!sideNavOpened)"></edu-navigation>
+<edu-info-block></edu-info-block>
+
+<edu-navigation #nav (toggleMenu)="toggleSideNav(!sideNavOpened)"></edu-navigation>
 
 
 <div class="global-content">
 
 
-  <mat-sidenav-container class="example-sidenav-container">
-    <mat-sidenav #snav
-                 [mode]="'over'"
-                 [position]="'end'"
-                 [fixedInViewport]="true"
-                 [fixedTopGap]="sideNavOffsetTop"
-                 (closed)="toggleSideNav(false)">
-      <edu-side-nav (scrollToIndex)="scrollToIndex($event)"></edu-side-nav>
-    </mat-sidenav>
+  <router-outlet></router-outlet>
+  <edu-footer></edu-footer>
 
-    <mat-sidenav-content>
+<!--  <mat-sidenav-container class="example-sidenav-container">-->
 
-      <router-outlet></router-outlet>
-      <edu-footer></edu-footer>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+
+
+<!--    <mat-sidenav #snav-->
+<!--                 [mode]="'over'"-->
+<!--                 [position]="'end'"-->
+<!--                 [fixedInViewport]="true"-->
+
+<!--                 (closed)="toggleSideNav(false)">-->
+<!--      <edu-side-nav (scrollToIndex)="scrollToIndex($event)"></edu-side-nav>-->
+<!--    </mat-sidenav>-->
+
+<!--    <mat-sidenav-content>-->
+<!--      -->
+
+<!--      <div>-->
+<!--        <router-outlet></router-outlet>-->
+<!--        <edu-footer></edu-footer>-->
+<!--      </div>-->
+
+<!--    </mat-sidenav-content>-->
+<!--  </mat-sidenav-container>-->
 </div>
 
 

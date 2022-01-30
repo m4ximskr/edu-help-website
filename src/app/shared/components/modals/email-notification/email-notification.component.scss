@@ -1,25 +1,29 @@
-mat-dialog-content {
-  text-align: center;
+.notification-wrapper {
+  padding: 20px;
 
-  mat-icon {
-    font-size: 120px;
-    width: 120px;
-    height: 120px;
+  mat-dialog-content {
+    text-align: center;
 
-    &.success {
-      color: var(--green);
+    mat-icon {
+      font-size: 120px;
+      width: 120px;
+      height: 120px;
+
+      &.success {
+        color: var(--green);
+      }
+
+      &.error {
+        color: var(--red);
+      }
     }
 
-    &.error {
-      color: var(--red);
-    }
-  }
+    .info {
+      margin-bottom: 20px;
 
-  .info {
-    margin-bottom: 20px;
-
-    p {
-      margin-top: 10px;
+      .body-2 {
+        margin-top: 10px;
+      }
     }
   }
 }

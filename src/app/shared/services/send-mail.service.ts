@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {of, throwError} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,9 @@ export class SendMailService {
   }
 
   sendQuestionMail(data) {
-    return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
+    // return of(null)
+    return throwError('ee')
+    // return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
   }
 
 }

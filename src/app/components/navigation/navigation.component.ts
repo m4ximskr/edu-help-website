@@ -11,13 +11,15 @@ import {
   QueryList,
   AfterViewInit, ChangeDetectorRef, AfterContentInit
 } from '@angular/core';
-import { navigationList } from './navigation';
+import { tabTitles} from './navigation';
 import {MobileMenuService} from './mobile-menu/mobile-menu.service';
 import {fromEvent, Subject} from 'rxjs';
 import {filter, takeUntil} from 'rxjs/operators';
 import {ScrollingHelperService} from '../../shared/services/scrolling-helper.service';
 import {NavigationStart, Router} from '@angular/router';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'edu-navigation',
   templateUrl: './navigation.component.html',
@@ -25,28 +27,16 @@ import {NavigationStart, Router} from '@angular/router';
 })
 export class NavigationComponent implements OnInit, AfterViewInit {
 
-
   @Output() toggleMenu = new EventEmitter();
-
+  @ViewChild('navigation') navigationRef: ElementRef;
   @ViewChildren('tabs') tabsRefs: QueryList<ElementRef>;
 
-  tabTitles = [
-    'Galvenā',
-    'Atsauksmes',
-    'Priekšrocības',
-    'Process',
-    'Sociālie tīkli',
-    'Par mums',
-    'Komanda',
-    '',
-  ];
+  tabs = tabTitles;
 
   tabSliderWidth: number = 0;
   tabSliderLeft: number;
 
   hideTabs: boolean;
-
-  menuOpened = false;
 
   constructor(
     private mobileMenuService: MobileMenuService,
@@ -56,13 +46,14 @@ export class NavigationComponent implements OnInit, AfterViewInit {
     router.events
       .pipe(filter(event => event instanceof NavigationStart))
       .subscribe((event: NavigationStart) => {
-        console.log(event);
-        this.hideTabs = event.url === '/pasutit'
+        if (event.url === '/pasutit') {
+          this.tabSliderWidth = 0
+        }
       });
   }
 
   ngOnInit(): void {
-    this.scrollingHelperService.currentPositionSectionIndex$.subscribe(index => {
+    this.scrollingHelperService.currentPositionSectionIndex$.pipe(untilDestroyed(this)).subscribe(index => {
       if (index !== -1) {
         this.tabSliderWidth = this.tabsRefs.toArray()[index].nativeElement.offsetWidth;
         if (index < 7) {
@@ -80,13 +71,22 @@ export class NavigationComponent implements OnInit, AfterViewInit {
     });
   }
 
-  handleTabClick(index: number) {
-   this.scrollingHelperService.updateScrollToIndex(index);
+  scrollToIndex(index: number) {
+    this.router.navigate(['']).then(() => {
+      setTimeout(() => {
+        this.scrollingHelperService.updateScrollToIndex(index);
+      })
+    })
   }
 
-  handleToggleMenu() {
-    // this.menuOpened = !this.menuOpened
-    this.toggleMenu.emit();
+  openMobileMenu() {
+    const mobileMenuRef = this.mobileMenuService.open(this.navigationRef)
+
+    mobileMenuRef.overlayRemoved$.pipe(untilDestroyed(this)).subscribe(index => {
+      if (index !== undefined) {
+        this.scrollToIndex(index);
+      }
+    })
   }
 
 }

@@ -9,38 +9,26 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class WorkComponent implements OnInit {
 
-  path = '../../../../../assets/images2/icons/';
-
   steps = [
     {
-      icon: `${this.path}/telephone.png`,
       title: 'Sazināties ar mums',
       text: `Atstājiet pieteikumu mūsu mājaslapā, sociālajos tiklos, vai zvaniet pa tālruni <a class="link">+371 25324951</a>.`,
-      num: 'looks_one',
     },
     {
-      icon: '💬',
       title: 'Apspriest detaļas',
       text: 'Mēs ar Jums vienosimies par izmaksām, termiņiem un citiem nosacījumiem.',
-      num: 'looks_two',
     },
     {
-      icon: '💳',
-      title: 'Apmaksāt',
-      text: 'Pēc priekšapmaksas saņemšanas mēs sākam strādāt pie jūsu darba.',
-      num: 'looks_3',
+      title: 'Apmaksāt rēķinu',
+      text: 'Mēs atsūtīsim rēķinu par mūsu pakalpojumiem, kuru Jūs varēsiet apmaksāt jebkurā brīdī.',
     },
     {
-      icon: '📅',
       title: 'Sagaidīt darba pabeigšanu',
-      text: 'Tūlīt pēc darba pabeigšanas jūs saņemsiet gatavu darbu.',
-      num: 'looks_4',
+      text: 'Darbs būs gatavs pēc iespējas ātrāk. Mēs negaidām pēdējo brīdi un pildām visu savlaicīgi.',
     },
     {
-      icon: '️✅',
-      title: 'Nodot savu darbu',
+      title: 'Sagaidīt atzīmi par izpildītu darbu ',
       text: 'Pēc jūsu darba nodošanas mēs garantējam, ka saņemsiet vēlamo atzīmi.',
-      num: 'looks_5',
     },
   ];
 

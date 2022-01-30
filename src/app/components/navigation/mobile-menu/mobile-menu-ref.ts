@@ -7,15 +7,14 @@ export class MobileMenuRef {
 
   componentInstance: MobileMenuComponent;
 
-  private overlayRemovedSubj = new Subject<void>();
+  private overlayRemovedSubj = new Subject<number>();
   public readonly overlayRemoved$ = this.overlayRemovedSubj.asObservable();
 
   constructor(private overlayRef: OverlayRef) {
     this.overlayRef.backdropClick().subscribe(() => this.close());
   }
 
-  close(): void {
-    this.overlayRemovedSubj.next();
+  close(index?: number): void {
     this.componentInstance.animationStateChanged.pipe(
       filter(event => event['phaseName'] === 'start'),
       take(1)
@@ -29,6 +28,7 @@ export class MobileMenuRef {
     ).subscribe(() => {
       this.overlayRef.dispose();
       this.componentInstance = null;
+      this.overlayRemovedSubj.next(index);
     });
 
     this.componentInstance.startExitAnimation();

@@ -56,16 +56,16 @@ export class OrderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.content.nativeElement.offsetTop);
-
-    setTimeout(() => {
-      console.log(this.content.nativeElement.offsetTop);
-      console.log(this.content.nativeElement.offsetTop >= 70);
-      if (this.content.nativeElement.offsetTop < 140) {
-        this.isCentered = false
-        // this.cdr.markForCheck();
-      }
-    })
+    // console.log(this.content.nativeElement.offsetTop);
+    //
+    // setTimeout(() => {
+    //   console.log(this.content.nativeElement.offsetTop);
+    //   console.log(this.content.nativeElement.offsetTop >= 70);
+    //   if (this.content.nativeElement.offsetTop < 140) {
+    //     this.isCentered = false
+    //     // this.cdr.markForCheck();
+    //   }
+    // })
   }
 
 }

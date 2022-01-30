@@ -20,16 +20,16 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     fromEvent(window, 'scroll').pipe(untilDestroyed(this)).subscribe(() => {
       const index = this.sectionsRefs.toArray().findIndex(
-        (section) => section.nativeElement.offsetTop + section.nativeElement.offsetHeight + 50 >= window.pageYOffset)
+        (section) => section.nativeElement.offsetTop + section.nativeElement.offsetHeight - 121 >= window.pageYOffset)
       this.scrollingHelperService.updateCurrentPositionSectionIndex(index);
     })
 
-    this.scrollingHelperService.scrollToIndex$.subscribe(index => {
+    this.scrollingHelperService.scrollToIndex$.pipe(untilDestroyed(this)).subscribe(index => {
       window.scroll({
-        top: this.sectionsRefs.toArray()[index].nativeElement.offsetTop + 51,
+        top: this.sectionsRefs.toArray()[index].nativeElement.offsetTop - 121,
         behavior: 'smooth'
-      })
-    })
+      });
+    });
   }
 
 }

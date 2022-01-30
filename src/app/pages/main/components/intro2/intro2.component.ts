@@ -138,8 +138,6 @@ export class Intro2Component implements OnInit {
       }, err => {
         this.createNotificationModal(EmailStatus.ERROR);
       });
-    } else {
-      this.questionForm.markAsTouched();
     }
   }
 

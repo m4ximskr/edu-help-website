@@ -32,7 +32,7 @@
 
           <a class=""
              mat-stroked-button
-             [routerLink]="'atsauksmes'">
+             href="https://wa.me/37125324951">
             <mat-icon svgIcon="edu:whatsapp-simple"></mat-icon>
             <span>Uzrakstīt mums</span>
           </a>
@@ -50,7 +50,7 @@
               <input matInput
                      required
                      placeholder="Priekšmeta nosaukums, klase, izpildes termiņi utt."
-                     [formControl]="questionForm.controls.question">
+                     formControlName="question">
               <mat-hint align="end">{{questionForm.controls.question.value.length}} / 256</mat-hint>
               <mat-error *ngIf="questionForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
             </mat-form-field>
@@ -60,8 +60,7 @@
               <input matInput
                      placeholder="name@example.com"
                      required
-
-                     [formControl]="questionForm.controls.email">
+                     formControlName="email">
               <mat-error *ngIf="questionForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
             </mat-form-field>
 
