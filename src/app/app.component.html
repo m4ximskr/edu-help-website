@@ -1,56 +1,11 @@
-<!--<edu-navigation [isFixed]="true" [show]="isNavigationFixed"></edu-navigation>-->
-
-<!--<edu-navigation class="static" [show]="true"></edu-navigation>-->
-
-<!--<div class="global-wrapper">-->
-
-
-<!--  <div>-->
-<!--    <router-outlet></router-outlet>-->
-<!--  </div>-->
-
-<!--  <edu-footer></edu-footer>-->
-
-<!--</div>-->
-<!--  <mat-toolbar color="primary" class="example-toolbar">-->
-<!--    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>-->
-<!--    <h1 class="example-app-name">Responsive App</h1>-->
-<!--  </mat-toolbar>-->
-
 <edu-info-block></edu-info-block>
-
 <edu-navigation #nav (toggleMenu)="toggleSideNav(!sideNavOpened)"></edu-navigation>
 
-
 <div class="global-content">
-
-
-  <router-outlet></router-outlet>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
   <edu-footer></edu-footer>
-
-<!--  <mat-sidenav-container class="example-sidenav-container">-->
-
-
-
-<!--    <mat-sidenav #snav-->
-<!--                 [mode]="'over'"-->
-<!--                 [position]="'end'"-->
-<!--                 [fixedInViewport]="true"-->
-
-<!--                 (closed)="toggleSideNav(false)">-->
-<!--      <edu-side-nav (scrollToIndex)="scrollToIndex($event)"></edu-side-nav>-->
-<!--    </mat-sidenav>-->
-
-<!--    <mat-sidenav-content>-->
-<!--      -->
-
-<!--      <div>-->
-<!--        <router-outlet></router-outlet>-->
-<!--        <edu-footer></edu-footer>-->
-<!--      </div>-->
-
-<!--    </mat-sidenav-content>-->
-<!--  </mat-sidenav-container>-->
 </div>
 
 

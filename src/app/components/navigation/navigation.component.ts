@@ -66,7 +66,8 @@ export class NavigationComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       if (!this.hideTabs) {
-        this.tabSliderLeft = this.tabsRefs.toArray()[1].nativeElement.offsetLeft;
+        this.tabSliderLeft = this.tabsRefs.toArray()[0].nativeElement.offsetLeft;
+        this.tabSliderWidth = this.tabsRefs.toArray()[0].nativeElement.offsetWidth;
       }
     });
   }

@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
 
     this.scrollingHelperService.scrollToIndex$.pipe(untilDestroyed(this)).subscribe(index => {
       window.scroll({
-        top: this.sectionsRefs.toArray()[index].nativeElement.offsetTop - 121,
+        top: this.sectionsRefs.toArray()[index].nativeElement.offsetTop - 120,
         behavior: 'smooth'
       });
     });
