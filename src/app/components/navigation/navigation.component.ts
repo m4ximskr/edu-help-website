@@ -9,14 +9,14 @@ import {
   ViewChildren,
   ElementRef,
   QueryList,
-  AfterViewInit, ChangeDetectorRef, AfterContentInit
+  AfterViewInit, ChangeDetectorRef, AfterContentInit, Inject, LOCALE_ID
 } from '@angular/core';
 import { tabTitles} from './navigation';
 import {MobileMenuService} from './mobile-menu/mobile-menu.service';
 import {fromEvent, Subject} from 'rxjs';
 import {filter, takeUntil} from 'rxjs/operators';
 import {ScrollingHelperService} from '../../shared/services/scrolling-helper.service';
-import {NavigationStart, Router} from '@angular/router';
+import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
 @UntilDestroy()
@@ -38,15 +38,21 @@ export class NavigationComponent implements OnInit, AfterViewInit {
 
   hideTabs: boolean;
 
+  langIcon = $localize`:@@langIcon:edu:ic-lv`
+
+  logoName = $localize`:@@darkLogoName:logo-dark-lv.png`;
+  logoPath = 'assets/images/';
+
   constructor(
+    @Inject(LOCALE_ID) private localeID: string,
     private mobileMenuService: MobileMenuService,
     private scrollingHelperService: ScrollingHelperService,
-    private router: Router
+    private router: Router,
   ) {
     router.events
       .pipe(filter(event => event instanceof NavigationStart))
       .subscribe((event: NavigationStart) => {
-        if (event.url === '/pasutit') {
+        if (event.url !== '/') {
           this.tabSliderWidth = 0
         }
       });
@@ -54,7 +60,7 @@ export class NavigationComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.scrollingHelperService.currentPositionSectionIndex$.pipe(untilDestroyed(this)).subscribe(index => {
-      if (index !== -1) {
+      if (index !== -1 && this.router.url === '/') {
         this.tabSliderWidth = this.tabsRefs.toArray()[index].nativeElement.offsetWidth;
         if (index < 7) {
           this.tabSliderLeft = this.tabsRefs.toArray()[index].nativeElement.offsetLeft;
@@ -65,7 +71,7 @@ export class NavigationComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      if (!this.hideTabs) {
+      if (this.router.url === '/') {
         this.tabSliderLeft = this.tabsRefs.toArray()[0].nativeElement.offsetLeft;
         this.tabSliderWidth = this.tabsRefs.toArray()[0].nativeElement.offsetWidth;
       }
@@ -74,10 +80,8 @@ export class NavigationComponent implements OnInit, AfterViewInit {
 
   scrollToIndex(index: number) {
     this.router.navigate(['']).then(() => {
-      setTimeout(() => {
-        this.scrollingHelperService.updateScrollToIndex(index);
-      })
-    })
+      this.scrollingHelperService.updateScrollToIndex(index);
+    });
   }
 
   openMobileMenu() {

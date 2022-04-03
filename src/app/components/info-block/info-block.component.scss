@@ -1,11 +1,19 @@
 .section-wrapper {
   display: flex;
   align-items: center;
-  height: 50px;
+  //height: 50px;
 
   .section-content {
     padding-top: 0;
     padding-bottom: 0;
+
+    .info-wrapper {
+      padding: 10px;
+      display: grid;
+      grid-row-gap: 5px;
+      justify-content: center;
+      text-align: center;
+    }
   }
 }
 

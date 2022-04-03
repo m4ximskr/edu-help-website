@@ -13,6 +13,19 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "edu",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "lv": {
+            "translation": "src/locale/messages.lv.xlf",
+            "baseHref": "/lv/"
+          },
+          "ru": {
+            "translation": "src/locale/messages.ru.xlf",
+            "baseHref": "/ru/"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -44,6 +57,14 @@
             "namedChunks": true
           },
           "configurations": {
+            "lv": {
+              "localize": ["lv"],
+              "outputPath": "dist/edu-help-lv/",
+            },
+            "ru": {
+              "localize": ["ru"],
+              "outputPath": "dist/edu-help-ru/",
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -82,6 +103,12 @@
           "configurations": {
             "production": {
               "browserTarget": "edu-help:build:production"
+            },
+            "lv": {
+              "browserTarget": "edu-help:build:lv"
+            },
+            "ru": {
+              "browserTarget": "edu-help:build:ru"
             }
           }
         },

@@ -7,58 +7,48 @@ import {
   EmailStatus, EmailType
 } from '../../../../shared/components/modals/email-notification/email-notification.component';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import {
+  aboutYourselfFormFieldPlaceholder,
+  emailFieldErrorText,
+  requiredFieldErrorText
+} from "../../../../shared/form-constants";
 
 @Component({
   selector: 'edu-join-team',
   templateUrl: './join-team.component.html',
   styleUrls: ['./join-team.component.scss']
 })
-export class JoinTeamComponent implements OnInit {
+export class JoinTeamComponent {
 
   warranties = [
     {
-      title: 'Brīvs grafiks',
-      desc: 'Strādā tad, kad tev ir ērti. Galvenais, ja paņēmi darbu - izpildi to laikā.'
+      title: $localize`:Team warranties list 1 title:Brīvs grafiks`,
+      text: $localize`:Team warranties list 1 text:Strādā sev ērtā laikā. Galvenais, ja paņēmi darbu – izpildi to laikā.`
     },
     {
-      title: 'Stabīlas izmaksas',
-      desc: 'Tu pats regulē šo skaitli. Savukārt mēs garantējam ikmēneša izmaksas',
+      title: $localize`:Team warranties list 2 title:Stabils darbs`,
+      text: $localize`:Team warranties list 2 text:Tu pats regulē cik daudz darbu pilldīsi, savukārt mēs garantējam ikmēneša izmaksas.`,
     },
     {
-      title: 'Pilnīgā konfidencialitāte',
-      desc: 'Tavi personas dati ir pilnībā pasargāti no trešo personu izmantošanas.',
+      title: $localize`:Team warranties list 3 title:Laba attieksme`,
+      text: $localize`:Team warranties list 3 text:Mēs nodrošinam Tavu datu konfidencialitāti, kā arī dodam iespēju atteikties no darba, kuru nevēlies pildīt.`,
     }
   ]
 
   joinTeamForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
-              private sendMailService: SendMailService,
-              private dialog: MatDialog,
-              private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer) {
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'team',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/team-2-01.svg'));
-
-    this.createForm();
-  }
-
-  ngOnInit() {
-  }
+  aboutYourselfPlaceholder = aboutYourselfFormFieldPlaceholder;
 
   get getNameErrorMessage(): string {
-    return this.joinTeamForm.controls.name.hasError('required') ? 'Šis lauks ir obligāts' : '';
+    return this.joinTeamForm.controls.name.hasError('required') ? requiredFieldErrorText : '';
   }
 
   get getEmailErrorMessage(): string {
     const emailControl = this.joinTeamForm.controls.email;
     if (emailControl.hasError('required')) {
-      return 'Šis lauks ir obligāts';
+      return requiredFieldErrorText;
     } else if (emailControl.hasError('email')) {
-      return 'Nepareizs email';
+      return emailFieldErrorText;
     } else {
       return '';
     }
@@ -67,10 +57,16 @@ export class JoinTeamComponent implements OnInit {
   get getQuestionErrorMessage(): string {
     const questionControl = this.joinTeamForm.controls.question;
     if (questionControl.hasError('required')) {
-      return 'Šis lauks ir obligāts';
+      return requiredFieldErrorText;
     } else {
       return '';
     }
+  }
+
+  constructor(private formBuilder: FormBuilder,
+              private sendMailService: SendMailService,
+              private dialog: MatDialog) {
+    this.createForm();
   }
 
   onFormSubmit() {

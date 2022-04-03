@@ -11,10 +11,14 @@ export class ScrollingHelperService {
   readonly currentPositionSectionIndex$: Observable<number> =
     this._currentPositionSectionIndex$.asObservable();
 
-  private _scrollToIndex$: Subject<number> =
-    new Subject<number>();
+  private _scrollToIndex$: BehaviorSubject<number> =
+    new BehaviorSubject<number>(-1);
   readonly scrollToIndex$: Observable<number> =
     this._scrollToIndex$.asObservable();
+
+  get scrollToIndex(): number {
+    return this._scrollToIndex$.getValue()
+  }
 
   constructor() { }
 

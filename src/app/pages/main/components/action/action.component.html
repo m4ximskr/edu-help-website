@@ -3,19 +3,19 @@
     <div class="action-wrapper">
 
       <div class="message">
-        <div class="heading-4 color-white">Neatliec darba izpildīšanu uz pēdējo dienu</div>
-        <div class="body-2 color-extra-light-grey">Nosūti pieteikumu un saņem atbildi ar piedāvājumu
-          par cenu un izpildīšanas nosacījumiem stundas laikā.
+        <div class="heading-4 color-white" i18n="Action heading">
+          Neatliec darba izpildīšanu uz pēdējo dienu
+        </div>
+        <div class="body-2 color-extra-light-grey" i18n="Action body">
+          Nosūti pieteikumu un saņem atbildi ar piedāvājumu par cenu un izpildīšanas nosacījumiem stundas laikā.
         </div>
       </div>
-
 
       <a
         mat-flat-button
         color="primary"
-        [routerLink]="'../pasutit'">
-        <span>Atstāt pieteikumu</span>
-        <mat-icon svgIcon="edu:clicked-arrow"></mat-icon>
+        [routerLink]="'../order'">
+        <span i18n="@@orderButtonTitle">Nosūtīt pieteikumu</span>
       </a>
     </div>
   </div>

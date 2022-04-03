@@ -1,20 +1,19 @@
 .section-wrapper {
 
   &.main {
-    padding-top: 70px;
     //background-image:
-    //  url('../../../../../assets/images2/svg/figures2-01.svg');
-    background-image: url("~src/assets/images2/svg/figures-big.svg");
+    //  url('../../../../../assets/images/svg/figures2-01.svg');
+    background-image: url("../../../../../assets/images/svg/figures-big.svg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (max-width: 1000px) {
-      background-image: url("~src/assets/images2/svg/figures-small.svg");
+      background-image: url("../../../../../assets/images/svg/figures-small.svg");
     }
 
     @media (max-width: 500px) {
-      background-image: url("~src/assets/images2/svg/figures-xsmall.svg");
+      background-image: url("../../../../../assets/images/svg/figures-xsmall.svg");
     }
   }
 
@@ -28,14 +27,14 @@
         align-items: end;
         grid-row-gap: 50px;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 850px) {
           grid-auto-flow: row;
         }
 
         .main-section {
-          @media (max-width: 1000px) {
+          @media (max-width: 850px) {
             display: grid;
-            justify-content: center;
+            //justify-content: center;
           }
 
           .heading-1 {
@@ -72,16 +71,20 @@
           grid-template-columns: max-content max-content;
           grid-gap: 20px;
 
-          @media (max-width: 1000px) {
-            grid-row: 3;
-            justify-content: center;
+          @media (max-width: 850px) {
+            //grid-row: 3;
+            grid-template-columns: 1fr 1fr;
+
+            a {
+              width: 100%;
+            }
           }
 
           @media (max-width: 450px) {
-            grid-template-columns: max-content;
+            grid-template-columns: 1fr;
 
-            //.primary-button {
-            //  margin: 0 auto;
+            //a {
+            //  width: 100%;
             //}
           }
         }
@@ -93,7 +96,7 @@
           grid-column: 2;
           grid-row: 1 / span 2;
 
-          @media (max-width: 1000px) {
+          @media (max-width: 850px) {
             grid-column: 1;
             grid-row: auto;
             height: 100%;
@@ -114,8 +117,8 @@
             padding: 30px 20px;
           }
 
-          @media (max-width: 1000px) {
-            grid-row: 2;
+          @media (max-width: 850px) {
+            grid-row: 3;
             grid-column: 1;
             margin-top: 0;
           }
@@ -126,13 +129,13 @@
             grid-template-columns: 2fr 1fr max-content;
             grid-column-gap: 30px;
 
-            @media (max-width: 1000px) {
+            @media (max-width: 850px) {
               grid-template-columns: 1fr;
             }
 
             button {
               margin-top: 4px;
-              @media (max-width: 1000px) {
+              @media (max-width: 850px) {
                 width: 100%;
               }
             }
@@ -152,25 +155,19 @@
       .advantages-box {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px 100px;
+        grid-gap: 50px 50px;
         justify-content: space-between;
 
-        @media (max-width: 900px) {
+        @media (max-width: 600px) {
           grid-template-columns: auto;
           justify-content: center;
         }
 
         .advantage {
           display: grid;
-          grid-template-columns: max-content auto;
-          grid-column-gap: 20px;
+          grid-template-rows: max-content max-content;
+          grid-row-gap: 5px;
           align-items: center;
-
-          mat-icon {
-            width: 40px;
-            height: 40px;
-            font-size: 40px;
-          }
         }
       }
     }

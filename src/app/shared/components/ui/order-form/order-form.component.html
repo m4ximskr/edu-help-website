@@ -1,14 +1,14 @@
 <div class="client-form-wrapper">
 
-  <div class="heading-3 color-dark-blue text-align-center">Atstāj pieteikumu</div>
+  <div class="heading-3 color-dark-blue text-align-center" i18n="Order form heading">Atstāj pieteikumu</div>
 
-  <form [formGroup]="clientForm" class="client-form mt-20">
+  <form [formGroup]="clientForm" (ngSubmit)="onFormSubmit()" class="client-form mt-20">
     <mat-form-field appearance="outline">
-      <mat-label>Pilnais vārds</mat-label>
+      <mat-label i18n="@@formFieldFullNameLabel">Pilnais vārds</mat-label>
       <input matInput
              placeholder="Andris Liepa"
              required
-             [formControl]="clientForm.controls.name">
+             formControlName="name">
       <mat-error *ngIf="clientForm.controls.name.invalid">{{getNameErrorMessage}}</mat-error>
     </mat-form-field>
 
@@ -17,43 +17,47 @@
       <input matInput
              placeholder="name@example.com"
              required
-             [formControl]="clientForm.controls.email">
+             formControlName="email">
       <mat-error *ngIf="clientForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Telefona numurs</mat-label>
+      <mat-label i18n="Form field telephone label@@formFieldTelephoneLabel">Telefona numurs</mat-label>
       <input matInput
              placeholder="22222222"
              type="number"
-             [formControl]="clientForm.controls.number">
+             formControlName="number">
       <mat-error *ngIf="clientForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Darba apraksts</mat-label>
+      <mat-label i18n="@@formFieldWorkDescLabel">Darba apraksts</mat-label>
       <textarea matInput
                 required
                 maxlength="256"
-                placeholder="Priekšmeta nosaukums, klase, izpildes termiņi utt."
-                [formControl]="clientForm.controls.description"></textarea>
+                [placeholder]="workDescriptionPlaceholder"
+                formControlName="description"></textarea>
       <mat-hint align="end">{{clientForm.controls.description.value.length}} / 256</mat-hint>
       <mat-error *ngIf="clientForm.controls.description.invalid">{{getDescErrorMessage}}</mat-error>
 
     </mat-form-field>
 
-    <file-attachment [formControl]="clientForm.controls.files"></file-attachment>
+    <file-attachment formControlName="files"></file-attachment>
 
-    <button
-            mat-flat-button
-            color="primary"
-            (click)="sendMail()">
+    <button mat-flat-button
+            color="primary">
       <mat-spinner *ngIf="busy" [strokeWidth]="3" [diameter]="36"></mat-spinner>
-      <ng-container *ngIf="!busy">Nosūtīt &#8594;</ng-container>
+      <ng-container *ngIf="!busy">
+        <span i18n="@@sendFormButtonTitle">Nosūtīt</span>
+        &#8594;
+      </ng-container>
     </button>
 
     <div class="body-3 color-dark-grey text-align-center mt-20">
-      ❗️Nosūtot pieteikumu, tu apliecini, ka esi piekritis <a class="link" target="_blank" routerLink="../noteikumi">Lietošanas Noteikumiem</a>.
+      <ng-container i18n="Agree with terms text@@agreeWithTermsText">
+        ❗️Nosūtot pieteikumu, tu apliecini, ka esi piekritis
+      </ng-container>
+      <a class="link" target="_blank" routerLink="../terms" i18n="Agree with terms link@@agreeWithTermsLink">Lietošanas Noteikumiem</a>.
     </div>
   </form>
 

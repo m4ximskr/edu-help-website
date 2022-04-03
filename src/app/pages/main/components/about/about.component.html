@@ -1,35 +1,61 @@
 <div class="section-wrapper">
   <div class="section-content">
 
+    <div class="heading-2 color-dark-blue text-align-center" i18n="About heading">Par mums</div>
+
+    <div class="body-1 mt-20 color-dark-grey text-align-center" i18n="About body">Eduhelp – mācību palīdzības serviss 👩‍🏫</div>
+
+    <div class="about-points">
+      <div *ngFor="let point of points" class="point">
+        <mat-icon fontSet="material-icons-round">{{point.icon}}</mat-icon>
+        <div>
+          <div class="heading-4 color-dark-blue">{{point.title}}</div>
+          <div class="body-2 color-dark-grey mt-10">{{point.text}}</div>
+        </div>
+      </div>
+    </div>
+
     <div class="about-content">
 
       <div class="left-section">
-        <mat-icon svgIcon="edu:about-illustration"></mat-icon>
+        <div class="image">
+          <mat-icon class="illustration" svgIcon="edu:ill-superhero"></mat-icon>
+          <mat-icon class="blob" svgIcon="edu:ic-blob"></mat-icon>
+          <div class="text">
+            <div class="heading-4 color-dark-blue" i18n="About icon text">Palīdzam no</div>
+            <div class="heading-3 color-dark-blue" i18n="About icon year">2018. gada</div>
+          </div>
+        </div>
       </div>
 
       <div class="right-section">
-        <div class="heading-2 color-dark-blue">Par mums</div>
-        <div class="body-1 mt-30 color-dark-grey">Mūsdienās skolēnu un studentu slodze ir diezgan liela, tāpēc ne
-          visiem uzdevumiem
-          pietiek laika un enerģijas. Šādos gadījumos palīgā nāk mūsu mācību palīdzības serviss. Kvalificētā komanda
-          EDUHELP ir gatava Jums palīdzēt jebkurā dienā un minūtē. Mēs veiksim jebkurus mācību darbus Jūsu vietā,
-          noteiktā laikā un par pieņemamām cenām bez priekšapmaksas! Šeit Jūs vienmēr varat paļauties uz kompetentu
-          izpildīšanu, jo mūsu komandā atrodas īstie izglītības jomas profesionāļi.
+        <div class="body-2 mt-10 color-dark-grey" i18n="About 1 description">
+          EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā. Mēs sākām savu darbību 2018. gadā, un esam
+          palīdzējuši jau vairāk nekā 1000 klientiem.
         </div>
-        <div class="body-1 mt-10 color-dark-grey">EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā.
-          Mēs sākām savu
-          darbību 2019. gadā, un esam palīdzējuši jau vairāk nekā 1000 klientiem.
+        <div class="body-2 mt-10 color-dark-grey" i18n="About 2 description">
+          Pašreizējā izglītības sistēma ir tālu no ideāla. To atzīst gan skolotāji, gan skolēni, gan valdība, kura izdod
+          reformas, cenšoties dot iespēju skolēniem apgūt tieši tos priekšmetus, kas viņiem interesē. Taču patiesībā
+          iznāk pavisam otrādi – izglītības plāns sastāv no daudziem priekšmetiem, kuru mērķis
+          Ir “paplašināt redzesloku", nevis sniegt reālu pamatu jomā, kura interesē. Tieši šajās situācijās mēs
+          cenšamies palīdzēt cilvēkiem.
+        </div>
+        <div class="body-2 mt-10 color-dark-grey" i18n="About 3 description">
+          Mēs palīdzam pieaugušiem cilvēkiem, kuri pēc ilga pārtraukuma nolemj pabeigt skolu, sniedzot padomus, kā arī
+          palīdzam ar priekšmetiem, kuri aizmirsās un dzīvē nebija izmantoti. Palīdzam arī skolēniem, kuriem dažādu
+          iemeslu dēļ nav iespējas pašiem pabeigt skolu. Eduhelp servisa ideja ir dot cilvēkiem iespēju koncentrēties uz
+          jomas, kas viņus patiešām interesē un dzīvē noderēs, pārējos priekšmetus deleģējot ekspertiem.
         </div>
       </div>
 
     </div>
 
-    <div class="heading-3 text-align-center color-dark-blue">Mūsu sniegto pakalpojumu saraksts ir ļoti plašs:</div>
+    <div class="services-title heading-3 color-dark-blue" i18n="About services heading">Mūsu sniegto pakalpojumu saraksts ir ļoti plašs:</div>
 
     <div class="services">
       <div *ngFor="let service of services" class="service">
         <div class="main">
-          <mat-icon svgIcon="edu:check"></mat-icon>
+          <mat-icon class="fill-blue" svgIcon="edu:ic-check"></mat-icon>
           <div class="heading-4 color-dark-blue">{{service.title}}</div>
         </div>
         <div *ngIf="service.parts as parts" class="parts">
@@ -41,7 +67,7 @@
       </div>
     </div>
 
-    <div class="body-3 text-align-center color-dark-grey">
+    <div class="body-3 text-align-center color-dark-grey" i18n="About services info">
       ❗️Ja neesi atradis vajadzīgo pakalpojumu sarakstā, neuzstraucies, visticemāk tas vienkārši vēl nav pievienots
     </div>
   </div>

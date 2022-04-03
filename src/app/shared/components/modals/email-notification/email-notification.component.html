@@ -4,21 +4,32 @@
     <ng-container *ngIf="data.status === emailStatus.SUCCESS">
       <mat-icon class="success">check_circle_outline</mat-icon>
       <div class="info">
-        <div class="heading-3 color-dark-blue">Paldies!</div>
-        <div class="body-2 color-dark-grey">Jūsu {{data.type === emailType.ORDER ? 'pieteikums' : 'jautājums'}} ir veiksmīgi nosūtīts.</div>
+        <div class="heading-3 color-dark-blue" i18n="Email notification success heading">Paldies!</div>
+        <div class="body-2 color-dark-grey">
+          <ng-container *ngIf="data.type === emailType.ORDER" i18n="Email notification success order body">
+            Jūsu pieteikums ir veiksmīgi nosūtīts.
+          </ng-container>
+          <ng-container *ngIf="data.type === emailType.QUESTION" i18n="Email notification success question body">
+            Jūsu jautājums ir veiksmīgi nosūtīts.
+          </ng-container>
+        </div>
       </div>
     </ng-container>
 
     <ng-container *ngIf="data.status === emailStatus.ERROR">
       <mat-icon class="error">error_outline</mat-icon>
       <div class="info">
-        <div class="heading-3 color-dark-blue">Oops...</div>
-        <div class="body-2 color-dark-grey">Notika servera kļūda. Mēģiniet vēlreiz.</div>
+        <div class="heading-3 color-dark-blue" i18n="Email notification error heading">Oops...</div>
+        <div class="body-2 color-dark-grey" i18n="Email notification error body">Notika servera kļūda. Mēģini vēlreiz.<br>Vai sazinies ar mums uz tiešo:</div>
+      </div>
+      <div class="contacts">
+        <div class="contact"><mat-icon>email</mat-icon><a class="heading-4 link-2" href="mailto:info@eduhelp.lv">info@eduhelp.lv</a></div>
+        <div class="contact"><mat-icon>local_phone</mat-icon><a class="heading-4 link-2" href="tel:+371 28857299">+371 25324951</a></div>
       </div>
     </ng-container>
 
   </mat-dialog-content>
-  <mat-dialog-actions align="center">
-    <button mat-stroked-button mat-dialog-close cdkFocusInitial>Aizvert</button>
+  <mat-dialog-actions>
+    <button mat-stroked-button mat-dialog-close i18n="Email notification close button title">Aizvert</button>
   </mat-dialog-actions>
 </div>

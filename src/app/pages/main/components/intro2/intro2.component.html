@@ -1,60 +1,49 @@
 <div class="section-wrapper main">
-<!--  <mat-icon svgIcon="edu:abstract"></mat-icon>-->
-<!--  <mat-icon svgIcon="edu:wave"></mat-icon>-->
   <div class="section-content">
     <div class="intro-wrapper">
       <div class="upper">
         <div class="main-section">
+
           <div class="heading-1 color-dark-blue">
-            Kvalitātīva palīdzība ar
+            <span i18n="Intro heading static">Kvalitatīva palīdzība ar</span>
             <div class="typewriter">
               <div class="text" [innerHTML]="typewriterText"></div>
-              <!--          <div class="line" [style.width.ch]="words[wordIndex].length"></div>-->
             </div>
           </div>
-          <div class="body-1 color-dark-grey">
-            Grūtā tēma, vai nav laika darbu izpildīšanai? Mēs tev palīdzēsim!<br>
-            Pasūtī izpildīšanu un saņēm garantēto rezultātu! 🙌
+          <div class="body-1 color-dark-grey" i18n="Intro body">
+            Grūta tēma, vai nav laika darbu izpildīšanai? Mēs Tev palīdzēsim!<br> Nosūtī pieteikumu un saņem garantēto rezultātu! 🙌
           </div>
-
         </div>
 
-        <mat-icon class="illustration" svgIcon="edu:study-work"></mat-icon>
+        <mat-icon class="illustration" svgIcon="edu:ill-study-work"></mat-icon>
 
         <div class="buttons">
-
           <a class="primary-button"
              mat-flat-button
              color="primary"
-             routerLink="pasutit">
-            Atstāt pieteikumu
-          </a>
+             routerLink="order"
+             i18n="Order button title@@orderButtonTitle">Nosūtīt pieteikumu</a>
 
-          <a class=""
-             mat-stroked-button
+          <a mat-stroked-button
              href="https://wa.me/37125324951">
-            <mat-icon svgIcon="edu:whatsapp-simple"></mat-icon>
-            <span>Uzrakstīt mums</span>
+            <mat-icon svgIcon="edu:ic-wp"></mat-icon>
+            <span i18n="Whatsapp button title@@whatsappButtonTitle">Uzrakstīt Whatsapp</span>
           </a>
-
         </div>
 
         <div class="costs-form-wrapper">
-
-          <div class="heading-3 color-dark-blue">Uzzini izmaksas:</div>
+          <div class="heading-3 color-dark-blue" i18n="Costs form heading">Uzzini izmaksas:</div>
 
           <form [formGroup]="questionForm" (ngSubmit)="onFormSubmit()">
-
             <mat-form-field appearance="outline">
-              <mat-label>Darba apraksts</mat-label>
+              <mat-label i18n="Form field work description label@@formFieldWorkDescLabel">Darba apraksts</mat-label>
               <input matInput
                      required
-                     placeholder="Priekšmeta nosaukums, klase, izpildes termiņi utt."
+                     [placeholder]="workDescriptionPlaceholder"
                      formControlName="question">
               <mat-hint align="end">{{questionForm.controls.question.value.length}} / 256</mat-hint>
               <mat-error *ngIf="questionForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
             </mat-form-field>
-
             <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
               <input matInput
@@ -63,21 +52,23 @@
                      formControlName="email">
               <mat-error *ngIf="questionForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
             </mat-form-field>
-
             <button color="primary"
-                    mat-flat-button>Uzzināt izmaksas &#8594;</button>
+                    mat-flat-button>
+              <mat-spinner *ngIf="formBusy" [strokeWidth]="3" [diameter]="36"></mat-spinner>
+              <ng-container *ngIf="!formBusy">
+                <span i18n="Find costs button title">Uzzināt izmaksas</span>
+                &#8594;
+              </ng-container>
+            </button>
           </form>
 
           <div class="body-3 color-dark-grey">
-            Vēlies sniegt pilnu aprakstu?
-            <a class="link" routerLink="pasutit">Azpildi pieteikumu</a>
+            <span i18n="Costs form info">Vēlies sniegt pilnu aprakstu?</span>&nbsp;
+            <a class="link" routerLink="order" i18n="@@orderButtonTitle">Nosūtīt pieteikumu</a>
           </div>
         </div>
       </div>
     </div>
-
-
-
   </div>
 </div>
 
@@ -85,14 +76,11 @@
   <div class="section-content">
     <div class="advantages-wrapper">
       <div class="advantages-box">
-<!--        <mat-icon svgIcon="edu:dots"></mat-icon>-->
         <div *ngFor="let advantage of advantages" class="advantage">
-<!--                    <mat-icon fontSet="material-icons-round" [svgIcon]="advantage.icon">{{advantage.icon}}</mat-icon>-->
-          <mat-icon svgIcon="edu:check"></mat-icon>
-          <div class="heading-4 color-dark-blue">{{advantage.name}}</div>
+          <div class="heading-2 color-blue">{{advantage.number}}</div>
+          <div class="body-1 color-dark-blue">{{advantage.name}}</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>

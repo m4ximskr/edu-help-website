@@ -17,7 +17,7 @@ input:-webkit-autofill:active{
   //  font-size: 16px;
   //}
 
-  &.mat-flat-button,&.mat-stroked-button {
+  &.mat-button,&.mat-flat-button,&.mat-stroked-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,6 +56,7 @@ input:-webkit-autofill:active{
   &.mat-stroked-button:not(.mat-button-disabled) {
     //border-color: #1267f4;
     color: #1267f4;
+    background-color: #fff;
 
     //&:hover {
     //  .mat-button-focus-overlay {

@@ -1,58 +1,62 @@
-import { Component, OnInit } from '@angular/core';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'edu-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
+
+  points = [
+    {
+      icon: 'flag',
+      title: $localize`:About 1 title:Mērķis`,
+      text:  $localize`:About 1 text:Mūsu mērķis ir dot iespēju koncentrēties uz lietām, kas patiešām ir svarīgas, netērējot laiku bezjēdzīgiem skolas sistēmas priekšmetiem, kas nedod ieguvuma un praktiska pielietojuma.`
+    },
+    {
+      icon: 'people_alt',
+      title: $localize`:About 2 title:Izpildītāji`,
+      text: $localize`:About 2 text:Izpildītāji, kas strādā Eduhelp, ir sevi pierādījuši konkrētas jomas eksperti, kuriem mēs piedāvājam iespēju nopelnīt ar savām zināšanām sev interesējošā tēmā.`,
+    },
+    {
+      icon: 'verified_user',
+      title: $localize`:About 3 title:Kvalitāte`,
+      text: $localize`:About 3 text:Kvalitātes nodrošināšana un individuāla pieeja ir mūsu galvenās priekšrocības, kuras mūs ievērojami atšķir no konkurentiem.`,
+    }
+  ]
 
   services = [
     {
-    title: 'Palīdzība ar tālmācības skolām:',
+      title: $localize`:About service 1 title:Palīdzība ar tālmācības skolām:`,
       parts: [
         'Rīgas 1. Tālmācības vidusskola',
         'Rīgas 1. vidusskola',
         'Rīgas Komercskola',
         'Eiropas Tālmācības vidusskola',
         'Rīgas Tālmācības vidusskola',
-        'un citas',
+        $localize`:@@andOtherText:un citas.`,
       ]
   },
     {
-      title: 'Online platformas:',
+      title: $localize`:About service 2 title:Online platformas:`,
       parts: [
         'uzdevumi.lv',
         'macibas.e-skola.lv',
         'soma.lv',
-        'un citas',
+        $localize`:@@andOtherText:un citas.`,
       ],
     },
     {
-      title: 'Atsevišķi darbi, kurus vajag izpildīt līdz noteiktajam termiņam',
+      title: $localize`:About service 3 title:Atsevišķi darbi, kurus nepieciešams izpildīt līdz noteiktajam termiņam`,
     },
     {
-      title: 'Online palīdzība ar darbiem noteiktajā laikā',
+      title: $localize`:About service 4 title:Online palīdzība ar darbiem noteiktajā laikā`,
     },
     {
-      title: 'Visu semestra darbu izpilde uz vajadzīgām atzīmēm vakarskolās',
+      title: $localize`:About service 5 title:Visu semestra darbu izpilde ar vajadzīgajām atzīmēm vakarskolās`,
     },
     {
-      title: 'Palīdzība tehnisko universitāšu studentiem',
+      title: $localize`:About service 6 title:Palīdzība tehnisko universitāšu studentiem`,
     }
   ]
-
-  constructor(private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer) {
-    this.iconRegistry.addSvgIconInNamespace('edu', 'about-illustration',  this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/education-woman-3.svg'));
-    // this.iconRegistry.addSvgIcon(
-    //   'about-illustration',
-    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_education_f8ru.svg'));
-  }
-
-  ngOnInit(): void {
-  }
-
 }

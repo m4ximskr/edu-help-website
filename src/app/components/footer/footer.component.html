@@ -1,19 +1,16 @@
-<div *ngIf="!hideUpperSection" class="section-wrapper bg-color-dark-blue upper">
+<div class="section-wrapper bg-color-dark-blue upper">
   <div class="section-content">
     <div class="upper-footer-wrapper">
 
-        <!--        <img class="logo" src="/assets/images/logo_dark_lv.png">-->
-        <img class="logo" src="assets/images2/logo_lv_png.png">
+        <img class="logo" [src]="logoPath + logoName">
 
-        <div class="heading-4 color-white">Kontakti</div>
+        <div class="heading-4 color-white" i18n="Footer heading contacts">Kontakti</div>
 
-        <div class="heading-4 color-white">Rekviziīti</div>
+<!--        <div class="heading-4 color-white" i18n="Footer heading bank details">Mājāslapu apkalpo uzņēmums</div>-->
+      <div></div>
 
         <div class="main">
-          <div class="body-3 color-extra-light-grey">
-            Eduhelp - mācību palīdzības serviss. Mēs sniedzam kvalitātes garantiju jebkuram mūsu pakalpojumam.
-          </div>
-          <div class="body-3 color-extra-light-grey">
+          <div class="body-3 color-extra-light-grey" i18n="Footer body about">
             Eduhelp eksperti veic darbu pie materiāla atlases, apstrādes un strukturēšanas
             atbilstoši klienta prasībām. Šī darba rezultāts nav gatavs zinātnisks darbs, bet var kalpot kā
             avots tā rakstīšanai.
@@ -22,45 +19,53 @@
         </div>
 
         <div class="contacts column">
-          <div class="body-3 color-extra-light-grey">Tel. Nr.: &nbsp;<a class="link">+371 25324951</a></div>
-          <div class="body-3 color-extra-light-grey">Email: &nbsp;<a class="link">info@eduhelp.lv</a></div>
+          <div class="body-3 color-extra-light-grey">
+            <ng-container i18n="Telephone number">Tel. Nr.:</ng-container>
+            &nbsp;
+            <a class="link" href="tel:+371 25324951">+371 25324951</a></div>
+          <div class="body-3 color-extra-light-grey">Email: &nbsp;<a class="link" href="mailto:info@eduhelp.lv">info@eduhelp.lv</a></div>
 
           <div class="social-icons">
-            <a href="/">
-              <mat-icon class="social-icon" svgIcon="edu:fb"></mat-icon>
+            <a href="https://www.facebook.com/eduhelp.lv">
+              <mat-icon class="social-icon" svgIcon="edu:ic-fb-coloured"></mat-icon>
             </a>
-            <a href="/">
-              <mat-icon class="social-icon" svgIcon="edu:instagram"></mat-icon>
+            <a href="https://www.instagram.com/eduhelp_lv">
+              <mat-icon class="social-icon" svgIcon="edu:ic-ig-coloured"></mat-icon>
             </a>
-            <a href="/">
-              <mat-icon class="social-icon" svgIcon="edu:vk"></mat-icon>
+<!--            <a href="/">-->
+<!--              <mat-icon class="social-icon" svgIcon="edu:vk"></mat-icon>-->
+<!--            </a>-->
+            <a href="https://www.tiktok.com/@eduhelp_lv">
+              <mat-icon class="social-icon" svgIcon="edu:ic-tt-coloured"></mat-icon>
             </a>
-            <a href="/">
-              <mat-icon class="social-icon" svgIcon="edu:tiktok"></mat-icon>
+            <a href="https://wa.me/37125324951">
+              <mat-icon class="social-icon" svgIcon="edu:ic-wp-coloured"></mat-icon>
             </a>
-            <a href="/">
-              <mat-icon class="social-icon" svgIcon="edu:whatsapp"></mat-icon>
-            </a>
-            <a href="/">
-              <mat-icon class="social-icon" svgIcon="edu:discord"></mat-icon>
-            </a>
+<!--            <a href="/">-->
+<!--              <mat-icon class="social-icon" svgIcon="edu:discord"></mat-icon>-->
+<!--            </a>-->
           </div>
 
-
-          <!--          <div class="sm-list">-->
-          <!--            <social-media-icon name="vk"></social-media-icon>-->
-          <!--            <social-media-icon name="fb"></social-media-icon>-->
-          <!--            <social-media-icon name="instagram"></social-media-icon>-->
-          <!--          </div>-->
         </div>
 
-        <div class="bank-details column">
-          <div class="body-3 color-extra-light-grey">SIA SolutionsVS</div>
-          <div class="body-3 color-extra-light-grey">Reģ. Nr.: &nbsp;40203222555</div>
-          <div class="body-3 color-extra-light-grey">Banka: &nbsp;A/S Swedbank</div>
-          <div class="body-3 color-extra-light-grey">SWIFT: &nbsp;HABALV22</div>
-          <div class="body-3 color-extra-light-grey">Konta Nr.: &nbsp;LV45HABA0551047037611</div>
-        </div>
+      <div></div>
+
+<!--        <div class="bank-details column">-->
+<!--          <div class="body-3 color-extra-light-grey">SIA SolutionsVS</div>-->
+<!--          <div class="body-3 color-extra-light-grey">-->
+<!--            <ng-container i18n="Footer bank details registration number">Reģ. Nr.:</ng-container>-->
+<!--            &nbsp;40203222555-->
+<!--          </div>-->
+<!--          <div class="body-3 color-extra-light-grey">-->
+<!--            <ng-container i18n="Footer bank details bank">Banka:</ng-container>-->
+<!--            &nbsp;A/S Swedbank-->
+<!--          </div>-->
+<!--          <div class="body-3 color-extra-light-grey">SWIFT: &nbsp;HABALV22</div>-->
+<!--          <div class="body-3 color-extra-light-grey">-->
+<!--            <ng-container i18n="Footer bank details account number">Konta Nr.:</ng-container>-->
+<!--            &nbsp;LV45HABA0551047037611-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
     </div>
@@ -68,8 +73,11 @@
 <div class="section-wrapper bg-color-dark-blue lower">
   <div class="section-content">
     <div class="lower-footer-wrapper">
-      <div class="body-3 color-white">© 2018-2021, Eduhelp. <a class="link" target="_blank"
-                                                               [routerLink]="'noteikumi'">Lietošanas Noteikumi</a>
+      <div class="body-3 color-white">
+        © 2018-2022, Eduhelp.
+        <a class="link" target="_blank" [routerLink]="'terms'" i18n="Terms of use@@terms">
+          Lietošanas Noteikumi
+        </a>
       </div>
     </div>
   </div>

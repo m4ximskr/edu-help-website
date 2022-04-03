@@ -25,12 +25,6 @@ export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
 
   filesFormArray: FormArray = new FormArray([]);
 
-  fruits = [
-    {name: 'Lemon'},
-    {name: 'Lime'},
-    {name: 'Apple'},
-  ];
-
 
   @ViewChild('fileUploadInput') fileUploadInput: ElementRef;
 

@@ -1,45 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'edu-work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
-export class WorkComponent implements OnInit {
-
+export class WorkComponent {
+  private numberLinkHtml = `<a class="link" href="tel:+371 25324951">+371 25324951</a>`;
   steps = [
     {
-      title: 'Sazināties ar mums',
-      text: `Atstājiet pieteikumu mūsu mājaslapā, sociālajos tiklos, vai zvaniet pa tālruni <a class="link">+371 25324951</a>.`,
+      title: $localize`:Work 1 title:Sazināties ar mums`,
+      text: $localize`:Work 1 text:Nosūti savu pieteikumu mūsu mājas lapā, sociālajos tīklos vai piesakies zvanot uz tel.nr. ${this.numberLinkHtml}.`,
     },
     {
-      title: 'Apspriest detaļas',
-      text: 'Mēs ar Jums vienosimies par izmaksām, termiņiem un citiem nosacījumiem.',
+      title: $localize`:Work 2 title:Apspriest detaļas`,
+      text: $localize`:Work 2 text:Mēs vienosimies par izmaksām, izpildes termiņiem un citiem nosacījumiem.`,
     },
     {
-      title: 'Apmaksāt rēķinu',
-      text: 'Mēs atsūtīsim rēķinu par mūsu pakalpojumiem, kuru Jūs varēsiet apmaksāt jebkurā brīdī.',
+      title: $localize`:Work 3 title:Sagaidīt darba pabeigšanu`,
+      text: $localize`:Work 3 text:Darbs būs gatavs pēc iespējas ātrāk. Mēs negaidām pēdējo brīdi un pildām visu savlaicīgi.`,
     },
     {
-      title: 'Sagaidīt darba pabeigšanu',
-      text: 'Darbs būs gatavs pēc iespējas ātrāk. Mēs negaidām pēdējo brīdi un pildām visu savlaicīgi.',
+      title: $localize`:Work 4 title:Apmaksāt rēķinu`,
+      text: $localize`:Work 4 text:Mēs atsūtīsim rēķinu par mūsu pakalpojumiem, kuru Jūs varēsiet apmaksāt jebkurā brīdī.`,
     },
     {
-      title: 'Sagaidīt atzīmi par izpildītu darbu ',
-      text: 'Pēc jūsu darba nodošanas mēs garantējam, ka saņemsiet vēlamo atzīmi.',
+      title: $localize`:Work 5 title:Sagaidīt atzīmi par izpildītu darbu`,
+      text: $localize`:Work 5 text:Pēc darba nodošanas mēs garantējam, ka saņemsi vēlamo atzīmi.`,
     },
   ];
-
-  constructor(private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer) {
-    this.iconRegistry.addSvgIcon(
-      'completed_steps',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_work_together_re_5yhn.svg'));
-  }
-
-  ngOnInit() {
-  }
-
 }

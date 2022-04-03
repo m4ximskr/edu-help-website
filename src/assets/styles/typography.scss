@@ -4,7 +4,12 @@
   letter-spacing: -1px;
   line-height: 70px;
 
-  @media (max-width: 550px) {
+  //@media (max-width: 550px) {
+  //  font-size: 40px;
+  //  line-height: 50px;
+  //}
+
+  @media (max-width: 1000px) {
     font-size: 40px;
     line-height: 50px;
   }
@@ -16,7 +21,7 @@
   letter-spacing: -1px;
   line-height: 60px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 1000px) {
     font-size: 35px;
     line-height: 45px;
   }
@@ -28,7 +33,7 @@
   font-weight: 600;
   line-height: 40px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 1000px) {
     font-size: 25px;
     line-height: 35px;
   }
@@ -39,6 +44,11 @@
   letter-spacing: -0.1px;
   font-weight: 500;
   line-height: 32px;
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .heading-5 {
@@ -51,6 +61,11 @@
   font-size: 20px;
   letter-spacing: -0.5px;
   line-height: 32px;
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .body-2 {
@@ -90,12 +105,11 @@ a {
   cursor: pointer;
 
   &.link {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--blue);
 
     &:hover {
-      text-decoration: underline;
-      //color: #1b6dff;
+      text-decoration: none;
     }
   }
 

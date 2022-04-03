@@ -16,14 +16,14 @@ export class SendMailService {
   // http://localhost:3000/send-order-mail
 
   sendOrderMail(data) {
-    return this.http.post('zhttps://api.eduhelp.lv/send-order-mail', {params: data, headers: this.headers});
+    return this.http.post('https://api.eduhelp.lv/send-order-mail', {params: data, headers: this.headers});
     // return of(null);
   }
 
   sendQuestionMail(data) {
     // return of(null)
-    return throwError('ee')
-    // return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
+    // return throwError('ee')
+    return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
   }
 
 }

@@ -1,15 +1,23 @@
 <div class="section-wrapper bg-color-white">
   <div class="section-content">
-    <div class="heading-2 color-dark-blue text-align-center">Kā mēs strādājam</div>
-    <div class="body-1 color-dark-grey text-align-center">
+
+    <div
+      class="heading-2 color-dark-blue text-align-center"
+      i18n="Work heading"
+    >
+      Kā mēs strādājam
+    </div>
+    <div
+      class="body-1 color-dark-grey text-align-center"
+      i18n="Work body"
+    >
       Lai saņemtu gatavu darbu, nepieciešams izpildīt 5 vienkāršus soļus 👨‍🔧
     </div>
 
     <div class="work-content">
       <div class="left-section">
-        <mat-icon svgIcon="completed_steps"></mat-icon>
+        <mat-icon svgIcon="edu:ill-work-together"></mat-icon>
       </div>
-
       <div class="right-section">
         <div class="steps-list">
           <div *ngFor="let step of steps; let i = index; let isLast = last" class="step-box" [class.last]="isLast">
@@ -22,17 +30,6 @@
           </div>
         </div>
       </div>
-
     </div>
-
-    <!--      <div class="control">-->
-    <!--        <div class="heading-3 color-dark-blue">Izmēģini pats!</div>-->
-    <!--        <a mat-flat-button-->
-    <!--           color="primary"-->
-    <!--           [routerLink]="'../pasutit'">-->
-    <!--          Atstāt pieteikumu-->
-    <!--        </a>-->
-    <!--      </div>-->
-
   </div>
 </div>

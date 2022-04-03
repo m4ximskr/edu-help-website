@@ -3,18 +3,11 @@
     <div class="section-content not-found-wrapper">
 
       <mat-icon>error_outline</mat-icon>
-      <h2>
-        Lapa nav atrasta - 404
-      </h2>
-      <p class="sub-title">
-        ️Atvainojamies, Jūsu meklētās lapas nav vai tā ir pārcelta citā vietā.
-      </p>
+      <div class="heading-2 color-dark-blue" i18n="Not found heading">Lapa nav atrasta - 404</div>
+      <div class="body-1 color-dark-grey" i18n="Not found body">️Atvainojamies, Jūsu meklētās lapas nav vai tā ir pārcelta citā vietā.</div>
 
-      <a class="big round"
-         mat-flat-button
-         color="primary"
-         [routerLink]="''">
-        Uz galveno
+      <a mat-flat-button color="primary" [routerLink]="''">
+        <ng-container i18n="Go to main page button title@@mainPageButtonTitle">Uz galveno</ng-container>
       </a>
     </div>
   </div>

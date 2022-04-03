@@ -10,7 +10,7 @@
   <button mat-flat-button color="primary" (click)="uploadFile($event)">
     <mat-spinner *ngIf="loadingFile"
                  [diameter]="30"></mat-spinner>
-    <span *ngIf="!loadingFile">+ Pievienot failus</span>
+    <span *ngIf="!loadingFile" i18n="Add files button title@@addFilesButtonTitle">+ Pievienot failus</span>
   </button>
 
   <div class="files">

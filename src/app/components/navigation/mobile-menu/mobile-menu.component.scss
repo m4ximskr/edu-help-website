@@ -6,9 +6,9 @@
 
   padding: 0 5%;
 
-  @media (max-width: 650px) {
-    padding: 0 10px;
-  }
+  //@media (max-width: 650px) {
+  //  padding: 0 10px;
+  //}
 
   .header {
     height: 70px;
@@ -30,7 +30,7 @@
 
   .menu-content {
     display: grid;
-    grid-template-columns: minmax(auto, 500px);
+    grid-template-columns: minmax(auto, 300px);
     grid-template-rows: repeat(3,max-content);
     grid-row-gap: 40px;
     justify-content: center;
@@ -99,18 +99,23 @@
         margin: 0 auto;
 
         mat-icon {
-          width: 30px;
-          height: 30px;
-          font-size: 30px;
+          width: 20px;
+          height: 20px;
+          font-size: 20px;
           pointer-events: none;
-          color: #1b6dff;
+          color: var(--blue);
         }
       }
-
     }
 
-    .action-button {
-      width: 100%;
+    .main-buttons {
+      display: grid;
+      grid-auto-flow: row;
+      grid-row-gap: 10px;
+
+      a {
+        width: 100%;
+      }
     }
   }
 }

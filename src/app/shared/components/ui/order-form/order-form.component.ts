@@ -4,7 +4,13 @@ import {SendMailService} from '../../../services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EmailNotificationComponent, EmailStatus, EmailType} from '../../modals/email-notification/email-notification.component';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
-import {distinctUntilChanged, startWith} from 'rxjs/operators';
+import {distinctUntilChanged} from 'rxjs/operators';
+import {
+  emailFieldErrorText,
+  requiredFieldErrorText,
+  telephoneNumberFieldErrorText,
+  workDescriptionFormFieldPlaceholder
+} from "../../../form-constants";
 
 @Component({
   selector: 'order-form',
@@ -14,12 +20,33 @@ import {distinctUntilChanged, startWith} from 'rxjs/operators';
 export class OrderFormComponent implements OnInit {
 
   clientForm: FormGroup;
-
+  workDescriptionPlaceholder = workDescriptionFormFieldPlaceholder;
   busy = false;
 
-  constructor(private formBuilder: FormBuilder,
-              private sendMailService: SendMailService,
-              private dialog: MatDialog) {
+  get getNameErrorMessage(): string {
+    return this.clientForm.controls.name.hasError('required') ? requiredFieldErrorText : '';
+  }
+
+  get getEmailErrorMessage(): string {
+    if (this.clientForm.controls.email.hasError('required')) {
+      return requiredFieldErrorText;
+    }
+    return this.clientForm.controls.email.hasError('email') ? emailFieldErrorText : '';
+  }
+
+  get getNumberErrorMessage(): string {
+    return this.clientForm.controls.number.hasError('pattern') ? telephoneNumberFieldErrorText : '';
+  }
+
+  get getDescErrorMessage(): string {
+    return this.clientForm.controls.description.hasError('required') ? requiredFieldErrorText : '';
+  }
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private sendMailService: SendMailService,
+    private dialog: MatDialog
+  ) {
     this.createForm();
   }
 
@@ -27,28 +54,7 @@ export class OrderFormComponent implements OnInit {
     this.listenPhoneChanges();
   }
 
-  get getNameErrorMessage(): string {
-    return this.clientForm.controls.name.hasError('required') ? 'Šis lauks ir obligāts' : '';
-  }
-
-  get getEmailErrorMessage(): string {
-    if (this.clientForm.controls.email.hasError('required')) {
-      return 'Šis lauks ir obligāts';
-    }
-    return this.clientForm.controls.email.hasError('email') ? 'Nepareizs email' : '';
-  }
-
-  get getNumberErrorMessage(): string {
-    return this.clientForm.controls.number.hasError('pattern') ? 'Nepareizs telefona numurs' : '';;
-  }
-
-  get getDescErrorMessage(): string {
-    return this.clientForm.controls.description.hasError('required') ? 'Šis lauks ir obligāts' : '';
-  }
-
-
-
-  sendMail() {
+  onFormSubmit() {
     if (this.clientForm.valid) {
       this.busy = true;
       this.sendMailService.sendOrderMail(this.clientForm.value).subscribe(res => {
@@ -58,11 +64,8 @@ export class OrderFormComponent implements OnInit {
         this.createNotificationModal(EmailStatus.ERROR);
         this.busy = false;
       })
-    } else {
-      this.clientForm.markAsTouched();
     }
   }
-
 
   private createForm() {
     this.clientForm = this.formBuilder.group({

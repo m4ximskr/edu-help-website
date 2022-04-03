@@ -33,15 +33,13 @@ export class MobileMenuService {
     const positionStrategy = this.overlay
       .position()
       .global()
-      .height('max-content')
 
     return new OverlayConfig({
       hasBackdrop: true,
       backdropClass: 'dark-backdrop',
-      panelClass: 'burger-menu-panel',
+      panelClass: 'mobile-menu-pane',
       scrollStrategy: this.overlay.scrollStrategies.noop(),
       positionStrategy,
-      width: '100%',
     });
   }
 

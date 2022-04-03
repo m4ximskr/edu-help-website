@@ -1,5 +1,5 @@
 .section-wrapper {
-  //background-image: url('../../../../../assets/images2/happy.jpeg');
+  //background-image: url('../../../../../assets/images/happy.jpeg');
   //background-size: cover;
   //background-position: center;
   //background-repeat: no-repeat;
@@ -49,19 +49,23 @@
 
 
       .phone {
-        max-width: 300px;
-        height: max-content;
+        width: 300px;
+        height: 500px;
+        //height: max-content;
         float: right;
         position: relative;
-        overflow: hidden;
+        //overflow: hidden;
         transform: rotate(15deg);
         margin-right: 50px;
-        //background-image: url('~src/assets/images2/svg/phone-border.svg');
+        //background-image: url('~src/assets/images/svg/phone-border.svg');
 
         @media (max-width: 900px) {
           display: block;
           margin: 0 auto;
-          float: none;
+          width: 200px;
+          height: 400px;
+          //float: none;
+          //max-width: 200px;
         }
 
         mat-icon {
@@ -73,11 +77,12 @@
 
         img {
           position: absolute;
-          top: 10px;
-          left: 1px;
-          width: calc(100% - 5px);
-          height: calc(100% - 20px);
-          border-radius: 15%;
+          //top: 2px;
+          //left: 11px;
+          //width: calc(100% - 5px);
+          //height: calc(100% - 10px);
+          //border-radius: 12%;
+          height: 100%;
 
           &.first {
             z-index: 1;

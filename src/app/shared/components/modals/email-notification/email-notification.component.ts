@@ -21,17 +21,13 @@ interface EmailNotification {
   templateUrl: './email-notification.component.html',
   styleUrls: ['./email-notification.component.scss']
 })
-export class EmailNotificationComponent implements OnInit {
+export class EmailNotificationComponent {
 
   emailStatus = EmailStatus;
 
   emailType = EmailType;
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data,
-  ) { }
-
-  ngOnInit() {
-  }
-
+    @Inject(MAT_DIALOG_DATA) public data: EmailNotification,
+  ) {}
 }

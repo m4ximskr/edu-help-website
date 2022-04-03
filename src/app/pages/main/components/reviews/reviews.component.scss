@@ -1,16 +1,19 @@
 .section-wrapper {
-  //background-image: url("../../../../../assets/images2/clouds-02.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  //background-attachment: fixed;
+  mat-icon {
+    position: absolute;
+    fill: var(--light-blue);
+    width: 120px;
+    height: 120px;
+    top: -25px;
+    z-index: -1;
+  }
 
   edu-slider {
     display: block;
     margin: 30px 0 50px 0;
   }
 
-  button {
+  a {
     margin: 20px auto 0 auto;
   }
 }

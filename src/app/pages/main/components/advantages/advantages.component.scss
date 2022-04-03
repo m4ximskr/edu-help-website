@@ -21,6 +21,10 @@
       grid-template-columns: max-content auto;
       grid-column-gap: 40px;
 
+      @media (max-width: 550px) {
+        grid-column-gap: 20px;
+      }
+
       mat-icon {
         width: 60px;
         height: 60px;

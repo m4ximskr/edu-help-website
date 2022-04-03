@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {clone} from 'lodash';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
 import {
   EmailNotificationComponent,
   EmailStatus, EmailType
@@ -10,6 +7,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
+import {
+  emailFieldErrorText,
+  requiredFieldErrorText,
+  workDescriptionFormFieldPlaceholder
+} from "../../../../shared/form-constants";
 
 @Component({
   selector: 'edu-intro2',
@@ -18,8 +20,11 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class Intro2Component implements OnInit {
 
-
-  words = ['tālmācības ieskaitēm', 'mājāsdarbiem', 'kontroldarbiem'];
+  words = [
+    $localize`:Typewriter 1 word:tālmācības ieskaitēm`,
+    $localize`:Typewriter 2 word:mājāsdarbiem`,
+    $localize`:Typewriter 3 word:kontroldarbiem`,
+  ];
   wordIndex = 0;
 
   textPosition = 0;
@@ -30,55 +35,47 @@ export class Intro2Component implements OnInit {
   questionForm: FormGroup;
 
   advantages = [
-    // {
-    //   name: 'Pieejamas cenas skolēniem',
-    //   icon: '💵',
-    // },
     {
-      name: 'Atlaides pastāvīgajiem klientiem',
-      icon: 'present',
+      name: $localize`:Intro advantages 1 phrase:gadus aktīvi strādājam`,
+      number: '4+',
     },
     {
-      name: 'Liels izpildītāju skaits',
-      icon: 'groups',
+      name: $localize`:Intro advantages 2 phrase:klientiem esam palīdzējuši`,
+      number: '700+',
     },
     {
-      name: 'Augstā darbu izpildes kvalitāte',
-      icon: 'grade',
+      name: $localize`:Intro advantages 3 phrase:klientu atgriezās pie mums vēl`,
+      number: '70%+',
     },
   ];
 
-  constructor(private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer,
-              private formBuilder: FormBuilder,
+  formBusy: boolean;
+
+  workDescriptionPlaceholder = workDescriptionFormFieldPlaceholder;
+
+  get getEmailErrorMessage(): string {
+    const emailControl = this.questionForm.controls.email;
+    if (emailControl.hasError('required')) {
+      return requiredFieldErrorText;
+    } else if (emailControl.hasError('email')) {
+      return emailFieldErrorText;
+    } else {
+      return '';
+    }
+  }
+
+  get getQuestionErrorMessage(): string {
+    const questionControl = this.questionForm.controls.question;
+    if (questionControl.hasError('required')) {
+      return requiredFieldErrorText;
+    } else {
+      return '';
+    }
+  }
+
+  constructor(private formBuilder: FormBuilder,
               private sendMailService: SendMailService,
               private dialog: MatDialog) {
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'study-work',
-      // this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_book_lover_re_rwjy.svg'));
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_attached_file_re_0n9b.svg' +
-        ''));
-    this.iconRegistry.addSvgIcon(
-      'present',
-      // this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_book_lover_re_rwjy.svg'));
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/present.svg'));
-
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'dots',
-      // this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_book_lover_re_rwjy.svg'));
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/dots.svg' +
-        ''));
-
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'abstract',
-      // this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_book_lover_re_rwjy.svg'));
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/298_Abstract_background-01.svg' +
-        ''));
-
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'wave',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/wave.svg'));
-
     this.createForm();
   }
 
@@ -111,31 +108,14 @@ export class Intro2Component implements OnInit {
     }
   }
 
-  get getEmailErrorMessage(): string {
-    const emailControl = this.questionForm.controls.email;
-    if (emailControl.hasError('required')) {
-      return 'Šis lauks ir obligāts';
-    } else if (emailControl.hasError('email')) {
-      return 'Nepareizs email';
-    } else {
-      return '';
-    }
-  }
-
-  get getQuestionErrorMessage(): string {
-    const questionControl = this.questionForm.controls.question;
-    if (questionControl.hasError('required')) {
-      return 'Šis lauks ir obligāts';
-    } else {
-      return '';
-    }
-  }
-
   onFormSubmit() {
     if (this.questionForm.valid) {
+      this.formBusy = true;
       this.sendMailService.sendQuestionMail(this.questionForm.value).subscribe(res => {
+        this.formBusy = false;
         this.createNotificationModal(EmailStatus.SUCCESS);
       }, err => {
+        this.formBusy = false;
         this.createNotificationModal(EmailStatus.ERROR);
       });
     }

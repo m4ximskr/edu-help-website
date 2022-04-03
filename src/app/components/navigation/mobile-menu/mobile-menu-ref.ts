@@ -11,7 +11,10 @@ export class MobileMenuRef {
   public readonly overlayRemoved$ = this.overlayRemovedSubj.asObservable();
 
   constructor(private overlayRef: OverlayRef) {
-    this.overlayRef.backdropClick().subscribe(() => this.close());
+    this.overlayRef.backdropClick().subscribe(() => {
+      console.log('backdrop')
+      this.close()
+    });
   }
 
   close(index?: number): void {

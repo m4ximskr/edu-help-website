@@ -7,8 +7,11 @@ import {
   EmailStatus, EmailType
 } from '../../../../shared/components/modals/email-notification/email-notification.component';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import {
+  emailFieldErrorText,
+  questionFormFieldPlaceholder,
+  requiredFieldErrorText
+} from "../../../../shared/form-constants";
 
 @Component({
   selector: 'edu-questions',
@@ -19,26 +22,14 @@ export class QuestionsComponent implements OnInit {
 
   questionForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
-              private sendMailService: SendMailService,
-              private dialog: MatDialog,
-              private iconRegistry: MatIconRegistry,
-              private sanitizer: DomSanitizer) {
-    this.createForm();
-
-    this.iconRegistry.addSvgIconInNamespace('edu', 'chat-illustration',  this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/chat-2-01.svg'));
-
-  }
-
-  ngOnInit() {
-  }
+  questionPlaceholder = questionFormFieldPlaceholder;
 
   get getEmailErrorMessage(): string {
     const emailControl = this.questionForm.controls.email;
     if (emailControl.hasError('required')) {
-      return 'Šis lauks ir obligāts';
+      return requiredFieldErrorText;
     } else if (emailControl.hasError('email')) {
-      return 'Nepareizs email';
+      return emailFieldErrorText;
     } else {
       return '';
     }
@@ -47,10 +38,20 @@ export class QuestionsComponent implements OnInit {
   get getQuestionErrorMessage(): string {
     const questionControl = this.questionForm.controls.question;
     if (questionControl.hasError('required')) {
-      return 'Šis lauks ir obligāts';
+      return requiredFieldErrorText;
     } else {
       return '';
     }
+  }
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private sendMailService: SendMailService,
+    private dialog: MatDialog
+  ) {}
+
+  ngOnInit() {
+    this.createForm();
   }
 
   onFormSubmit() {
@@ -79,5 +80,4 @@ export class QuestionsComponent implements OnInit {
       }
     });
   }
-
 }

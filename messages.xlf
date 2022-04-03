@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="855290d0ca29e998a13f8094690631bd409f1d1e" datatype="html">
+        <source>Kontakti</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Footer heading contacts</note>
+      </trans-unit>
+      <trans-unit id="9918472fc40334b0723c0f50fdaa8048acafabf2" datatype="html">
+        <source>Mājāslapu apkalpo uzņēmums</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Footer heading bank details</note>
+      </trans-unit>
+      <trans-unit id="8d8125f806f3d70f10aafbd5791220d61c7643cb" datatype="html">
+        <source> Eduhelp eksperti veic darbu pie materiāla atlases, apstrādes un strukturēšanas atbilstoši klienta prasībām. Šī darba rezultāts nav gatavs zinātnisks darbs, bet var kalpot kā avots tā rakstīšanai. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">12,16</context>
+        </context-group>
+        <note priority="1" from="description">Footer body about</note>
+      </trans-unit>
+      <trans-unit id="1811a656527c4a011063f70a7a13f694df61297b" datatype="html">
+        <source>Tel. Nr.:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Telephone number</note>
+      </trans-unit>
+      <trans-unit id="3b42c49e9d1973776855b6930bf075446469b2ed" datatype="html">
+        <source>Reģ. Nr.:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Footer bank details registration number</note>
+      </trans-unit>
+      <trans-unit id="073f6af93c991de2b52af2d2158e9243b10aaf22" datatype="html">
+        <source>Banka:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Footer bank details bank</note>
+      </trans-unit>
+      <trans-unit id="3c0686a900276a58fbac51cce8f966c630d6d26c" datatype="html">
+        <source>Konta Nr.:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Footer bank details account number</note>
+      </trans-unit>
+      <trans-unit id="terms" datatype="html">
+        <source> Lietošanas Noteikumi </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/terms/terms.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Terms of use</note>
+      </trans-unit>
+      <trans-unit id="lightLogoName" datatype="html">
+        <source>logo-light-lv.png</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="89d6cd7d772f77f93a08c57ddedbc9c9930bcbae" datatype="html">
+        <source> 🎁 20% atlaide pirmajam pasūtījumam 🎁 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/info-block/info-block.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+        <note priority="1" from="description">Info block body</note>
+      </trans-unit>
+      <trans-unit id="orderButtonTitle" datatype="html">
+        <source>Atstāt pieteikumu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/action/action.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whatsappButtonTitle" datatype="html">
+        <source>Uzrakstīt Whatsapp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="langIcon" datatype="html">
+        <source>edu:ic-lv</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="darkLogoName" datatype="html">
+        <source>logo-dark-lv.png</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3109563877711980292" datatype="html">
+        <source>Galvenā</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 1 title</note>
+      </trans-unit>
+      <trans-unit id="2450951429511514833" datatype="html">
+        <source>Atsauksmes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 2 title</note>
+      </trans-unit>
+      <trans-unit id="4005647178241094153" datatype="html">
+        <source>Priekšrocības</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 3 title</note>
+      </trans-unit>
+      <trans-unit id="467152698327190533" datatype="html">
+        <source>Process</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 4 title</note>
+      </trans-unit>
+      <trans-unit id="3687676755237556620" datatype="html">
+        <source>Sociālie tīkli</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 5 title</note>
+      </trans-unit>
+      <trans-unit id="943172835629591088" datatype="html">
+        <source>Par mums</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 6 title</note>
+      </trans-unit>
+      <trans-unit id="4006675007580591463" datatype="html">
+        <source>Komanda</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Navigation 7 title</note>
+      </trans-unit>
+      <trans-unit id="d0796de657e0708578a899ca53bd310a108edd27" datatype="html">
+        <source>Par mums</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">About heading</note>
+      </trans-unit>
+      <trans-unit id="6b01380a9c076f3b9e1ad33c1ceb7a3f110f7349" datatype="html">
+        <source>Eduhelp – mācību palīdzības serviss 👩‍🏫</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">About body</note>
+      </trans-unit>
+      <trans-unit id="e6a99d5afff18354e6c2be21034fef9096011964" datatype="html">
+        <source>Palīdzam no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">About icon text</note>
+      </trans-unit>
+      <trans-unit id="5934a8da97c86c052e7e8be42af9006a7353c18a" datatype="html">
+        <source>2018. gada</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">About icon year</note>
+      </trans-unit>
+      <trans-unit id="ae0eea0c3fa9f424fb01587f40c5fb3c337194a1" datatype="html">
+        <source> EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā. Mēs sākām savu darbību 2018. gadā, un esam palīdzējuši jau vairāk nekā 1000 klientiem. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">32,35</context>
+        </context-group>
+        <note priority="1" from="description">About 1 description</note>
+      </trans-unit>
+      <trans-unit id="5092b51d963ce5ae48d23dd3d402688add9bdf2f" datatype="html">
+        <source> Pašreizējā izglītības sistēma ir tālu no ideāla. To atzīst gan skolotāji, gan skolēni, gan valdība, kura izdod reformas, cenšoties dot iespēju skolēniem apgūt tieši tos priekšmetus, kas viņiem interesē. Taču patiesībā iznāk pavisam otrādi – izglītības plāns sastāv no daudziem priekšmetiem, kuru mērķis Ir “paplašināt redzesloku&quot;, nevis sniegt reālu pamatu jomā, kura interesē. Tieši šajās situācijās mēs cenšamies palīdzēt cilvēkiem. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">36,42</context>
+        </context-group>
+        <note priority="1" from="description">About 2 description</note>
+      </trans-unit>
+      <trans-unit id="db7b9606926a7b919bed2de744575aeb6dfd7746" datatype="html">
+        <source> Mēs palīdzam pieaugušiem cilvēkiem, kuri pēc ilga pārtraukuma nolemj pabeigt skolu, sniedzot padomus, kā arī palīdzam ar priekšmetiem, kuri aizmirsās un dzīvē nebija izmantoti. Palīdzam arī skolēniem, kuriem dažādu iemeslu dēļ nav iespējas pašiem pabeigt skolu. Eduhelp servisa ideja ir dot cilvēkiem iespēju koncentrēties uz jomas, kas viņus patiešām interesē un dzīvē noderēs, pārējos priekšmetus deleģējot ekspertiem. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">43,48</context>
+        </context-group>
+        <note priority="1" from="description">About 3 description</note>
+      </trans-unit>
+      <trans-unit id="ac81e28b6c96e1ba3aa65ca39ab61f7ddee14dbf" datatype="html">
+        <source>Mūsu sniegto pakalpojumu saraksts ir ļoti plašs:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">About services heading</note>
+      </trans-unit>
+      <trans-unit id="5b4856e7947fa9a051f4f51ba6244fb4b09bdf06" datatype="html">
+        <source> ❗️Ja neesi atradis vajadzīgo pakalpojumu sarakstā, neuzstraucies, visticemāk tas vienkārši vēl nav pievienots </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+        <note priority="1" from="description">About services info</note>
+      </trans-unit>
+      <trans-unit id="7364396240061213999" datatype="html">
+        <source>Mērķis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">About 1 title</note>
+      </trans-unit>
+      <trans-unit id="7345846615319263884" datatype="html">
+        <source>Mūsu mērķis ir dot iespēju koncentrēties uz lietām, kas patiešām ir svarīgas, netērējot laiku bezjēdzīgiem skolas sistēmas priekšmetiem, kas nedod ieguvuma un praktiska pielietojuma.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">About 1 text</note>
+      </trans-unit>
+      <trans-unit id="5913079607658606977" datatype="html">
+        <source>Izpildītāji</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">About 2 title</note>
+      </trans-unit>
+      <trans-unit id="9188085891625711547" datatype="html">
+        <source>Izpildītāji, kas strādā Eduhelp, ir sevi pierādījuši konkrētas jomas eksperti, kuriem mēs piedāvājam iespēju nopelnīt ar savām zināšanām sev interesējošā tēmā.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">About 2 text</note>
+      </trans-unit>
+      <trans-unit id="3753551935018761973" datatype="html">
+        <source>Kvalitāte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">About 3 title</note>
+      </trans-unit>
+      <trans-unit id="215080231220960249" datatype="html">
+        <source>Kvalitātes nodrošināšana un individuāla pieeja ir mūsu galvenās priekšrocības, kuras mūs ievērojami atšķir no konkurentiem.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">About 3 text</note>
+      </trans-unit>
+      <trans-unit id="5654993056672115236" datatype="html">
+        <source>Palīdzība ar tālmācības skolām:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">About service 1 title</note>
+      </trans-unit>
+      <trans-unit id="andOtherText" datatype="html">
+        <source>un citas.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6376487361434659108" datatype="html">
+        <source>Online platformas:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">About service 2 title</note>
+      </trans-unit>
+      <trans-unit id="8986104287329500358" datatype="html">
+        <source>Atsevišķi darbi, kurus nepieciešams izpildīt līdz noteiktajam termiņam</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">About service 3 title</note>
+      </trans-unit>
+      <trans-unit id="359838216207044185" datatype="html">
+        <source>Online palīdzība ar darbiem noteiktajā laikā</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">About service 4 title</note>
+      </trans-unit>
+      <trans-unit id="8329510173081230928" datatype="html">
+        <source>Visu semestra darbu izpilde ar vajadzīgajām atzīmēm vakarskolās</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">About service 5 title</note>
+      </trans-unit>
+      <trans-unit id="3452688743741592623" datatype="html">
+        <source>Palīdzība tehnisko universitāšu studentiem</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description">About service 6 title</note>
+      </trans-unit>
+      <trans-unit id="7548b07edd5eb9a22fb09e73189706f71ceb991e" datatype="html">
+        <source> Neatliec darba izpildīšanu uz pēdējo dienu </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/action/action.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">Action heading</note>
+      </trans-unit>
+      <trans-unit id="e288402b2ae036554d555ab2b26c5868a8596b49" datatype="html">
+        <source> Nosūti pieteikumu un saņem atbildi ar piedāvājumu par cenu un izpildīšanas nosacījumiem stundas laikā. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/action/action.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <note priority="1" from="description">Action body</note>
+      </trans-unit>
+      <trans-unit id="b7d975b740160de972af9db57516004a5cb62aad" datatype="html">
+        <source>Kāpēc izvēlēties mūs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Advantages heading</note>
+      </trans-unit>
+      <trans-unit id="d446cd7e9ddf59dd62ebd1f5e58bb8dc79353449" datatype="html">
+        <source>Ekspertu ir gatavi palīdzēt tev katru dienu!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Advantages experts heading</note>
+      </trans-unit>
+      <trans-unit id="668731922770816495" datatype="html">
+        <source>Augstu rezultātu garantija</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 1 title</note>
+      </trans-unit>
+      <trans-unit id="3898470415309410632" datatype="html">
+        <source>Mēs strādājam ar klientu līdz darba iesniegšanai un vajadzīgās atzīmes saņemšanai.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 1 text</note>
+      </trans-unit>
+      <trans-unit id="4979118196587927229" datatype="html">
+        <source>BEZ priekšapmaksas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 2 title</note>
+      </trans-unit>
+      <trans-unit id="6210062477193323151" datatype="html">
+        <source>Gadījumā, ja Tev nepieciešama palīdzība ar tālmācības skolām, apmaksāt darbu Tu varēsi pēc vajadzīgas atzīmes saņemšanas!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 2 text</note>
+      </trans-unit>
+      <trans-unit id="9206099742639647307" datatype="html">
+        <source>Pārbaudīts un 100% garantēts rezultāts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 3 title</note>
+      </trans-unit>
+      <trans-unit id="2702872457863239202" datatype="html">
+        <source>Darbu pilda uzticami skolēni ar izcilām priekšmeta zināšanām. Katrs izpildītājs uzņemas priekšmetu, kuru viņš labi izprot.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 3 text</note>
+      </trans-unit>
+      <trans-unit id="4297394866866303804" datatype="html">
+        <source>Vairāk nekā “labi”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 4 title</note>
+      </trans-unit>
+      <trans-unit id="2071533684837729085" datatype="html">
+        <source>65% gadījumos klienti saņem labāku atzīmi nekā bija gaidījuši. Mēs strādājam ar rezervi, lai precīzi atbilstu Tavam vēlmēm.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 4 text</note>
+      </trans-unit>
+      <trans-unit id="8161024216897696027" datatype="html">
+        <source>Ātrums</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 5 title</note>
+      </trans-unit>
+      <trans-unit id="8414865004202980453" datatype="html">
+        <source>Darbu ar pasūtījumu mēs sākam tajā pašā dienā, kad saņemam pasūtījumu. Praktiski jebkurš pasūtījums var būt izpildīts 24 stundu laikā.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 5 text</note>
+      </trans-unit>
+      <trans-unit id="6250435146764814576" datatype="html">
+        <source>Strādājam 24/7</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 6 title</note>
+      </trans-unit>
+      <trans-unit id="1849886458992075605" datatype="html">
+        <source>Mēs vienmēr esam pieejami un jebkurā brīdī esam gatavi izpildīt darbu! Strādājam arī svētku dienās.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Advantages 6 text</note>
+      </trans-unit>
+      <trans-unit id="85975f839bd4442c4bf566b002985e5237df0627" datatype="html">
+        <source>Kvalitatīva palīdzība ar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Intro heading static</note>
+      </trans-unit>
+      <trans-unit id="ee3a1057c4e392502f20c05e2ce7648361a9fc44" datatype="html">
+        <source> Grūta tēma, vai nav laika darbu izpildīšanai? Mēs Tev palīdzēsim!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Nosūtī pieteikumu un saņem garantēto rezultātu! 🙌 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <note priority="1" from="description">Intro body</note>
+      </trans-unit>
+      <trans-unit id="8250afd29fdbfeb52ec4c6e93f436ad14d54b5fc" datatype="html">
+        <source>Uzzini izmaksas:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Costs form heading</note>
+      </trans-unit>
+      <trans-unit id="formFieldWorkDescLabel" datatype="html">
+        <source>Darba apraksts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Form field work description label</note>
+      </trans-unit>
+      <trans-unit id="219fe1025d0ee14f593021355e9cc29e8f134891" datatype="html">
+        <source>Uzzināt izmaksas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description">Find costs button title</note>
+      </trans-unit>
+      <trans-unit id="27dfa48ce2fa54d942618ac52934adaae3041e1a" datatype="html">
+        <source>Vēlies sniegt pilnu aprakstu?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <note priority="1" from="description">Costs form info</note>
+      </trans-unit>
+      <trans-unit id="7036851575308950904" datatype="html">
+        <source>tālmācības ieskaitēm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Typewriter 1 word</note>
+      </trans-unit>
+      <trans-unit id="7377522461923617614" datatype="html">
+        <source>mājāsdarbiem</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Typewriter 2 word</note>
+      </trans-unit>
+      <trans-unit id="1685916263603499864" datatype="html">
+        <source>kontroldarbiem</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Typewriter 3 word</note>
+      </trans-unit>
+      <trans-unit id="5923997645329715858" datatype="html">
+        <source>gadus aktīvi strādājam</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Intro advantages 1 phrase</note>
+      </trans-unit>
+      <trans-unit id="8216321479621580258" datatype="html">
+        <source>klientiem esam palīdzējuši</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Intro advantages 2 phrase</note>
+      </trans-unit>
+      <trans-unit id="3692620230259957309" datatype="html">
+        <source>klientu atgriezās pie mums vēl</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/intro2/intro2.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Intro advantages 3 phrase</note>
+      </trans-unit>
+      <trans-unit id="7a9f53e8e7f0ff73e470c1d936002f367f6367c0" datatype="html">
+        <source> Pievienojies mūsu komandai </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+        <note priority="1" from="description">Join team heading</note>
+      </trans-unit>
+      <trans-unit id="53ac3dd4964ef55fcca2341d6580d6ce4a9b64b1" datatype="html">
+        <source> Kļūsti par Eduhelp ekspertu un nopelni ar savām zināšanām jebkurā sev ērtā laikā 🤝 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">Join team body</note>
+      </trans-unit>
+      <trans-unit id="92d287a7505475a62ad5ab8d7d35024d2521bb3f" datatype="html">
+        <source>No mūsu puses mēs garantējam:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Join team warranties title</note>
+      </trans-unit>
+      <trans-unit id="212e3d502d402ad58260db8f6786e5a17be4878c" datatype="html">
+        <source>Nosūti pieteikumu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Join team form heading</note>
+      </trans-unit>
+      <trans-unit id="formFieldFullNameLabel" datatype="html">
+        <source>Pilnais vārds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Form field name label</note>
+      </trans-unit>
+      <trans-unit id="695348d63d9619e1acf61c817a5fc1f30bbdc75b" datatype="html">
+        <source>Pastāsti par sevi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Form field about yourself label</note>
+      </trans-unit>
+      <trans-unit id="sendFormButtonTitle" datatype="html">
+        <source>Nosūtīt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3956013165878772205" datatype="html">
+        <source>Brīvs grafiks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Team warranties list 1 title</note>
+      </trans-unit>
+      <trans-unit id="7947886565788038185" datatype="html">
+        <source>Strādā sev ērtā laikā. Galvenais, ja paņēmi darbu – izpildi to laikā.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Team warranties list 1 text</note>
+      </trans-unit>
+      <trans-unit id="3123416444440938071" datatype="html">
+        <source>Stabils darbs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Team warranties list 2 title</note>
+      </trans-unit>
+      <trans-unit id="3387422365494655407" datatype="html">
+        <source>Tu pats regulē cik daudz darbu pilldīsi, savukārt mēs garantējam ikmēneša izmaksas.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Team warranties list 2 text</note>
+      </trans-unit>
+      <trans-unit id="8052287867331582363" datatype="html">
+        <source>Laba attieksme</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Team warranties list 3 title</note>
+      </trans-unit>
+      <trans-unit id="6201064416241226768" datatype="html">
+        <source>Mēs nodrošinam Tavu datu konfidencialitāti, kā arī dodam iespēju atteikties no darba, kuru nevēlies pildīt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/join-team/join-team.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Team warranties list 3 text</note>
+      </trans-unit>
+      <trans-unit id="43f460d0a4ec22b70407c123487378ddb916a756" datatype="html">
+        <source> Vēl kādi jautājumi? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+        <note priority="1" from="description">Questions heading</note>
+      </trans-unit>
+      <trans-unit id="2f07ab8e34cc49c8646c00409276ae9e61002d19" datatype="html">
+        <source> Sazinies ar mums jebkurā laikā 👩‍💻 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+        <note priority="1" from="description">Questions body</note>
+      </trans-unit>
+      <trans-unit id="a15d4aa85ad49c468990e1f3cf4982cdc2ce3132" datatype="html">
+        <source> Aizpildi un nosūti šo formu: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+        <note priority="1" from="description">Questions form heading</note>
+      </trans-unit>
+      <trans-unit id="fab6491f82267113f7450f0a9713830dae2b7434" datatype="html">
+        <source>Jūsu jautājumus</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Your question field label</note>
+      </trans-unit>
+      <trans-unit id="8bf77ba13876856916ec7c0e85c6b746bd9c2cf1" datatype="html">
+        <source>Uzdod savu jautājumu uz tiešo:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/questions/questions.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Question contacts heading</note>
+      </trans-unit>
+      <trans-unit id="fc07399f78524c27bad274cad414852cb3321ac6" datatype="html">
+        <source>Atsauksmes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/reviews/reviews.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Reviews heading</note>
+      </trans-unit>
+      <trans-unit id="925705889611660b2a86e4e19e531af3d6559fed" datatype="html">
+        <source> Vairāk atsauksmes vari atrast mūsu Instagram profilā - sadaļā &quot;Atsauksmes&quot; ⭐️ </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/reviews/reviews.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">Reviews body</note>
+      </trans-unit>
+      <trans-unit id="117b7007fa89a214cabf6ea74ea8253e72cfc6ce" datatype="html">
+        <source>Skatīt visas atsauksmes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/reviews/reviews.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Reviews button title</note>
+      </trans-unit>
+      <trans-unit id="c205397dddcbbead4dbf7e25826d4ca58673b10b" datatype="html">
+        <source>Mūsu sociālie tīkli</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/social-medias/social-medias.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Social medias heading</note>
+      </trans-unit>
+      <trans-unit id="2df830e473c73b7c7271a67541f88996cade0251" datatype="html">
+        <source> Seko mums mūsu sociālajos tīklos, lai pēc iespējas ātrāk uzzinātu par Eduhelp jaunumiem un iespējamām akcijām. Kā arī vari pasūtīt darba izpildīšanu rakstot mums jebkurā no mesendžēriem 😉 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/social-medias/social-medias.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+        <note priority="1" from="description">Social medias body</note>
+      </trans-unit>
+      <trans-unit id="8aad497ecb6902eb7cea1934b002749fc24dc5b6" datatype="html">
+        <source> Kā mēs strādājam </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="description">Work heading</note>
+      </trans-unit>
+      <trans-unit id="13450e5b5cbaa152a79075829bb0d1c7d7e0db48" datatype="html">
+        <source> Lai saņemtu gatavu darbu, nepieciešams izpildīt 5 vienkāršus soļus 👨‍🔧 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <note priority="1" from="description">Work body</note>
+      </trans-unit>
+      <trans-unit id="5177509750605160499" datatype="html">
+        <source>Sazināties ar mums</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Work 1 title</note>
+      </trans-unit>
+      <trans-unit id="4200357585235530859" datatype="html">
+        <source>Nosūti savu pieteikumu mūsu mājas lapā, sociālajos tīklos vai piesakies zvanot uz tel.nr. <x id="PH" equiv-text="this.numberLinkHtml"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Work 1 text</note>
+      </trans-unit>
+      <trans-unit id="2869108023612619252" datatype="html">
+        <source>Apspriest detaļas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Work 2 title</note>
+      </trans-unit>
+      <trans-unit id="2832757421208887563" datatype="html">
+        <source>Mēs vienosimies par izmaksām, izpildes termiņiem un citiem nosacījumiem.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Work 2 text</note>
+      </trans-unit>
+      <trans-unit id="6185811119055475594" datatype="html">
+        <source>Sagaidīt darba pabeigšanu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Work 3 title</note>
+      </trans-unit>
+      <trans-unit id="1158508880415970790" datatype="html">
+        <source>Darbs būs gatavs pēc iespējas ātrāk. Mēs negaidām pēdējo brīdi un pildām visu savlaicīgi.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Work 3 text</note>
+      </trans-unit>
+      <trans-unit id="94000635775904923" datatype="html">
+        <source>Apmaksāt rēķinu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Work 4 title</note>
+      </trans-unit>
+      <trans-unit id="291966387913084226" datatype="html">
+        <source>Mēs atsūtīsim rēķinu par mūsu pakalpojumiem, kuru Jūs varēsiet apmaksāt jebkurā brīdī.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Work 4 text</note>
+      </trans-unit>
+      <trans-unit id="9095996755471822689" datatype="html">
+        <source>Sagaidīt atzīmi par izpildītu darbu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Work 5 title</note>
+      </trans-unit>
+      <trans-unit id="2325778532239070385" datatype="html">
+        <source>Pēc darba nodošanas mēs garantējam, ka saņemsi vēlamo atzīmi.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Work 5 text</note>
+      </trans-unit>
+      <trans-unit id="96e2c5e93a527bf2b2aeafb4274410d00493e0cf" datatype="html">
+        <source>Lapa nav atrasta - 404</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Not found heading</note>
+      </trans-unit>
+      <trans-unit id="c008959279b7f65ac370d354f66cb9e7d3da3b23" datatype="html">
+        <source>️Atvainojamies, Jūsu meklētās lapas nav vai tā ir pārcelta citā vietā.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Not found body</note>
+      </trans-unit>
+      <trans-unit id="mainPageButtonTitle" datatype="html">
+        <source>Uz galveno</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Go to main page button title</note>
+      </trans-unit>
+      <trans-unit id="70418e5aaec40d4dfacb1eaec1a2904d46d24bf5" datatype="html">
+        <source>Pasūti darba izpildīšanu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Order heading</note>
+      </trans-unit>
+      <trans-unit id="2b12e61880c35c529bd0346680053ab1c85790d4" datatype="html">
+        <source> Pasūti darba izpildīšanu un saņem garantēto rezultātu! 🤓 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+        <note priority="1" from="description">Order subheading</note>
+      </trans-unit>
+      <trans-unit id="4f8ad2da13a4a5352b80448b5479d0edc21392e9" datatype="html">
+        <source>Cena par darbu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Order money stat title</note>
+      </trans-unit>
+      <trans-unit id="6320692861e01fa9c9d4e692d0d27b6c12b21c3b" datatype="html">
+        <source>no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Order money stat text start</note>
+      </trans-unit>
+      <trans-unit id="0533f46942b19f07e288ecfc3ef503c101868bf8" datatype="html">
+        <source>Izpildīšanas laiks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Order time stat title</note>
+      </trans-unit>
+      <trans-unit id="fae62df9729c5a8e334be451f55321e824e4fa54" datatype="html">
+        <source>stundas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Order time stat text end</note>
+      </trans-unit>
+      <trans-unit id="b3b8c770c7044004d99dd830eb153118dc3441a7" datatype="html">
+        <source> Atstājot pieteikumu, lūdzam norādīt sekojošas detaļas: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+        <note priority="1" from="description">Order factors title</note>
+      </trans-unit>
+      <trans-unit id="57378777591472750" datatype="html">
+        <source>Skolas nosaukums vai vietne (ja tā ir tālmācība)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Factors 1 title</note>
+      </trans-unit>
+      <trans-unit id="1830794804171514057" datatype="html">
+        <source>Klase, kurā mācies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Factors 2 title</note>
+      </trans-unit>
+      <trans-unit id="5407395256611941482" datatype="html">
+        <source>Priekšmets, kurā ir nepieciešama palīdzība</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Factors 3 title</note>
+      </trans-unit>
+      <trans-unit id="2962781648041804469" datatype="html">
+        <source>Darba izpildes termiņi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Factors 4 title</note>
+      </trans-unit>
+      <trans-unit id="5575180556963750820" datatype="html">
+        <source>Cik augsta atzīme ir nepieciešama</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/order/order.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Factors 5 title</note>
+      </trans-unit>
+      <trans-unit id="0b6bc4880f6c6c67e9698e82e7367e1368ffa78f" datatype="html">
+        <source>Paldies!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/modals/email-notification/email-notification.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Email notification success heading</note>
+      </trans-unit>
+      <trans-unit id="ead5e8c958036255f8ecedc9c9bbf6ba05fe899e" datatype="html">
+        <source> Jūsu pieteikums ir veiksmīgi nosūtīts. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/modals/email-notification/email-notification.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <note priority="1" from="description">Email notification success order body</note>
+      </trans-unit>
+      <trans-unit id="c849b9523b9d26ed0c80cb5d568f70788af2c6f6" datatype="html">
+        <source> Jūsu jautājums ir veiksmīgi nosūtīts. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/modals/email-notification/email-notification.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+        <note priority="1" from="description">Email notification success question body</note>
+      </trans-unit>
+      <trans-unit id="0821fc87fbf595b8258f1807fc0a452ab4d6b0b6" datatype="html">
+        <source>Oops...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/modals/email-notification/email-notification.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Email notification error heading</note>
+      </trans-unit>
+      <trans-unit id="446983725c39fdd01b385a6277051f3508ecc50b" datatype="html">
+        <source>Notika servera kļūda. Mēģini vēlreiz.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>Vai sazinies ar mums uz tiešo:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/modals/email-notification/email-notification.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Email notification error body</note>
+      </trans-unit>
+      <trans-unit id="16614466bcee975ef2bf60122c3ec9b1ce2a6667" datatype="html">
+        <source>Aizvert</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/modals/email-notification/email-notification.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Email notification close button title</note>
+      </trans-unit>
+      <trans-unit id="addFilesButtonTitle" datatype="html">
+        <source>+ Pievienot failus</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/form/file-attachment/file-attachment.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Add files button title</note>
+      </trans-unit>
+      <trans-unit id="88f5cbdb54eb8bbd18a77619c9e7aafc3c1f38da" datatype="html">
+        <source>Atstāj pieteikumu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Order form heading</note>
+      </trans-unit>
+      <trans-unit id="formFieldTelephoneLabel" datatype="html">
+        <source>Telefona numurs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Form field telephone label</note>
+      </trans-unit>
+      <trans-unit id="agreeWithTermsText" datatype="html">
+        <source> ❗️Nosūtot pieteikumu, tu apliecini, ka esi piekritis </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+        <note priority="1" from="description">Agree with terms text</note>
+      </trans-unit>
+      <trans-unit id="agreeWithTermsLink" datatype="html">
+        <source>Lietošanas Noteikumiem</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <note priority="1" from="description">Agree with terms link</note>
+      </trans-unit>
+      <trans-unit id="6449935825913953401" datatype="html">
+        <source>Šis lauks ir obligāts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form-constants.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Required field error</note>
+      </trans-unit>
+      <trans-unit id="7097776054433152539" datatype="html">
+        <source>Nepareizs email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form-constants.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Email field error</note>
+      </trans-unit>
+      <trans-unit id="7058828140785973887" datatype="html">
+        <source>Nepareizs telefona numurs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form-constants.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Telephone number field error</note>
+      </trans-unit>
+      <trans-unit id="5033283139828366072" datatype="html">
+        <source>Priekšmeta nosaukums, klase, izpildes termiņi utt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form-constants.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Work description field placeholder</note>
+      </trans-unit>
+      <trans-unit id="8077961279529721854" datatype="html">
+        <source>Mācību pieredze, stipras puses, prasmes utt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form-constants.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">About yourself field placeholder</note>
+      </trans-unit>
+      <trans-unit id="6576688067570287341" datatype="html">
+        <source>Jebkas, kur jums ir radušas neskaidrības</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form-constants.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Question field placeholder</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

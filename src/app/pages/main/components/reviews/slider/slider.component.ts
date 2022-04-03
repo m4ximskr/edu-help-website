@@ -21,8 +21,8 @@ export class SliderComponent implements OnInit {
     { src: '2.jpg' },
     { src: '3.jpg' },
     { src: '4.jpg' },
-    { src: '5.png' },
-    { src: '6.png' },
+    { src: '5.jpg' },
+    { src: '6.jpg' },
   ]
 
   slides = [];

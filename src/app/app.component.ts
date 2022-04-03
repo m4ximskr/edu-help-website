@@ -10,7 +10,7 @@ import {ScrollingHelperService} from './shared/services/scrolling-helper.service
 
 @UntilDestroy()
 @Component({
-  selector: 'app-root',
+  selector: 'edu-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
@@ -33,63 +33,63 @@ export class AppComponent implements OnInit {
   }
 
   private registerIcons() {
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'fb',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/fb-coloured.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'vk',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/vk-coloured.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'instagram',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/ig-coloured.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'fb',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/fb-coloured.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'vk',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/vk-coloured.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'instagram',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/ig-coloured.svg'));
+    //
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'tiktok',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/tt-coloured.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'whatsapp',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/wp-coloured.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'discord',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/ds-coloured.svg'));
+    //
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'whatsapp-simple',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/whatsapp.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'facebook-simple',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/facebook.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'instagram-simple',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/instagram.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'vk-simple',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/vk.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'tiktok-simple',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/tiktok.svg'));
 
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'tiktok',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/tt-coloured.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'whatsapp',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/wp-coloured.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'discord',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/ds-coloured.svg'));
 
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'whatsapp-simple',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/whatsapp.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'facebook-simple',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/facebook.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'instagram-simple',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/instagram.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'vk-simple',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/vk.svg'));
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'tiktok-simple',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/tiktok.svg'));
-
-
-    this.iconRegistry.addSvgIconInNamespace('edu',
-      'check',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/check.svg'));
-
-    this.iconRegistry.addSvgIcon(
-      'lv',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/lv.svg'));
-    this.iconRegistry.addSvgIcon(
-      'ru',
-      this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/ru.svg'));
+    // this.iconRegistry.addSvgIconInNamespace('edu',
+    //   'check',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/check.svg'));
+    //
+    // this.iconRegistry.addSvgIcon(
+    //   'lv',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/lv.svg'));
+    // this.iconRegistry.addSvgIcon(
+    //   'ru',
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/ru.svg'));
 
     // this.iconRegistry.addSvgIconInNamespace('edu',
     //   'abstract',
-    //   // this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_book_lover_re_rwjy.svg'));
-    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/298_Abstract_background-01.svg' +
+    //   // this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/undraw_book_lover_re_rwjy.svg'));
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/298_Abstract_background-01.svg' +
     //     ''));
 
     // this.iconRegistry.addSvgIcon(
     //   'completedSteps',
-    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images2/svg/undraw_completed_steps_re_h9wc.svg'));
+    //   this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/svg/undraw_completed_steps_re_h9wc.svg'));
   }
 
   ngOnInit() {

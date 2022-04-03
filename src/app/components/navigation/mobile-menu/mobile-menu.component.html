@@ -4,51 +4,72 @@
      (@slideContent.done)="onAnimationDone($event)">
 
   <div class="header">
+<!--    <div class="lang-button" [matMenuTriggerFor]="menu">-->
+<!--      <mat-icon svgIcon="lv"></mat-icon>-->
+<!--      <mat-icon class="icon-expand">expand_more</mat-icon>-->
+<!--    </div>-->
+
     <button mat-icon-button (click)="close()"><mat-icon>close</mat-icon></button>
   </div>
 
   <div class="menu-content">
 
-    <a mat-flat-button color="primary" class="action-button" [routerLink]="'pasutit'" (click)="close()">Atstāt pieteikumu</a>
+    <div class="main-buttons">
+      <div class="lang">
+        <a mat-button href="/lv/"><mat-icon svgIcon="edu:ic-lv"></mat-icon>LV</a>
+        <a mat-button href="/ru/"><mat-icon svgIcon="edu:ic-ru"></mat-icon>RU</a>
+      </div>
+      <a mat-flat-button color="primary" [routerLink]="'order'" (click)="close()" i18n="@@orderButtonTitle">Atstāt pieteikumu</a>
+      <a mat-stroked-button href="https://wa.me/37125324951">
+        <mat-icon svgIcon="edu:ic-wp"></mat-icon>
+        <span i18n="@@whatsappButtonTitle">Uzrakstīt Whatsapp</span>
+      </a>
+    </div>
 
     <div class="tabs">
-      <div *ngFor="let tab of tabs; let i = index" class="tab color-dark-blue body-1" [class.hidden]="i === 7" (click)="close(i)">
+      <div *ngFor="let tab of tabs; let i = index" class="tab color-dark-blue body-2" [class.hidden]="i === 7" (click)="close(i)">
         {{tab}}
       </div>
     </div>
 
-    <div class="social-icons">
-      <a href="/">
-        <mat-icon class="social-icon" svgIcon="edu:fb"></mat-icon>
-      </a>
-      <a href="/">
-        <mat-icon class="social-icon" svgIcon="edu:instagram"></mat-icon>
-      </a>
-      <a href="/">
-        <mat-icon class="social-icon" svgIcon="edu:vk"></mat-icon>
-      </a>
-      <a href="/">
-        <mat-icon class="social-icon" svgIcon="edu:tiktok"></mat-icon>
-      </a>
-      <a href="/">
-        <mat-icon class="social-icon" svgIcon="edu:whatsapp"></mat-icon>
-      </a>
-      <a href="/">
-        <mat-icon class="social-icon" svgIcon="edu:discord"></mat-icon>
-      </a>
-    </div>
-
     <div class="contacts">
-      <div class="contact"><mat-icon>email</mat-icon><a class="heading-4 link" href="mailto:info@eduhelp.lv">info@eduhelp.lv</a></div>
-      <div class="contact"><mat-icon>local_phone</mat-icon><a class="heading-4 link" href="tel:+371 28857299">+371 25324951</a></div>
+      <div class="contact"><mat-icon>email</mat-icon><a class="heading-4 link-2" href="mailto:info@eduhelp.lv">info@eduhelp.lv</a></div>
+      <div class="contact"><mat-icon>local_phone</mat-icon><a class="heading-4 link-2" href="tel:+371 25324951">+371 25324951</a></div>
     </div>
 
-    <div class="lang">
-      <a mat-stroked-button href="/lv/"><mat-icon svgIcon="lv"></mat-icon>Latviešu</a>
-      <a mat-stroked-button href="/ru/"><mat-icon svgIcon="ru"></mat-icon>Русский</a>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/eduhelp.lv">
+        <mat-icon class="social-icon" svgIcon="edu:ic-fb-coloured"></mat-icon>
+      </a>
+      <a href="https://www.instagram.com/eduhelp_lv">
+        <mat-icon class="social-icon" svgIcon="edu:ic-ig-coloured"></mat-icon>
+      </a>
+      <!--      <a href="/">-->
+      <!--        <mat-icon class="social-icon" svgIcon="edu:vk"></mat-icon>-->
+      <!--      </a>-->
+      <a href="https://www.tiktok.com/@eduhelp_lv">
+        <mat-icon class="social-icon" svgIcon="edu:ic-tt-coloured"></mat-icon>
+      </a>
+      <a href="https://wa.me/37125324951">
+        <mat-icon class="social-icon" svgIcon="edu:ic-wp-coloured"></mat-icon>
+      </a>
+      <!--      <a href="/">-->
+      <!--        <mat-icon class="social-icon" svgIcon="edu:discord"></mat-icon>-->
+      <!--      </a>-->
     </div>
 
 
   </div>
 
 </div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <a class="menu-link body-2 color-dark-grey" href="/lv/"><mat-icon svgIcon="edu:ic-lv">lv</mat-icon>Latviešu
+    </a>
+  </button>
+  <button mat-menu-item>
+    <a class="menu-link body-2 color-dark-grey" href="/ru/"><mat-icon svgIcon="edu:ic-ru">ru</mat-icon>Русский
+    </a>
+  </button>
+</mat-menu>
