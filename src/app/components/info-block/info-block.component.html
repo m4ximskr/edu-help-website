@@ -4,13 +4,23 @@
 <!--      <span class="body-3 color-white">-->
 <!--        🔥️ 100% atlaide jebkuram pasūtījumam līdz 04.03.2022 🔥-->
 <!--      </span>-->
-<!--      <span *ngIf="time" class="body-3 color-white">-->
-<!--      Piedāvājums beigsies pēc {{time.days}} dienām-->
-<!--        {{time.hours >= 10 ? '' : 0}}{{time.hours}}:{{time.minutes >= 10 ? '' : 0}}{{time.minutes}}:{{time.seconds >= 10 ? '' : 0}}{{time.seconds}}-->
-<!--    </span>-->
-      <span class="body-3 color-white" i18n="Info block body">
-        🎁 20% atlaide pirmajam pasūtījumam 🎁
+      <span class="body-3 color-white" i18n="Info block title">
+        🔥 Mācību gada beigu piedāvājums: 20% atlaide pasūtījumam līdz 20.05.2022. Pasteidzies visu nokārtot! 🔥
       </span>
+      <span *ngIf="time" class="body-3 color-white">
+        <ng-container i18n="Info block after days">Piedāvājums beigsies pēc {{time.days}} dienām</ng-container>
+        {{time.hours >= 10 ? '' : 0}}{{time.hours}}:{{time.minutes >= 10 ? '' : 0}}{{time.minutes}}:{{time.seconds >= 10 ? '' : 0}}{{time.seconds}}
+    </span>
+
+<!--      <span class="body-3 color-white" i18n="Info block body">-->
+<!--        📅 Pasteidzies visu nokārtot! 📅 Mācību gada beigu piedāvājums - 20% atlaide pirmajam pasūtījumam 🎁-->
+<!--      </span>-->
+<!--      <span class="body-3 color-white" i18n="Info block body">-->
+<!--        📅 Pasteidzies visu nokārtot! 📅-->
+<!--        </span>-->
+<!--      <span>-->
+<!--        Mācību gada beigu piedāvājums - 20% atlaide pirmajam pasūtījumam 🎁-->
+<!--      </span>-->
     </div>
   </div>
 </div>

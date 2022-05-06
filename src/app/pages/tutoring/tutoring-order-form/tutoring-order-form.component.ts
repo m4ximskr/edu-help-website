@@ -1,31 +1,30 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {SendMailService} from '../../../services/send-mail.service';
-import {MatDialog} from '@angular/material/dialog';
-import {
-  EmailNotificationComponent,
-  EmailStatus,
-  EmailType
-} from '../../modals/email-notification/email-notification.component';
-import {NoopScrollStrategy} from '@angular/cdk/overlay';
-import {distinctUntilChanged} from 'rxjs/operators';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {
   emailFieldErrorText,
   requiredFieldErrorText,
   telephoneNumberFieldErrorText,
-  workDescriptionFormFieldPlaceholder
-} from "../../../form-constants";
+  tutoringDescriptionFormFieldPlaceholder,
+} from "../../../shared/form-constants";
+import {SendMailService} from "../../../shared/services/send-mail.service";
+import {MatDialog} from "@angular/material/dialog";
+import {
+  EmailNotificationComponent,
+  EmailStatus, EmailType
+} from "../../../shared/components/modals/email-notification/email-notification.component";
+import {distinctUntilChanged} from "rxjs/operators";
+import {NoopScrollStrategy} from "@angular/cdk/overlay";
 
 @Component({
-  selector: 'order-form',
-  templateUrl: './order-form.component.html',
-  styleUrls: ['./order-form.component.scss'],
+  selector: 'edu-tutoring-order-form',
+  templateUrl: './tutoring-order-form.component.html',
+  styleUrls: ['./tutoring-order-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class OrderFormComponent implements OnInit {
+export class TutoringOrderFormComponent implements OnInit {
 
   clientForm: FormGroup;
-  workDescriptionPlaceholder = workDescriptionFormFieldPlaceholder;
+  tutoringDescriptionPlaceholder = tutoringDescriptionFormFieldPlaceholder;
   busy = false;
 
   get getNameErrorMessage(): string {
@@ -63,7 +62,7 @@ export class OrderFormComponent implements OnInit {
   onFormSubmit() {
     if (this.clientForm.valid) {
       this.busy = true;
-      this.sendMailService.sendOrderMail(this.clientForm.value).subscribe(res => {
+      this.sendMailService.sendTutoringOrderMail(this.clientForm.value).subscribe(res => {
         this.createNotificationModal(EmailStatus.SUCCESS);
         this.busy = false;
         this.cdr.markForCheck();
@@ -81,7 +80,6 @@ export class OrderFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       number: [''],
       description: ['', [Validators.required]],
-      files: [[]],
     });
   }
 
@@ -104,4 +102,5 @@ export class OrderFormComponent implements OnInit {
       }
     });
   }
+
 }

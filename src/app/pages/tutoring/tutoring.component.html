@@ -1,0 +1,57 @@
+<div class="page-wrapper">
+  <div class="section-wrapper">
+    <div class="section-content">
+
+      <div class="make-order-wrapper">
+        <div class="heading-1 color-dark-blue text-align-center" i18n="Tutoring order heading">Pasūti online apmācības</div>
+        <mat-icon class="arrow stroke-blue" svgIcon="edu:ic-arrow"></mat-icon>
+
+        <div class="order-content">
+          <div class="info">
+            <div class="heading-3 color-dark-blue" i18n="Tutoring order subheading">
+              Uzlabo savas zināšanas ar Eduhelp ekspertu palīdzību! 🤓
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <div class="body-2 color-dark-grey text-align-center" i18n="Tutoring order money stat title">Cena par konsultāciju</div>
+                <div class="box">
+                  <ng-container i18n="Tutoring order money stat text start">no</ng-container>
+                  <span>10</span>eur
+                </div>
+              </div>
+              <div class="stat">
+                <div class="body-2 color-dark-grey text-align-center" i18n="Tutoring order time stat title">Konsultācijas laiks</div>
+                <div class="box">
+                  <ng-container i18n="Tutoring order time stat text start">no</ng-container>
+                  <span>30</span>
+                  <ng-container i18n="Tutoring order time stat text end">minūtēm</ng-container>
+                </div>
+              </div>
+            </div>
+
+            <div class="factors">
+              <div class="heading-4 color-dark-blue" i18n="Tutoring order factors title">
+                Atstājot pieteikumu, lūdzam norādīt sekojošas detaļas:
+              </div>
+              <div class="list">
+                <div class="item" *ngFor="let factor of factors">
+                  <div class="icon">{{factor.icon}}</div>
+                  <div class="body-1 color-dark-grey">{{factor.name}}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="additional-info heading-4 color-dark-blue mt-50" i18n="Tutoring order info text">
+              Dienas laikā mēs sazināsimies ar Tevi, lai vienotos par cenu, laiku utt.
+            </div>
+          </div>
+
+          <div class="order-form">
+            <edu-tutoring-order-form></edu-tutoring-order-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

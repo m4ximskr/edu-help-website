@@ -17,19 +17,19 @@ export class InfoBlockComponent implements OnInit {
     seconds: number
   } = null
 
-  private endDate: Date = new Date('March 04, 2022');
+  private endDate: Date = new Date('May 20, 2022');
 
   constructor() {
-    // interval(1000).pipe(
-    //   map(() => Math.floor((this.endDate.getTime() - new Date().getTime())))
-    // ).subscribe((diff) => {
-    //   this.time = {
-    //     days: this.getDays(diff),
-    //     hours: this.getHours(diff),
-    //     minutes: this.getMinutes(diff),
-    //     seconds: this.getSeconds(diff),
-    //   }
-    // });
+    interval(1000).pipe(
+      map(() => Math.floor((this.endDate.getTime() - new Date().getTime())))
+    ).subscribe((diff) => {
+      this.time = {
+        days: this.getDays(diff),
+        hours: this.getHours(diff),
+        minutes: this.getMinutes(diff),
+        seconds: this.getSeconds(diff),
+      }
+    });
   }
 
   ngOnInit(): void {

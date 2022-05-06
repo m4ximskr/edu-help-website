@@ -1,0 +1,62 @@
+<div class="tutoring-form-wrapper">
+
+  <div class="heading-3 color-dark-blue text-align-center" i18n="Order form heading">Atstāj pieteikumu</div>
+
+  <form [formGroup]="clientForm" (ngSubmit)="onFormSubmit()" class="client-form mt-20">
+    <mat-form-field appearance="outline">
+      <mat-label i18n="@@formFieldFullNameLabel">Pilnais vārds</mat-label>
+      <input matInput
+             placeholder="Andris Liepa"
+             required
+             formControlName="name">
+      <mat-error *ngIf="clientForm.controls.name.invalid">{{getNameErrorMessage}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput
+             placeholder="name@example.com"
+             required
+             formControlName="email">
+      <mat-error *ngIf="clientForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label i18n="Form field telephone label@@formFieldTelephoneLabel">Telefona numurs</mat-label>
+      <input matInput
+             placeholder="22222222"
+             type="number"
+             formControlName="number">
+      <mat-error *ngIf="clientForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label i18n="@@formFieldTutoringDescLabel">Apmācības praksts</mat-label>
+      <textarea matInput
+                required
+                maxlength="256"
+                [placeholder]="tutoringDescriptionPlaceholder"
+                formControlName="description"></textarea>
+      <mat-hint align="end">{{clientForm.controls.description.value.length}} / 256</mat-hint>
+      <mat-error *ngIf="clientForm.controls.description.invalid">{{getDescErrorMessage}}</mat-error>
+
+    </mat-form-field>
+
+    <button mat-flat-button
+            color="primary">
+      <mat-spinner *ngIf="busy" [strokeWidth]="3" [diameter]="36"></mat-spinner>
+      <ng-container *ngIf="!busy">
+        <span i18n="@@sendFormButtonTitle">Nosūtīt</span>
+        &#8594;
+      </ng-container>
+    </button>
+
+    <div class="body-3 color-dark-grey text-align-center mt-20">
+      <ng-container i18n="Agree with terms text@@agreeWithTermsText">
+        ❗️Nosūtot pieteikumu, tu apliecini, ka esi piekritis
+      </ng-container>
+      <a class="link" target="_blank" routerLink="../terms" i18n="Agree with terms link@@agreeWithTermsLink">Lietošanas Noteikumiem</a>.
+    </div>
+  </form>
+
+</div>

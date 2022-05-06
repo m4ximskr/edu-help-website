@@ -30,7 +30,7 @@ export class AboutComponent {
       title: $localize`:About service 1 title:Palīdzība ar tālmācības skolām:`,
       parts: [
         'Rīgas 1. Tālmācības vidusskola',
-        'Rīgas 1. vidusskola',
+        // 'Rīgas 1. vidusskola',
         'Rīgas Komercskola',
         'Eiropas Tālmācības vidusskola',
         'Rīgas Tālmācības vidusskola',

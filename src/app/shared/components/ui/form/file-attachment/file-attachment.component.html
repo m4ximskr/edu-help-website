@@ -7,7 +7,7 @@
          type="file"
          [accept]="extensions"
          (change)="fileUploaded($event)">
-  <button mat-flat-button color="primary" (click)="uploadFile($event)">
+  <button mat-flat-button color="primary" class="small" (click)="uploadFile($event)">
     <mat-spinner *ngIf="loadingFile"
                  [diameter]="30"></mat-spinner>
     <span *ngIf="!loadingFile" i18n="Add files button title@@addFilesButtonTitle">+ Pievienot failus</span>

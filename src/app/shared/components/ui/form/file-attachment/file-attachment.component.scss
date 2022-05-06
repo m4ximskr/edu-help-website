@@ -19,10 +19,11 @@
   }
 
   button {
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 165px;
+    //height: 40px;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
 
     mat-spinner {
       ::ng-deep circle {

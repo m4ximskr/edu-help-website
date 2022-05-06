@@ -19,6 +19,7 @@ import {MobileMenuComponent} from './components/navigation/mobile-menu/mobile-me
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {ScrollingHelperService} from './shared/services/scrolling-helper.service';
+import {TutoringModule} from "./pages/tutoring/tutoring.module";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {ScrollingHelperService} from './shared/services/scrolling-helper.service
     MainModule,
     HttpClientModule,
     OrderModule,
+    TutoringModule,
     MatIconModule,
     NotFoundModule,
     SnackBarInfoModule,

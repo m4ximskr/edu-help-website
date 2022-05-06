@@ -15,8 +15,8 @@ export class AdvantagesComponent {
     },
     {
       icon: 'credit_card_off',
-      title: $localize`:Advantages 2 title:BEZ priekšapmaksas`,
-      text: $localize`:Advantages 2 text:Gadījumā, ja Tev nepieciešama palīdzība ar tālmācības skolām, apmaksāt darbu Tu varēsi pēc vajadzīgas atzīmes saņemšanas!`,
+      title: $localize`:Advantages 2 title:BEZ pilnas priekšapmaksas`,
+      text: $localize`:Advantages 2 text:Veikt pilno darba apmaksu Tu varēsi pēc vajadzīgas atzīmes saņemšanas!`,
     },
     {
       icon: 'fact_check',

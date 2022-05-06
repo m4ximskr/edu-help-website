@@ -65,12 +65,14 @@
 </div>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <a class="menu-link body-2 color-dark-grey" href="/lv/"><mat-icon svgIcon="edu:ic-lv">lv</mat-icon>Latviešu
-    </a>
-  </button>
-  <button mat-menu-item>
-    <a class="menu-link body-2 color-dark-grey" href="/ru/"><mat-icon svgIcon="edu:ic-ru">ru</mat-icon>Русский
-    </a>
-  </button>
+  <a class="menu-item" mat-menu-item href="/lv/">
+    <div class="menu-link body-2 color-dark-grey">
+      <mat-icon svgIcon="edu:ic-lv">lv</mat-icon>Latviešu
+    </div>
+  </a>
+  <a class="menu-item" mat-menu-item href="/ru/">
+    <div class="menu-link body-2 color-dark-grey">
+      <mat-icon svgIcon="edu:ic-ru">ru</mat-icon>Русский
+    </div>
+  </a>
 </mat-menu>
