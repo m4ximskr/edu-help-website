@@ -16,7 +16,8 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install --legacy-peer-deps
-        npm run build
+        npm run build:lv
+        npm run build:ru
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -24,3 +25,4 @@ jobs:
         server: ftp.eduhelp.lv
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/	
