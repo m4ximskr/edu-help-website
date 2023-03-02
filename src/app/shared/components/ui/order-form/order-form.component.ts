@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {SendMailService} from '../../../services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -33,19 +33,21 @@ export class OrderFormComponent implements OnInit {
   }
 
   get getEmailErrorMessage(): string {
-    if (this.clientForm.controls.email.hasError('required')) {
-      return requiredFieldErrorText;
-    }
     return this.clientForm.controls.email.hasError('email') ? emailFieldErrorText : '';
   }
 
   get getNumberErrorMessage(): string {
+    if (this.clientForm.controls.number.hasError('required')) {
+      return requiredFieldErrorText;
+    }
     return this.clientForm.controls.number.hasError('pattern') ? telephoneNumberFieldErrorText : '';
   }
 
   get getDescErrorMessage(): string {
     return this.clientForm.controls.description.hasError('required') ? requiredFieldErrorText : '';
   }
+
+  @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -57,7 +59,7 @@ export class OrderFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listenPhoneChanges();
+    // this.listenPhoneChanges();
   }
 
   onFormSubmit() {
@@ -66,6 +68,7 @@ export class OrderFormComponent implements OnInit {
       this.sendMailService.sendOrderMail(this.clientForm.value).subscribe(res => {
         this.createNotificationModal(EmailStatus.SUCCESS);
         this.busy = false;
+        this.ngForm.resetForm();
         this.cdr.markForCheck();
       }, err => {
         this.createNotificationModal(EmailStatus.ERROR);
@@ -77,11 +80,11 @@ export class OrderFormComponent implements OnInit {
 
   private createForm() {
     this.clientForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      number: [''],
-      description: ['', [Validators.required]],
-      files: [[]],
+      name: [''],
+      email: ['', [Validators.email]],
+      number: ['', [Validators.pattern('[0-9]{8}')]],
+      description: [''],
+      files: [null],
     });
   }
 

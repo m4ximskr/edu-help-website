@@ -12,7 +12,7 @@ export class MobileMenuRef {
 
   constructor(private overlayRef: OverlayRef) {
     this.overlayRef.backdropClick().subscribe(() => {
-      console.log('backdrop')
+      // console.log('backdrop')
       this.close()
     });
   }

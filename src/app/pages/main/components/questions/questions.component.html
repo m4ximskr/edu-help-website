@@ -15,7 +15,7 @@
           Aizpildi un nosūti šo formu:
         </div>
 
-        <form [formGroup]="questionForm" (ngSubmit)="onFormSubmit()">
+        <form #ngForm="ngForm" [formGroup]="questionForm" (ngSubmit)="onFormSubmit()">
           <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput
@@ -31,7 +31,7 @@
                       required
                       [placeholder]="questionPlaceholder"
                       formControlName="question"></textarea>
-            <mat-hint align="end">{{questionForm.controls.question.value.length}} / 256</mat-hint>
+            <mat-hint align="end">{{questionForm.controls.question.value?.length}} / 256</mat-hint>
             <mat-error *ngIf="questionForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
           </mat-form-field>
 
@@ -52,10 +52,10 @@
           </div>
           <div class="contact heading-3">
             <mat-icon>local_phone</mat-icon>
-            <a class="link-2" href="tel:+371 25324951">+371 25324951</a>
+            <a class="link-2" href="tel:+371 22320497">+371 22320497</a>
           </div>
           <a mat-stroked-button
-             href="https://wa.me/37125324951">
+             href="https://wa.me/37122320497">
             <mat-icon svgIcon="edu:ic-wp"></mat-icon>
             <span i18n="Whatsapp button title@@whatsappButtonTitle">Uzrakstīt Whatsapp</span>
           </a>

@@ -98,8 +98,6 @@ export class AppComponent implements OnInit {
   toggleSideNav(state = this.sideNavOpened) {
     this.sideNavOpened = state;
 
-    console.log(this.sideNavOpened);
-
     document.body.style.overflowY = this.sideNavOpened ? 'hidden' : 'auto';
     (document.activeElement as HTMLElement).blur();
 

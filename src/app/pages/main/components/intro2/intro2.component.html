@@ -25,7 +25,7 @@
              i18n="Order button title@@orderButtonTitle">Nosūtīt pieteikumu</a>
 
           <a mat-stroked-button
-             href="https://wa.me/37125324951">
+             href="https://wa.me/37122320497">
             <mat-icon svgIcon="edu:ic-wp"></mat-icon>
             <span i18n="Whatsapp button title@@whatsappButtonTitle">Uzrakstīt Whatsapp</span>
           </a>
@@ -34,24 +34,36 @@
         <div class="costs-form-wrapper">
           <div class="heading-3 color-dark-blue" i18n="Costs form heading">Uzzini izmaksas:</div>
 
-          <form [formGroup]="questionForm" (ngSubmit)="onFormSubmit()">
+          <form #ngForm="ngForm" [formGroup]="questionForm" (ngSubmit)="onFormSubmit()">
             <mat-form-field appearance="outline">
               <mat-label i18n="Form field work description label@@formFieldWorkDescLabel">Darba apraksts</mat-label>
               <input matInput
                      required
                      [placeholder]="workDescriptionPlaceholder"
                      formControlName="question">
-              <mat-hint align="end">{{questionForm.controls.question.value.length}} / 256</mat-hint>
+              <mat-hint align="end">{{questionForm.controls.question.value?.length}} / 256</mat-hint>
               <mat-error *ngIf="questionForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
             </mat-form-field>
+
+<!--            <mat-form-field appearance="outline">-->
+<!--              <mat-label>Email</mat-label>-->
+<!--              <input matInput-->
+<!--                     placeholder="name@example.com"-->
+<!--                     required-->
+<!--                     formControlName="email">-->
+<!--              <mat-error *ngIf="questionForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>-->
+<!--            </mat-form-field>-->
+
             <mat-form-field appearance="outline">
-              <mat-label>Email</mat-label>
+              <mat-label i18n="Form field telephone label@@formFieldTelephoneLabel">Telefona numurs</mat-label>
               <input matInput
-                     placeholder="name@example.com"
                      required
-                     formControlName="email">
-              <mat-error *ngIf="questionForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+                     placeholder="22222222"
+                     type="number"
+                     formControlName="number">
+              <mat-error *ngIf="questionForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
             </mat-form-field>
+
             <button color="primary"
                     mat-flat-button>
               <mat-spinner *ngIf="formBusy" [strokeWidth]="3" [diameter]="36"></mat-spinner>
@@ -68,23 +80,23 @@
           </div>
         </div>
 
-        <div class="tutoring-wrapper">
-          <div class="left-section">
-            <mat-icon svgIcon="edu:ill-tutoring"></mat-icon>
-          </div>
-          <div class="right-section">
-            <div class="heading-4 color-white" i18n="Intro tutoring title">
-              Vēlies izprast mācību vielu pats, lai sagatavotos kontroldarbam vai uzlabotu savas zināšanas? Izmēģini
-              mūsu online ampācību pakalpojumu!
-            </div>
-            <a class="small"
-               mat-flat-button
-               color="primary"
-               routerLink="tutoring"
-               i18n="Tutoring order button title@@tutoringOrderButtonTitle">Pieteikties apmācībām</a>
+<!--        <div class="tutoring-wrapper">-->
+<!--          <div class="left-section">-->
+<!--            <mat-icon svgIcon="edu:ill-tutoring"></mat-icon>-->
+<!--          </div>-->
+<!--          <div class="right-section">-->
+<!--            <div class="heading-4 color-white" i18n="Intro tutoring title">-->
+<!--              Vēlies izprast mācību vielu pats, lai sagatavotos kontroldarbam vai uzlabotu savas zināšanas? Izmēģini-->
+<!--              mūsu online ampācību pakalpojumu!-->
+<!--            </div>-->
+<!--            <a class="small"-->
+<!--               mat-flat-button-->
+<!--               color="primary"-->
+<!--               routerLink="tutoring"-->
+<!--               i18n="Tutoring order button title@@tutoringOrderButtonTitle">Pieteikties apmācībām</a>-->
 
-          </div>
-        </div>
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
   </div>

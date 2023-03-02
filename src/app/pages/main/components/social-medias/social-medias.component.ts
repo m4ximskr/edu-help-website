@@ -19,10 +19,10 @@ export class SocialMediasComponent {
   imgPath = 'assets/images/';
 
   images = [
-    {
-      src: `${this.imgPath}fb-screenshot.png`,
-      link: 'https://www.facebook.com/eduhelp.lv',
-    },
+    // {
+    //   src: `${this.imgPath}fb-screenshot.png`,
+    //   link: 'https://www.facebook.com/eduhelp.lv',
+    // },
     {
       src: `${this.imgPath}ig-screenshot.png`,
       link: 'https://instagram.com/eduhelp_lv',

@@ -11,7 +11,8 @@
     "start:lv": "ng serve --configuration=lv -- --port=4001",
     "start:ru": "ng serve --configuration=ru -- --port=4002",
     "build:lv": "ng build --configuration=lv --output-hashing=all",
-    "build:ru": "ng build --configuration=ru --output-hashing=all"
+    "build:ru": "ng build --configuration=ru --output-hashing=all",
+    "i18n:extract": "ng xi18n --output-path src/locale"
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -9,8 +9,7 @@ import {
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
 import {
   aboutYourselfFormFieldPlaceholder,
-  emailFieldErrorText,
-  requiredFieldErrorText
+  requiredFieldErrorText, telephoneNumberFieldErrorText
 } from "../../../../shared/form-constants";
 
 @Component({
@@ -43,25 +42,23 @@ export class JoinTeamComponent {
     return this.joinTeamForm.controls.name.hasError('required') ? requiredFieldErrorText : '';
   }
 
-  get getEmailErrorMessage(): string {
-    const emailControl = this.joinTeamForm.controls.email;
-    if (emailControl.hasError('required')) {
+  get getMessageErrorMessage(): string {
+    const messageControl = this.joinTeamForm.controls.message;
+    if (messageControl.hasError('required')) {
       return requiredFieldErrorText;
-    } else if (emailControl.hasError('email')) {
-      return emailFieldErrorText;
     } else {
       return '';
     }
   }
 
-  get getQuestionErrorMessage(): string {
-    const questionControl = this.joinTeamForm.controls.question;
-    if (questionControl.hasError('required')) {
+  get getNumberErrorMessage(): string {
+    if (this.joinTeamForm.controls.number.hasError('required')) {
       return requiredFieldErrorText;
-    } else {
-      return '';
     }
+    return this.joinTeamForm.controls.number.hasError('pattern') ? telephoneNumberFieldErrorText : '';
   }
+
+  @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
   constructor(private formBuilder: FormBuilder,
               private sendMailService: SendMailService,
@@ -71,8 +68,9 @@ export class JoinTeamComponent {
 
   onFormSubmit() {
     if (this.joinTeamForm.valid) {
-      this.sendMailService.sendQuestionMail(this.joinTeamForm.value).subscribe(res => {
+      this.sendMailService.sendTutoringOrderMail(this.joinTeamForm.value).subscribe(res => {
         this.createNotificationModal(EmailStatus.SUCCESS);
+        this.ngForm.resetForm()
       }, err => {
         this.createNotificationModal(EmailStatus.ERROR);
       });
@@ -81,9 +79,9 @@ export class JoinTeamComponent {
 
   private createForm() {
     this.joinTeamForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      question: ['', [Validators.required, Validators.maxLength(256)]],
+      name: [''],
+      number: ['', [Validators.pattern('[0-9]{8}')]],
+      message: ['', [Validators.maxLength(256)]],
     });
   }
 
@@ -92,7 +90,7 @@ export class JoinTeamComponent {
       scrollStrategy: new NoopScrollStrategy(),
       data: {
         status,
-        type: EmailType.QUESTION,
+        type: EmailType.TUTORING,
       }
     });
   }

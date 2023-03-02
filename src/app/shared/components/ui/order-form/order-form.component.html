@@ -2,7 +2,7 @@
 
   <div class="heading-3 color-dark-blue text-align-center" i18n="Order form heading">Atstāj pieteikumu</div>
 
-  <form [formGroup]="clientForm" (ngSubmit)="onFormSubmit()" class="client-form mt-20">
+  <form #ngForm="ngForm" [formGroup]="clientForm" (ngSubmit)="onFormSubmit()" class="client-form mt-20">
     <mat-form-field appearance="outline">
       <mat-label i18n="@@formFieldFullNameLabel">Pilnais vārds</mat-label>
       <input matInput
@@ -13,21 +13,21 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput
-             placeholder="name@example.com"
-             required
-             formControlName="email">
-      <mat-error *ngIf="clientForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
       <mat-label i18n="Form field telephone label@@formFieldTelephoneLabel">Telefona numurs</mat-label>
       <input matInput
+             required
              placeholder="22222222"
              type="number"
              formControlName="number">
       <mat-error *ngIf="clientForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput
+             placeholder="name@example.com"
+             formControlName="email">
+      <mat-error *ngIf="clientForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -37,7 +37,7 @@
                 maxlength="256"
                 [placeholder]="workDescriptionPlaceholder"
                 formControlName="description"></textarea>
-      <mat-hint align="end">{{clientForm.controls.description.value.length}} / 256</mat-hint>
+      <mat-hint align="end">{{clientForm.controls.description.value?.length}} / 256</mat-hint>
       <mat-error *ngIf="clientForm.controls.description.invalid">{{getDescErrorMessage}}</mat-error>
 
     </mat-form-field>

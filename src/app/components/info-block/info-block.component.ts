@@ -17,7 +17,7 @@ export class InfoBlockComponent implements OnInit {
     seconds: number
   } = null
 
-  private endDate: Date = new Date('May 20, 2022');
+  private endDate: Date = new Date('Dec 18, 2022');
 
   constructor() {
     interval(1000).pipe(

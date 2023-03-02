@@ -387,15 +387,25 @@
         </context-group>
         <note priority="1" from="description">About icon year</note>
       </trans-unit>
-      <trans-unit id="ae0eea0c3fa9f424fb01587f40c5fb3c337194a1" datatype="html">
-        <source> EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā. Mēs sākām savu darbību 2018. gadā, un esam palīdzējuši jau vairāk nekā 1000 klientiem. </source>
-         <target>EDUHELP — один из ведущих сервисов помощи с учёбой в Латвии. Мы стартовали в 2018 году и уже помогли более 1000 клиентам.</target>
+<!--       <trans-unit id="ae0eea0c3fa9f424fb01587f40c5fb3c337194a1" datatype="html"> -->
+<!--         <source> EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā. Mēs sākām savu darbību 2018. gadā, un esam palīdzējuši jau vairāk nekā 1000 klientiem. </source> -->
+<!--          <target>EDUHELP — один из ведущих сервисов помощи с учёбой в Латвии. Мы стартовали в 2018 году и уже помогли более 1000 клиентам.</target> -->
+<!--         <context-group purpose="location"> -->
+<!--           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context> -->
+<!--           <context context-type="linenumber">32,35</context> -->
+<!--         </context-group> -->
+<!--         <note priority="1" from="description">About 1 description</note> -->
+<!--       </trans-unit> -->
+<trans-unit id="0e55a961348d3a16b7429e305d99a7513d5d460c" datatype="html">
+        <source> EDUHELP ir viens no vadošajiem mācību palīdzības servisiem Latvijā. Mēs sākām savu darbību 2018. gadā, un esam palīdzējuši jau vairāk nekā 1500 klientiem. </source>
+       <target>EDUHELP — один из ведущих сервисов помощи с учёбой в Латвии. Мы стартовали в 2018 году и уже помогли более 1500 клиентам.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
           <context context-type="linenumber">32,35</context>
         </context-group>
         <note priority="1" from="description">About 1 description</note>
       </trans-unit>
+
       <trans-unit id="5092b51d963ce5ae48d23dd3d402688add9bdf2f" datatype="html">
         <source> Pašreizējā izglītības sistēma ir tālu no ideāla. To atzīst gan skolotāji, gan skolēni, gan valdība, kura izdod reformas, cenšoties dot iespēju skolēniem apgūt tieši tos priekšmetus, kas viņiem interesē. Taču patiesībā iznāk pavisam otrādi – izglītības plāns sastāv no daudziem priekšmetiem, kuru mērķis Ir “paplašināt redzesloku&quot;, nevis sniegt reālu pamatu jomā, kura interesē. Tieši šajās situācijās mēs cenšamies palīdzēt cilvēkiem. </source>
          <target>В наше время система образования далека от идеала. Это признают и учителя, и школьники, и правительство, которое выпускает реформы, стараясь дать школьникам возможность учить именно те предметы, которые их интересуют. Однако на деле получается совсем иначе – план обучения состоит из множества предметов, цель которых «расширить кругозор», а не дать реальную основу в интересующей сфере. Именно в таких ситуациях мы стараемся помочь людям.</target>
@@ -405,12 +415,21 @@
         </context-group>
         <note priority="1" from="description">About 2 description</note>
       </trans-unit>
-      <trans-unit id="db7b9606926a7b919bed2de744575aeb6dfd7746" datatype="html">
-        <source> Mēs palīdzam pieaugušiem cilvēkiem, kuri pēc ilga pārtraukuma nolemj pabeigt skolu, sniedzot padomus, kā arī palīdzam ar priekšmetiem, kuri aizmirsās un dzīvē nebija izmantoti. Palīdzam arī skolēniem, kuriem dažādu iemeslu dēļ nav iespējas pašiem pabeigt skolu. Eduhelp servisa ideja ir dot cilvēkiem iespēju koncentrēties uz jomas, kas viņus patiešām interesē un dzīvē noderēs, pārējos priekšmetus deleģējot ekspertiem. </source>
-        <target>Мы помогаем взрослым состоявшимся людям, которые решили закончить школу после долгого перерыва, предоставляя им консультации, а также помогая с предметами, которые забылись и не использовались в жизни. Также мы помогаем и школьникам, у которых нет возможности закончить самим школу по разным причинам. Идея сервиса Eduhelp – дать возможность людям сосредотачиваться на сфере, которая их действительно интересует и пригодится в жизни, делегируя остальные предметы экспертам.</target>
+<!--       <trans-unit id="db7b9606926a7b919bed2de744575aeb6dfd7746" datatype="html"> -->
+<!--         <source> Mēs palīdzam pieaugušiem cilvēkiem, kuri pēc ilga pārtraukuma nolemj pabeigt skolu, sniedzot padomus, kā arī palīdzam ar priekšmetiem, kuri aizmirsās un dzīvē nebija izmantoti. Palīdzam arī skolēniem, kuriem dažādu iemeslu dēļ nav iespējas pašiem pabeigt skolu. Eduhelp servisa ideja ir dot cilvēkiem iespēju koncentrēties uz jomas, kas viņus patiešām interesē un dzīvē noderēs, pārējos priekšmetus deleģējot ekspertiem. </source> -->
+<!--         <target>Мы помогаем взрослым состоявшимся людям, которые решили закончить школу после долгого перерыва, предоставляя им консультации, а также помогая с предметами, которые забылись и не использовались в жизни. Также мы помогаем и школьникам, у которых нет возможности закончить самим школу по разным причинам. Идея сервиса Eduhelp – дать возможность людям сосредотачиваться на сфере, которая их действительно интересует и пригодится в жизни, делегируя остальные предметы экспертам.</target> -->
+<!--         <context-group purpose="location"> -->
+<!--           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context> -->
+<!--           <context context-type="linenumber">43,48</context> -->
+<!--         </context-group> -->
+<!--         <note priority="1" from="description">About 3 description</note> -->
+<!--       </trans-unit> -->
+<trans-unit id="10a369a71864960738431631d2329688ec2a4fbc" datatype="html">
+        <source> Eduhelp servisa ideja ir dot klientiem iespēju koncentrēties uz viņiem interesējošiem mācību priekšmetiem un interešu jomām dzīvē, pārējos mācību uzdevumus deleģējot ekspertiem. Mēs nemudinām cilvēkus pamest mācības. Mēs palīdzam koncentrēties uz pašattīstību un savu mērķu sasniegšanu. </source>
+        <target>Идея сервиса Eduhelp - предоставить нашим клиентам возможность сосредоточиться на интересующих школьных предметах и жизненных сферах, делегируя выполнение остальных задач экспертам. Мы не призываем людей отказаться от учёбы. Мы помогаем сосредоточиться на саморазвитии и достижении собственных целей</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.html</context>
-          <context context-type="linenumber">43,48</context>
+          <context context-type="linenumber">47,51</context>
         </context-group>
         <note priority="1" from="description">About 3 description</note>
       </trans-unit>
@@ -441,15 +460,24 @@
         </context-group>
         <note priority="1" from="description">About 1 title</note>
       </trans-unit>
-      <trans-unit id="7345846615319263884" datatype="html">
-        <source>Mūsu mērķis ir dot iespēju koncentrēties uz lietām, kas patiešām ir svarīgas, netērējot laiku bezjēdzīgiem skolas sistēmas priekšmetiem, kas nedod ieguvuma un praktiska pielietojuma.</source>
-        <target>Наша цель – давать людям возможность сосредотачиваться на действительно важных вещах, не тратя своё время на бессмысленные предметы школьной системы, которые не приносят пользы.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-        <note priority="1" from="description">About 1 text</note>
-      </trans-unit>
+<!--       <trans-unit id="7345846615319263884" datatype="html"> -->
+<!--         <source>Mūsu mērķis ir dot iespēju koncentrēties uz lietām, kas patiešām ir svarīgas, netērējot laiku bezjēdzīgiem skolas sistēmas priekšmetiem, kas nedod ieguvuma un praktiska pielietojuma.</source> -->
+<!--         <target>Наша цель – давать людям возможность сосредотачиваться на действительно важных вещах, не тратя своё время на бессмысленные предметы школьной системы, которые не приносят пользы.</target> -->
+<!--         <context-group purpose="location"> -->
+<!--           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context> -->
+<!--           <context context-type="linenumber">14</context> -->
+<!--         </context-group> -->
+<!--         <note priority="1" from="description">About 1 text</note> -->
+<!--       </trans-unit> -->
+      <trans-unit id="7531204686357786458" datatype="html">
+              <source>Mūsu mērķis ir dot iespēju koncentrēties uz saviem mērķiem un vērtībām, netērējot laiku un enerģiju mācību priekšmetiem, kas nav prioritātē dzīvē.</source>
+              <target>Наша цель - давать возможность сосредотачиваться на своих целях и ценностях, не тратя сил и времени на школьные предметы, которые не являются приоритетом в жизни.</target>
+              <context-group purpose="location">
+                <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
+                <context context-type="linenumber">14</context>
+              </context-group>
+              <note priority="1" from="description">About 1 text</note>
+            </trans-unit>
       <trans-unit id="5913079607658606977" datatype="html">
         <source>Izpildītāji</source>
         <target>Исполнители</target>
@@ -486,15 +514,25 @@
         </context-group>
         <note priority="1" from="description">About 3 text</note>
       </trans-unit>
-      <trans-unit id="5654993056672115236" datatype="html">
-        <source>Palīdzība ar tālmācības skolām:</source>
-        <target>Помощь с дистанционными школами:</target>
+<!--       <trans-unit id="5654993056672115236" datatype="html"> -->
+<!--         <source>Palīdzība ar tālmācības skolām:</source> -->
+<!--         <target>Помощь с дистанционными школами:</target> -->
+<!--         <context-group purpose="location"> -->
+<!--           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context> -->
+<!--           <context context-type="linenumber">30</context> -->
+<!--         </context-group> -->
+<!--         <note priority="1" from="description">About service 1 title</note> -->
+<!--       </trans-unit> -->
+<trans-unit id="4716278172708915927" datatype="html">
+        <source>Palīdzība un konsultācijas ar tālmācības skolām</source>
+        <target>Помощь и консультации с дистанционными школами</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">About service 1 title</note>
       </trans-unit>
+
       <trans-unit id="6376487361434659108" datatype="html">
         <source>Online platformas:</source>
         <target>Онлайн платформы:</target>
@@ -515,25 +553,25 @@
       </trans-unit>
       <trans-unit id="359838216207044185" datatype="html">
         <source>Online palīdzība ar darbiem noteiktajā laikā</source>
-        <target>Онлайн-помощь с работами в определнное время</target>
+        <target>Онлайн-помощь с работами в определенное время</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
           <context context-type="linenumber">53</context>
         </context-group>
         <note priority="1" from="description">About service 4 title</note>
       </trans-unit>
-      <trans-unit id="8329510173081230928" datatype="html">
-        <source>Visu semestra darbu izpilde ar vajadzīgajām atzīmēm vakarskolās</source>
-        <target>Выполнение всех семестровых работ с необходимыми оценками в вечерних школах</target>
+      <trans-unit id="5992450888894824869" datatype="html">
+        <source>Darbu izpilde uz vajadzīgo atzīmi vakarskolās</source>
+        <target>Выполнение работ на нужную оценку в вечерних школах</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
         <note priority="1" from="description">About service 5 title</note>
       </trans-unit>
-      <trans-unit id="3452688743741592623" datatype="html">
-        <source>Palīdzība tehnisko universitāšu studentiem</source>
-        <target>Помощь студентам технических университетов</target>
+      <trans-unit id="8433724683368678950" datatype="html">
+        <source>Palīdzība ar prezentācijām, esejām un referatiem</source>
+        <target>Помощь в состовлении презентаций, эссе и рефератов</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/about/about.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -558,17 +596,26 @@
         </context-group>
         <note priority="1" from="description">Action body</note>
       </trans-unit>
-      <trans-unit id="b7d975b740160de972af9db57516004a5cb62aad" datatype="html">
-        <source>Kāpēc izvēlēties mūs</source>
-        <target>Почему выбирать нас</target>
+<!--      <trans-unit id="advantagesHeading" datatype="html"> -->
+<!--              <source>Kāpēc tieši mēs</source> -->
+<!--              <target>Почему именно мы</target> -->
+<!--              <context-group purpose="location"> -->
+<!--                <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.html</context> -->
+<!--                <context context-type="linenumber">6,7</context> -->
+<!--              </context-group> -->
+<!--              <note priority="1" from="description">Advantages heading</note> -->
+<!--      </trans-unit> -->
+      <trans-unit id="advantagesHeading" datatype="html">
+        <source>Kāpēc tieši mēs </source>
+        <target>Почему именно мы</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">6,7</context>
         </context-group>
         <note priority="1" from="description">Advantages heading</note>
       </trans-unit>
-      <trans-unit id="d446cd7e9ddf59dd62ebd1f5e58bb8dc79353449" datatype="html">
-        <source>Ekspertu ir gatavi palīdzēt tev katru dienu!</source>
+      <trans-unit id="f837b709939b2262d0c3244e7bb45c5d8e196183" datatype="html">
+        <source>Eksperti ir gatavi palīdzēt tev katru dienu!</source>
         <target>Экспертов готовы помочь тебе каждый день!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.html</context>
@@ -621,8 +668,17 @@
         </context-group>
         <note priority="1" from="description">Advantages 3 title</note>
       </trans-unit>
-      <trans-unit id="2702872457863239202" datatype="html">
-        <source>Darbu pilda uzticami skolēni ar izcilām priekšmeta zināšanām. Katrs izpildītājs uzņemas priekšmetu, kuru viņš labi izprot.</source>
+<!--       <trans-unit id="2702872457863239202" datatype="html"> -->
+<!--         <source>Darbu pilda uzticami skolēni ar izcilām priekšmeta zināšanām. Katrs izpildītājs uzņemas priekšmetu, kuru viņš labi izprot.</source> -->
+<!--         <target>Работу выполняют надежные студенты с отличным знанием предмета. Каждый исполнитель берется за предмет, который ему хорошо понятен.</target> -->
+<!--         <context-group purpose="location"> -->
+<!--           <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context> -->
+<!--           <context context-type="linenumber">24</context> -->
+<!--         </context-group> -->
+<!--         <note priority="1" from="description">Advantages 3 text</note> -->
+<!--       </trans-unit> -->
+<trans-unit id="4370220356685752912" datatype="html">
+        <source>Darbu pilda uzticami studenti ar izcilām priekšmeta zināšanām. Katrs izpildītājs uzņemas priekšmetu, kuru viņš labi izprot.</source>
         <target>Работу выполняют надежные студенты с отличным знанием предмета. Каждый исполнитель берется за предмет, который ему хорошо понятен.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/advantages/advantages.component.ts</context>
@@ -1067,7 +1123,7 @@
           <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
-        <note priority="1" from="description">Work 3 title</note>
+        <note priority="1" from="description">Work 4 title</note>
       </trans-unit>
       <trans-unit id="1158508880415970790" datatype="html">
         <source>Darbs būs gatavs pēc iespējas ātrāk. Mēs negaidām pēdējo brīdi un pildām visu savlaicīgi.</source>
@@ -1076,7 +1132,7 @@
           <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
-        <note priority="1" from="description">Work 3 text</note>
+        <note priority="1" from="description">Work 4 text</note>
       </trans-unit>
       <trans-unit id="94000635775904923" datatype="html">
         <source>Apmaksāt rēķinu</source>
@@ -1085,20 +1141,20 @@
           <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
-        <note priority="1" from="description">Work 4 title</note>
+        <note priority="1" from="description">Work 3 title</note>
       </trans-unit>
-      <trans-unit id="291966387913084226" datatype="html">
-        <source>Mēs atsūtīsim rēķinu par mūsu pakalpojumiem, kuru Jūs varēsiet apmaksāt jebkurā brīdī.</source>
-        <target>Мы вышлем счет за наши услуги, который Ты сможешь оплатить в любое время.</target>
+      <trans-unit id="1506731600789005471" datatype="html">
+        <source>Mēs atsūtīsim rēķinu par mūsu pakalpojumiem, kuru Jūs varēsiet apmaksāt ar bankas pārskaitījumu.</source>
+        <target>Мы вышлем счет за наши услуги, который Вы сможете оплатить банковским перечислением.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
-        <note priority="1" from="description">Work 4 text</note>
+        <note priority="1" from="description">Work 3 text</note>
       </trans-unit>
-      <trans-unit id="9095996755471822689" datatype="html">
-        <source>Sagaidīt atzīmi par izpildītu darbu</source>
-        <target>Дождаться оценки за выполненную работу</target>
+      <trans-unit id="4114195065656307320" datatype="html">
+        <source>Nodot darbu</source>
+        <target>Сдать работу</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main/components/work/work.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -1496,15 +1552,15 @@
               </context-group>
               <note priority="1" from="description">Your question field label</note>
             </trans-unit>
-      <trans-unit id="719b98762c23a1dc1db7e4f0a7dc11e781458b3e" datatype="html">
-              <source> 🔥 Mācību gada beigu piedāvājums: 20% atlaide pasūtījumam līdz 20.05.2022. Pasteidzies visu nokārtot! 🔥 </source>
-              <target>🔥 Предложение конца года: 20% скидка на заказ до 20.05.2022. Поторопись все сдать! 🔥</target>
-              <context-group purpose="location">
-                <context context-type="sourcefile">src/app/components/info-block/info-block.component.html</context>
-                <context context-type="linenumber">7,9</context>
-              </context-group>
-              <note priority="1" from="description">Info block title</note>
-            </trans-unit>
+     <trans-unit id="086860ac39ac782416ea4714f21866e9ad0b7a6a" datatype="html">
+             <source> 🔥 Semestra beigu piedāvājums: 70% atlaide pasūtījumam līdz 18.12. 🔥 </source>
+             <target>🔥 Предложение конца семестра: 70% скидка на заказ до 18.12. 🔥</target>
+             <context-group purpose="location">
+               <context context-type="sourcefile">src/app/components/info-block/info-block.component.html</context>
+               <context context-type="linenumber">7,9</context>
+             </context-group>
+             <note priority="1" from="description">Info block title</note>
+           </trans-unit>
       <trans-unit id="b30c771814d1d290229d55013f88d6cd0b1fc3c1" datatype="html">
               <source>Piedāvājums beigsies pēc <x id="INTERPOLATION" equiv-text="{{time.days}}"/> dienām</source>
               <target>Предложение закончится через <x id="INTERPOLATION" equiv-text="{{time.days}}"/> дней</target>

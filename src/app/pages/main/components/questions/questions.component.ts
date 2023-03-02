@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -44,6 +44,8 @@ export class QuestionsComponent implements OnInit {
     }
   }
 
+  @ViewChild('ngForm', {static: false}) ngForm: NgForm;
+
   constructor(
     private formBuilder: FormBuilder,
     private sendMailService: SendMailService,
@@ -58,6 +60,7 @@ export class QuestionsComponent implements OnInit {
     if (this.questionForm.valid) {
       this.sendMailService.sendQuestionMail(this.questionForm.value).subscribe(res => {
         this.createNotificationModal(EmailStatus.SUCCESS);
+        this.ngForm.resetForm()
       }, err => {
         this.createNotificationModal(EmailStatus.ERROR);
       });

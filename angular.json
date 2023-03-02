@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "473091f3-5f2c-422c-b89f-ae1cc4c3768e"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -59,11 +62,11 @@
           "configurations": {
             "lv": {
               "localize": ["lv"],
-              "outputPath": "dist/edu-help-lv/",
+              "outputPath": "dist/"
             },
             "ru": {
               "localize": ["ru"],
-              "outputPath": "dist/edu-help-ru/",
+              "outputPath": "dist/"
             },
             "production": {
               "fileReplacements": [
