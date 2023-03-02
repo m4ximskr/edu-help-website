@@ -59,11 +59,11 @@
           "configurations": {
             "lv": {
               "localize": ["lv"],
-              "outputPath": "dist/edu-help-lv/",
+              "outputPath": "dist/edu-help-lv/"
             },
             "ru": {
               "localize": ["ru"],
-              "outputPath": "dist/edu-help-ru/",
+              "outputPath": "dist/edu-help-ru/"
             },
             "production": {
               "fileReplacements": [
