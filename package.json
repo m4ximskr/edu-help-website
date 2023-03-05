@@ -10,8 +10,8 @@
     "e2e": "ng e2e",
     "start:lv": "ng serve --configuration=lv -- --port=4001",
     "start:ru": "ng serve --configuration=ru -- --port=4002",
-    "build:lv": "ng build --configuration=lv --output-hashing=all",
-    "build:ru": "ng build --configuration=ru --output-hashing=all",
+    "build:lv": "ng build --configuration=lv --output-hashing=all --delete-output-path=false",
+    "build:ru": "ng build --configuration=ru --output-hashing=all --delete-output-path=false",
     "i18n:extract": "ng xi18n --output-path src/locale"
   },
   "private": true,
