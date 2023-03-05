@@ -13,11 +13,14 @@ jobs:
       with:
         node-version: '16'
       
-    - name: 🔨 Build Project
-      run: |
-        npm install --legacy-peer-deps
-        npm run build:lv
-        npm run build:ru
+    - name: Install dependencies
+      run: npm install --legacy-peer-deps
+      
+    - name: Build LV version
+      run: npm run build:lv
+      
+    - name: Build RU version
+      run: npm run build:ru    
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
