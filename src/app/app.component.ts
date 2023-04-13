@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     this.registerIcons();
     this.listenForWindowScroll();
 
-    this.titleService.setTitle('EDUHELP');
+    this.titleService.setTitle('Eduhelp');
     this.metaService.addTags([
       { name: 'description', content: 'This is an article about Angular Meta service' },
       { name: 'keywords', content: 'angular, javascript, typescript, meta, seo' }
