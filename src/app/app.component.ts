@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import {DomSanitizer, Meta, Title} from '@angular/platform-browser';
 import {fromEvent} from 'rxjs';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {startWith} from 'rxjs/operators';
@@ -27,9 +27,17 @@ export class AppComponent implements OnInit {
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer,
     private scrollingHelperService: ScrollingHelperService,
+    private titleService: Title,
+    private metaService: Meta,
   ) {
     this.registerIcons();
     this.listenForWindowScroll();
+
+    this.titleService.setTitle('Eduhelp');
+    this.metaService.addTags([
+      { name: 'description', content: 'This is an article about Angular Meta service' },
+      { name: 'keywords', content: 'angular, javascript, typescript, meta, seo' }
+    ])
   }
 
   private registerIcons() {
@@ -97,8 +105,6 @@ export class AppComponent implements OnInit {
 
   toggleSideNav(state = this.sideNavOpened) {
     this.sideNavOpened = state;
-
-    console.log(this.sideNavOpened);
 
     document.body.style.overflowY = this.sideNavOpened ? 'hidden' : 'auto';
     (document.activeElement as HTMLElement).blur();

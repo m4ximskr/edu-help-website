@@ -26,14 +26,14 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
 
-  @Input() formControl: FormControl
+  // @Input() formControl: FormControl
 
   @ViewChild('fileUploadInput') fileUploadInput: ElementRef;
 
   loadingFile = false;
   dropZoneActive = false;
   extensions = ['.pdf', '.docx', '.jpeg', '.jpg', '.png'];
-  filesFormArray: FormArray = new FormArray([]);
+  files: {filename: string, path: string}[] = [];
 
   constructor(
     private cdr: ChangeDetectorRef,
@@ -52,12 +52,14 @@ export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any): void {
   }
 
-  writeValue(obj: any): void {
+  writeValue(files): void {
+    this.files = files || [];
+    this.cdr.markForCheck();
   }
 
   removeFile(index:number) {
-    this.filesFormArray.removeAt(index);
-    this.propagateChange(this.filesFormArray.value)
+    this.files.splice(index, 1)
+    this.propagateChange(this.files)
   }
 
   uploadFile(e) {
@@ -89,12 +91,12 @@ export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      this.filesFormArray.push(new FormControl({
+      this.files.push({
         filename: file.name,
-        path: reader.result,
-      }));
+        path: reader.result as string,
+      });
       this.loadingFile = false;
-      this.propagateChange(this.filesFormArray.value)
+      this.propagateChange(this.files)
       this.cdr.markForCheck();
     }
   }

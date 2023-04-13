@@ -14,9 +14,9 @@
   </button>
 
   <div class="files">
-    <div *ngFor="let file of filesFormArray.controls; index as i"
+    <div *ngFor="let file of files; index as i"
          class="file">
-      <div class="name">{{file.value.filename}}</div>
+      <div class="name">{{file.filename}}</div>
       <mat-icon class="pointer" (click)="$event.preventDefault(); removeFile(i)">close</mat-icon>
     </div>
 

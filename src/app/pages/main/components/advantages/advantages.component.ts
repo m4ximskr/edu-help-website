@@ -21,7 +21,7 @@ export class AdvantagesComponent {
     {
       icon: 'fact_check',
       title: $localize`:Advantages 3 title:Pārbaudīts un 100% garantēts rezultāts`,
-      text: $localize`:Advantages 3 text:Darbu pilda uzticami skolēni ar izcilām priekšmeta zināšanām. Katrs izpildītājs uzņemas priekšmetu, kuru viņš labi izprot.`,
+      text: $localize`:Advantages 3 text:Darbu pilda uzticami studenti ar izcilām priekšmeta zināšanām. Katrs izpildītājs uzņemas priekšmetu, kuru viņš labi izprot.`,
     },
     {
       icon: 'thumb_up_alt',

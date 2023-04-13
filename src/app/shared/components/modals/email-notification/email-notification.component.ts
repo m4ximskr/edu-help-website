@@ -9,6 +9,7 @@ export enum EmailStatus {
 export enum EmailType {
   ORDER = 'order',
   QUESTION = 'question',
+  TUTORING = 'tutoring',
 }
 
 interface EmailNotification {
@@ -29,5 +30,7 @@ export class EmailNotificationComponent {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: EmailNotification,
-  ) {}
+  ) {
+    // console.log(this.data);
+  }
 }

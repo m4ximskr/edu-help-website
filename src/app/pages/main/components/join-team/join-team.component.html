@@ -23,7 +23,7 @@
 
       <div class="join-team-form-wrapper">
         <div class="heading-3 color-dark-blue text-align-center" i18n="Join team form heading">Nosūti pieteikumu</div>
-        <form [formGroup]="joinTeamForm" (ngSubmit)="onFormSubmit()">
+        <form #ngForm="ngForm" [formGroup]="joinTeamForm" (ngSubmit)="onFormSubmit()">
           <mat-form-field appearance="outline">
             <mat-label i18n="Form field name label@@formFieldFullNameLabel">Pilnais vārds</mat-label>
             <input matInput
@@ -34,12 +34,13 @@
           </mat-form-field>
 
           <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label>
+            <mat-label i18n="Form field telephone label@@formFieldTelephoneLabel">Telefona numurs</mat-label>
             <input matInput
-                   placeholder="andrisliepa@gmail.com"
                    required
-                   formControlName="email">
-            <mat-error *ngIf="joinTeamForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+                   placeholder="22222222"
+                   type="number"
+                   formControlName="number">
+            <mat-error *ngIf="joinTeamForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="outline">
@@ -47,9 +48,9 @@
             <textarea matInput
                       required
                       [placeholder]="aboutYourselfPlaceholder"
-                      formControlName="question"></textarea>
-            <mat-hint align="end">{{joinTeamForm.controls.question.value.length}} / 256</mat-hint>
-            <mat-error *ngIf="joinTeamForm.controls.question.invalid">{{getQuestionErrorMessage}}</mat-error>
+                      formControlName="message"></textarea>
+            <mat-hint align="end">{{joinTeamForm.controls.message.value?.length}} / 256</mat-hint>
+            <mat-error *ngIf="joinTeamForm.controls.message.invalid">{{getMessageErrorMessage}}</mat-error>
           </mat-form-field>
 
           <button color="primary" mat-flat-button>

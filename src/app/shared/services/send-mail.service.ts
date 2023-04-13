@@ -16,6 +16,8 @@ export class SendMailService {
   // http://localhost:3000/send-order-mail
 
   sendOrderMail(data) {
+    // return of(null)
+
     return this.http.post('https://api.eduhelp.lv/send-order-mail', {params: data, headers: this.headers});
     // return timer(2000);
   }
@@ -30,6 +32,7 @@ export class SendMailService {
   sendTutoringOrderMail(data) {
     return this.http.post('https://api.eduhelp.lv/send-tutoring-mail', {params: data, headers: this.headers});
     // console.log(data);
+    // return of(null);
     // return timer(2000);
   }
 

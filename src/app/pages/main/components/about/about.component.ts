@@ -11,7 +11,7 @@ export class AboutComponent {
     {
       icon: 'flag',
       title: $localize`:About 1 title:Mērķis`,
-      text:  $localize`:About 1 text:Mūsu mērķis ir dot iespēju koncentrēties uz lietām, kas patiešām ir svarīgas, netērējot laiku bezjēdzīgiem skolas sistēmas priekšmetiem, kas nedod ieguvuma un praktiska pielietojuma.`
+      text:  $localize`:About 1 text:Mūsu mērķis ir dot iespēju koncentrēties uz saviem mērķiem un vērtībām, netērējot laiku un enerģiju mācību priekšmetiem, kas nav prioritātē dzīvē.`
     },
     {
       icon: 'people_alt',
@@ -27,24 +27,24 @@ export class AboutComponent {
 
   services = [
     {
-      title: $localize`:About service 1 title:Palīdzība ar tālmācības skolām:`,
-      parts: [
-        'Rīgas 1. Tālmācības vidusskola',
-        // 'Rīgas 1. vidusskola',
-        'Rīgas Komercskola',
-        'Eiropas Tālmācības vidusskola',
-        'Rīgas Tālmācības vidusskola',
-        $localize`:@@andOtherText:un citas.`,
-      ]
-  },
-    {
       title: $localize`:About service 2 title:Online platformas:`,
       parts: [
         'uzdevumi.lv',
-        'macibas.e-skola.lv',
+        'skolo.lv',
         'soma.lv',
         $localize`:@@andOtherText:un citas.`,
       ],
+    },
+    {
+      title: $localize`:About service 1 title:Palīdzība un konsultācijas ar tālmācības skolām`,
+      // parts: [
+      //   'Rīgas 1. Tālmācības vidusskola',
+      //   'Rīgas 1. vidusskola',
+      //   'Rīgas Komercskola',
+      //   'Eiropas Tālmācības vidusskola',
+      //   'Rīgas Tālmācības vidusskola',
+      //   $localize`:@@andOtherText:un citas.`,
+      // ]
     },
     {
       title: $localize`:About service 3 title:Atsevišķi darbi, kurus nepieciešams izpildīt līdz noteiktajam termiņam`,
@@ -53,10 +53,10 @@ export class AboutComponent {
       title: $localize`:About service 4 title:Online palīdzība ar darbiem noteiktajā laikā`,
     },
     {
-      title: $localize`:About service 5 title:Visu semestra darbu izpilde ar vajadzīgajām atzīmēm vakarskolās`,
+      title: $localize`:About service 5 title:Darbu izpilde uz vajadzīgo atzīmi vakarskolās`,
     },
     {
-      title: $localize`:About service 6 title:Palīdzība tehnisko universitāšu studentiem`,
+      title: $localize`:About service 6 title:Palīdzība ar prezentācijām, esejām un referatiem`,
     }
   ]
 }

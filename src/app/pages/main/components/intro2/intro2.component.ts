@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {
   EmailNotificationComponent,
   EmailStatus, EmailType
 } from '../../../../shared/components/modals/email-notification/email-notification.component';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
   emailFieldErrorText,
-  requiredFieldErrorText,
+  requiredFieldErrorText, telephoneNumberFieldErrorText,
   workDescriptionFormFieldPlaceholder
 } from "../../../../shared/form-constants";
 
@@ -37,11 +37,11 @@ export class Intro2Component implements OnInit {
   advantages = [
     {
       name: $localize`:Intro advantages 1 phrase:gadus aktīvi strādājam`,
-      number: '4+',
+      number: '5+',
     },
     {
       name: $localize`:Intro advantages 2 phrase:klientiem esam palīdzējuši`,
-      number: '700+',
+      number: '1500+',
     },
     {
       name: $localize`:Intro advantages 3 phrase:klientu atgriezās pie mums vēl`,
@@ -53,17 +53,6 @@ export class Intro2Component implements OnInit {
 
   workDescriptionPlaceholder = workDescriptionFormFieldPlaceholder;
 
-  get getEmailErrorMessage(): string {
-    const emailControl = this.questionForm.controls.email;
-    if (emailControl.hasError('required')) {
-      return requiredFieldErrorText;
-    } else if (emailControl.hasError('email')) {
-      return emailFieldErrorText;
-    } else {
-      return '';
-    }
-  }
-
   get getQuestionErrorMessage(): string {
     const questionControl = this.questionForm.controls.question;
     if (questionControl.hasError('required')) {
@@ -72,6 +61,15 @@ export class Intro2Component implements OnInit {
       return '';
     }
   }
+
+  get getNumberErrorMessage(): string {
+    if (this.questionForm.controls.number.hasError('required')) {
+      return requiredFieldErrorText;
+    }
+    return this.questionForm.controls.number.hasError('pattern') ? telephoneNumberFieldErrorText : '';
+  }
+
+  @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
   constructor(private formBuilder: FormBuilder,
               private sendMailService: SendMailService,
@@ -114,6 +112,7 @@ export class Intro2Component implements OnInit {
       this.sendMailService.sendQuestionMail(this.questionForm.value).subscribe(res => {
         this.formBusy = false;
         this.createNotificationModal(EmailStatus.SUCCESS);
+        this.ngForm.resetForm();
       }, err => {
         this.formBusy = false;
         this.createNotificationModal(EmailStatus.ERROR);
@@ -123,8 +122,8 @@ export class Intro2Component implements OnInit {
 
   private createForm() {
     this.questionForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      question: ['', [Validators.required, Validators.maxLength(256)]],
+      number: ['', [Validators.pattern('[0-9]{8}')]],
+      question: ['', [Validators.maxLength(256)]],
     });
   }
 
