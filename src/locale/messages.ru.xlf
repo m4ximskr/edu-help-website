@@ -261,7 +261,7 @@
       </trans-unit>
       <trans-unit id="terms" datatype="html">
         <source> Lietošanas Noteikumi </source>
-        <target>Условия пользования</target>
+        <target>Политика приватности</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">63,65</context>
@@ -1374,7 +1374,7 @@
             </trans-unit>
             <trans-unit id="agreeWithTermsLink" datatype="html">
               <source>Lietošanas Noteikumiem</source>
-              <target>Условиями пользования</target>
+              <target>Политикой приватности</target>
               <context-group purpose="location">
                 <context context-type="sourcefile">src/app/shared/components/ui/order-form/order-form.component.html</context>
                 <context context-type="linenumber">60</context>

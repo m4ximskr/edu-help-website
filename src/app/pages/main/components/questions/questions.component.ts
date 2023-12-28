@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, NgForm, Validators} from '@angular/forms';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -20,7 +20,7 @@ import {
 })
 export class QuestionsComponent implements OnInit {
 
-  questionForm: FormGroup;
+  questionForm: UntypedFormGroup;
 
   questionPlaceholder = questionFormFieldPlaceholder;
 
@@ -47,7 +47,7 @@ export class QuestionsComponent implements OnInit {
   @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private sendMailService: SendMailService,
     private dialog: MatDialog
   ) {}
