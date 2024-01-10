@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, NgForm, Validators} from '@angular/forms';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -34,7 +34,7 @@ export class JoinTeamComponent {
     }
   ]
 
-  joinTeamForm: FormGroup;
+  joinTeamForm: UntypedFormGroup;
 
   aboutYourselfPlaceholder = aboutYourselfFormFieldPlaceholder;
 
@@ -60,7 +60,7 @@ export class JoinTeamComponent {
 
   @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(private formBuilder: UntypedFormBuilder,
               private sendMailService: SendMailService,
               private dialog: MatDialog) {
     this.createForm();

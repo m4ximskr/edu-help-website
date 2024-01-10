@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 import {
   emailFieldErrorText,
   requiredFieldErrorText,
@@ -23,7 +23,7 @@ import {NoopScrollStrategy} from "@angular/cdk/overlay";
 })
 export class TutoringOrderFormComponent implements OnInit {
 
-  clientForm: FormGroup;
+  clientForm: UntypedFormGroup;
   tutoringDescriptionPlaceholder = tutoringDescriptionFormFieldPlaceholder;
   busy = false;
 
@@ -47,7 +47,7 @@ export class TutoringOrderFormComponent implements OnInit {
   }
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private sendMailService: SendMailService,
     private dialog: MatDialog,
     private cdr: ChangeDetectorRef,
