@@ -18,15 +18,15 @@ export class SendMailService {
   sendOrderMail(data) {
     // return of(null)
 
-    return this.http.post('https://api.eduhelp.lv/send-order-mail', {params: data, headers: this.headers});
-    // return timer(2000);
+    // return this.http.post('https://api.eduhelp.lv/send-order-mail', {params: data, headers: this.headers});
+    return timer(2000);
   }
 
   sendQuestionMail(data) {
     // return of(null)
     // return throwError('ee')
-    return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
-    // return timer(2000);
+    // return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
+    return timer(2000);
   }
 
   sendTutoringOrderMail(data) {
