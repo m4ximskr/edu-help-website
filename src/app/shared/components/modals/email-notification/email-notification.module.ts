@@ -6,14 +6,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
-  declarations: [EmailNotificationComponent],
-  entryComponents: [EmailNotificationComponent],
-  imports: [
-    CommonModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatIconModule,
-  ],
-  exports: [EmailNotificationComponent]
+    declarations: [EmailNotificationComponent],
+    imports: [
+        CommonModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatIconModule,
+    ],
+    exports: [EmailNotificationComponent]
 })
 export class EmailNotificationModule { }

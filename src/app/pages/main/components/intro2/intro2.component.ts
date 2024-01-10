@@ -3,7 +3,7 @@ import {
   EmailNotificationComponent,
   EmailStatus, EmailType
 } from '../../../../shared/components/modals/email-notification/email-notification.component';
-import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, NgForm, Validators} from '@angular/forms';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
@@ -32,7 +32,7 @@ export class Intro2Component implements OnInit {
 
   typewriterText = '';
 
-  questionForm: FormGroup;
+  questionForm: UntypedFormGroup;
 
   advantages = [
     {
@@ -71,7 +71,7 @@ export class Intro2Component implements OnInit {
 
   @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(private formBuilder: UntypedFormBuilder,
               private sendMailService: SendMailService,
               private dialog: MatDialog) {
     this.createForm();

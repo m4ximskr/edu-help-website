@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 import {SendMailService} from '../../../services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EmailNotificationComponent, EmailStatus, EmailType} from '../../modals/email-notification/email-notification.component';
@@ -12,9 +12,9 @@ import {NoopScrollStrategy} from '@angular/cdk/overlay';
 })
 export class QuestionFormComponent implements OnInit {
 
-  questionForm: FormGroup;
+  questionForm: UntypedFormGroup;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(private formBuilder: UntypedFormBuilder,
               private sendMailService: SendMailService,
               private dialog: MatDialog) {
     this.createForm();

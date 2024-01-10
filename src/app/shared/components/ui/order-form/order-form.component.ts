@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, NgForm, Validators} from '@angular/forms';
 import {SendMailService} from '../../../services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -24,7 +24,7 @@ import {
 })
 export class OrderFormComponent implements OnInit {
 
-  clientForm: FormGroup;
+  clientForm: UntypedFormGroup;
   workDescriptionPlaceholder = workDescriptionFormFieldPlaceholder;
   busy = false;
 
@@ -50,7 +50,7 @@ export class OrderFormComponent implements OnInit {
   @ViewChild('ngForm', {static: false}) ngForm: NgForm;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private sendMailService: SendMailService,
     private dialog: MatDialog,
     private cdr: ChangeDetectorRef,
