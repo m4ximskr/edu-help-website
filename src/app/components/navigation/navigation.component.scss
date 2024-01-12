@@ -119,8 +119,9 @@
         height: 50px;
 
         mat-icon {
-          margin: auto 15px 2px auto;
-          font-size: 40px;
+          position: relative;
+          right: 1px;
+          font-size: 30px;
           color: var(--dark-blue);
         }
       }
