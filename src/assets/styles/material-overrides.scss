@@ -24,6 +24,13 @@ input:-webkit-autofill:active {
       height: 40px;
     }
 
+    &.circle {
+      border-radius: 50%;
+      min-width: 50px;
+      max-width: 50px;
+      padding: 0;
+    }
+
     &.round {
       border-radius: 50%;
       min-width: 50px;
