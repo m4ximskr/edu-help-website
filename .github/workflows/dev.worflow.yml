@@ -42,4 +42,4 @@ jobs:
           server: ftp.eduhelp.lv
           username: ${{ secrets.DEV_FTP_USERNAME }}
           password: ${{ secrets.DEV_FTP_PASSWORD }}
-          local-dir: ./edu-built-app
+          local-dir: ./edu-built-app/
