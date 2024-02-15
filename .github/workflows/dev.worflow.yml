@@ -1,5 +1,6 @@
 name: Deploy website to dev on dev.eduhelp.lv
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
 
 jobs:
   build:
