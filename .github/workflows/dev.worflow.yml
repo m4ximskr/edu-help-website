@@ -31,15 +31,10 @@ jobs:
         docker cp edu-temp-container:/usr/share/nginx/html/dist ./edu-built-app
         docker rm -f edu-temp-container
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: ftp.eduhelp.lv
-          username: ${{ secrets.DEV_FTP_USERNAME }}
-          password: ${{ secrets.DEV_FTP_PASSWORD }}
-          local-dir: ./edu-built-app/
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ftp.eduhelp.lv
+        username: ${{ secrets.DEV_FTP_USERNAME }}
+        password: ${{ secrets.DEV_FTP_PASSWORD }}
+        local-dir: ./edu-built-app/
