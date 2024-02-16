@@ -14,7 +14,7 @@ jobs:
       - name: Check branch
         if: ${{ github.ref != 'refs/heads/abs' && github.ref != 'refs/heads/adf' }}
         run: |
-          echo 'wrong'
+          echo 'Wrong branch ${{github.ref}}'
           exit 1
       - name: Git checkout
         uses: actions/checkout@v1
