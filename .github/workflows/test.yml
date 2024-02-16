@@ -10,4 +10,4 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Branch name
-        run: ${{ github.ref == 'refs/heads/master' && 'ms' || 'dev' }}
+        run: echo ${{ github.ref == 'refs/heads/master' && 'ms' || 'dev' }}
