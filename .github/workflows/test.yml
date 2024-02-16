@@ -11,6 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check branch
+        if: ${{ github.ref != 'refs/heads/master' || github.ref != 'refs/heads/development' }}
+        run: exit 1
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Branch name
