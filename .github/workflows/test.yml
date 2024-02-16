@@ -3,6 +3,9 @@ name: Test
 on:
   workflow_dispatch: # Putting here is also fine!!
 
+env:
+  docker_tag: ${{ github.ref == 'refs/heads/master' && 'ms' || 'dev' }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,4 +13,4 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Branch name
-        run: echo ${{ github.ref == 'refs/heads/master' && 'ms' || 'dev' }}
+        run: echo ${{ env.docker_tag }}
