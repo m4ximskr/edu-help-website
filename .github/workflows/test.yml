@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check branch
-        if: ${{ github.ref == 'refs/heads/master' && github.ref == 'refs/heads/development' }}
+        if: ${{ github.ref == 'refs/heads/abs' && github.ref == 'refs/heads/acb' }}
         run: exit 1
       - name: Git checkout
         uses: actions/checkout@v1
