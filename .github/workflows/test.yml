@@ -5,6 +5,7 @@ on:
 
 env:
   docker_tag: ${{ github.ref == 'refs/heads/master' && 'ms' || 'dev' }}
+  ftp: ${{ github.ref == 'refs/heads/master' && secrets.DEV_FTP_USERNAME || 'dev' }}
 
 jobs:
   build:
@@ -13,4 +14,4 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Branch name
-        run: echo ${{ env.docker_tag }}
+        run: echo ${{ env.ftp }}
