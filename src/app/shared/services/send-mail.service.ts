@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {of, throwError, timer} from 'rxjs';
+import {
+  RequestOrderData,
+  RequestQuestionData, RequestTutoringData,
+} from "../interfaces/request-data";
+import {timer} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -13,17 +17,17 @@ export class SendMailService {
 
   constructor(private http: HttpClient) { }
 
-  sendOrderMail(data) {
+  sendOrderMail(data: RequestOrderData) {
     return this.http.post(`${this.apiUrl}/send-order-mail`, {params: data, headers: this.headers});
     // return timer(2000);
   }
 
-  sendQuestionMail(data) {
-    return this.http.post(`${this.apiUrl}/send-question-mail`, {params: data});
+  sendQuestionMail(data: RequestQuestionData) {
+    return this.http.post(`${this.apiUrl}/send-question-mail`, {params: data, headers: this.headers});
     // return timer(2000);
   }
 
-  sendTutoringOrderMail(data) {
+  sendTutoringOrderMail(data: RequestTutoringData) {
     return this.http.post(`${this.apiUrl}/send-tutoring-mail`, {params: data, headers: this.headers});
     // return timer(2000);
   }

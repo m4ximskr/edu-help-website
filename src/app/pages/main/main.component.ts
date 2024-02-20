@@ -26,12 +26,12 @@ export class MainComponent implements OnInit, AfterViewInit {
   constructor(
     private scrollingHelperService: ScrollingHelperService,
     private breakpointObserver: BreakpointObserver
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.breakpointObserver
       .observe(['(min-width: 950px)'])
+      .pipe(untilDestroyed(this))
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           this.headerHeight = 120;
@@ -53,7 +53,7 @@ export class MainComponent implements OnInit, AfterViewInit {
       if (index !== -1 && this.sectionsRefs) {
         setTimeout(() => {
           window.scroll({
-            top: this.sectionsRefs.get(index).nativeElement.offsetTop - this.headerHeight,
+            top: this.sectionsRefs.get(index).nativeElement.offsetTop - this.headerHeight + 1,
             behavior: 'smooth'
           });
         }, 100)

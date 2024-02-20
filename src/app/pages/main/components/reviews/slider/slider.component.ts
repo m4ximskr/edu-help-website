@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {distinctUntilChanged, map, startWith, throttleTime} from 'rxjs/operators';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import {Review, Slide} from "./slider";
 
 @UntilDestroy()
 @Component({
@@ -16,7 +17,7 @@ export class SliderComponent implements OnInit {
 
   pathBase = 'assets/images/reviews/';
 
-  reviews = [
+  reviews: Review[] = [
     { src: '1.jpg' },
     { src: '2.jpg' },
     { src: '3.jpg' },
@@ -25,7 +26,7 @@ export class SliderComponent implements OnInit {
     { src: '6.jpg' },
   ]
 
-  slides = [];
+  slides: Slide[] = [];
 
   slidesTotalLength: number;
   slideIndex = 0;
@@ -36,7 +37,7 @@ export class SliderComponent implements OnInit {
   slideItemWidth: number;
 
   itemsPerSlide: number;
-  items = [];
+  items: number[] = [];
   itemIndex = 0;
 
   shifting = false;
@@ -110,7 +111,7 @@ export class SliderComponent implements OnInit {
 
   private buildSlides(itemsPerSlide: number) {
     this.slides = [];
-    let slide = [];
+    let slide: Review[] = [];
 
     this.reviews.forEach(review => {
       slide.push(review);

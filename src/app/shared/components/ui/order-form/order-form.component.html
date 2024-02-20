@@ -1,15 +1,14 @@
 <div class="client-form-wrapper">
 
   <div class="heading-3 color-dark-blue text-align-center" i18n="Order form heading">Atstāj pieteikumu</div>
-
-  <form #ngForm="ngForm" [formGroup]="clientForm" (ngSubmit)="onFormSubmit()" class="client-form mt-20">
+  <form #ngForm="ngForm" [formGroup]="orderForm" (ngSubmit)="onFormSubmit()" class="client-form mt-20">
     <mat-form-field appearance="outline">
       <mat-label i18n="@@formFieldFullNameLabel">Pilnais vārds</mat-label>
       <input matInput
              placeholder="Andris Liepa"
              required
              formControlName="name">
-      <mat-error *ngIf="clientForm.controls.name.invalid">{{getNameErrorMessage}}</mat-error>
+      <mat-error *ngIf="orderForm.controls.name.invalid">{{getNameErrorMessage}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -19,7 +18,7 @@
              placeholder="22222222"
              type="number"
              formControlName="number">
-      <mat-error *ngIf="clientForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
+      <mat-error *ngIf="orderForm.controls.number.invalid">{{getNumberErrorMessage}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -27,7 +26,7 @@
       <input matInput
              placeholder="name@example.com"
              formControlName="email">
-      <mat-error *ngIf="clientForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
+      <mat-error *ngIf="orderForm.controls.email.invalid">{{getEmailErrorMessage}}</mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -37,8 +36,8 @@
                 maxlength="256"
                 [placeholder]="workDescriptionPlaceholder"
                 formControlName="description"></textarea>
-      <mat-hint align="end">{{clientForm.controls.description.value?.length}} / 256</mat-hint>
-      <mat-error *ngIf="clientForm.controls.description.invalid">{{getDescErrorMessage}}</mat-error>
+      <mat-hint align="end">{{orderForm.controls.description.value?.length}} / 256</mat-hint>
+      <mat-error *ngIf="orderForm.controls.description.invalid">{{getDescErrorMessage}}</mat-error>
 
     </mat-form-field>
 
@@ -60,7 +59,5 @@
       <a class="link" target="_blank" routerLink="../terms" i18n="Agree with terms link@@agreeWithTermsLink">Privātuma politikai</a>.
     </div>
   </form>
-
-
 
 </div>

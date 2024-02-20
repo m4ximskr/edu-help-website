@@ -13,19 +13,17 @@ export class MobileMenuService {
 
   private menuOverlayRef: MobileMenuRef;
 
-  constructor(private overlay: Overlay,
-              private injector: Injector) { }
+  constructor(
+    private overlay: Overlay,
+    private injector: Injector
+  ) {
+  }
 
   open(navRef: ElementRef): MobileMenuRef {
-
     const config = this.createConfig(navRef);
-
     this.overlayRef = this.overlay.create(config);
-
     this.menuOverlayRef = new MobileMenuRef(this.overlayRef);
-
     this.menuOverlayRef.componentInstance = this.attachDialogContainer();
-
     return this.menuOverlayRef
   }
 

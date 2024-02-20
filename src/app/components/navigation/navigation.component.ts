@@ -1,22 +1,17 @@
 import {
   Component,
-  Input,
-  OnDestroy,
   OnInit,
-  Output,
   ViewChild,
-  EventEmitter,
   ViewChildren,
   ElementRef,
   QueryList,
-  AfterViewInit, ChangeDetectorRef, AfterContentInit, Inject, LOCALE_ID
+  AfterViewInit, Inject, LOCALE_ID
 } from '@angular/core';
 import { tabTitles} from './navigation';
 import {MobileMenuService} from './mobile-menu/mobile-menu.service';
-import {fromEvent, Subject} from 'rxjs';
-import {filter, takeUntil} from 'rxjs/operators';
+import {filter} from 'rxjs/operators';
 import {ScrollingHelperService} from '../../shared/services/scrolling-helper.service';
-import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
 @UntilDestroy()
@@ -26,8 +21,6 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit, AfterViewInit {
-
-  @Output() toggleMenu = new EventEmitter();
   @ViewChild('navigation') navigationRef: ElementRef;
   @ViewChildren('tabs') tabsRefs: QueryList<ElementRef>;
 
@@ -48,6 +41,7 @@ export class NavigationComponent implements OnInit, AfterViewInit {
     private mobileMenuService: MobileMenuService,
     private scrollingHelperService: ScrollingHelperService,
     private router: Router,
+    private activatedRoute: ActivatedRoute,
   ) {
     router.events
       .pipe(filter(event => event instanceof NavigationStart))
@@ -79,9 +73,13 @@ export class NavigationComponent implements OnInit, AfterViewInit {
   }
 
   scrollToIndex(index: number) {
-    this.router.navigate(['']).then(() => {
+    if (this.router.url.split('/')[1].length > 0) {
+      this.router.navigate(['.']).then(() => {
+        this.scrollingHelperService.updateScrollToIndex(index);
+      })
+    } else {
       this.scrollingHelperService.updateScrollToIndex(index);
-    });
+    }
   }
 
   openMobileMenu() {

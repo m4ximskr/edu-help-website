@@ -6,10 +6,6 @@ a {
 
 .page-wrapper {
   height: 100%;
-
-  //@media (max-width: 500px) {
-  //  margin-top: 35px;
-  //}
 }
 
 .section-wrapper {
@@ -33,13 +29,8 @@ h1,h2,h3,h4,p {
   position: relative;
 }
 
-h1,h2,h3,h4 {
-  //color: var(--dark-blue);
-}
-
 p {
   font-size: 16px;
-  //color: var(--dark-grey);
   font-weight: 400;
 
   &.sub-title {
@@ -96,7 +87,7 @@ h2 {
   @media (max-width: 1300px) {
     font-size: 35px;
   }
-  //
+
   @media (max-width: 500px) {
     font-size: 30px;
   }
@@ -110,10 +101,6 @@ h3 {
   @media (max-width: 1300px) {
     font-size: 25px;
   }
-  //
-  //@media (max-width: 400px) {
-  //  font-size: 20px;
-  //}
 }
 
 h4 {
@@ -121,136 +108,9 @@ h4 {
   font-weight: 700;
 }
 
-
-//.mat-button-base {
-//  display: flex !important;
-//  align-items: center;
-//  justify-content: center;
-//  text-decoration: none !important;
-//  box-shadow: none !important;
-//
-//  .mat-button-focus-overlay {
-//    opacity: 0 !important;
-//    transition: none !important;
-//  }
-//
-//  &.transparent {
-//    background: transparent !important;
-//
-//    //&:hover {
-//    //  background: rgba(255, 255, 255, 0.1) !important;
-//    //}
-//  }
-//
-//  //&.circle {
-//  //  width: 70px !important;
-//  //  height: 70px;
-//  //  padding: 0;
-//  //  border-radius: 50px;
-//  //  background: transparent;
-//  //
-//  //  &:hover {
-//  //    background-color: mat-color($edu-help-primary-palette, 300) !important;
-//  //  }
-//  //}
-//
-//  &.big {
-//    height: 56px;
-//    font-size: 18px;
-//    padding: 0 30px;
-//    font-weight: 600;
-//
-//    @media (max-width: 600px) {
-//      height: 50px;
-//      font-size: 16px;
-//    }
-//  }
-//
-//  &.round {
-//    border-radius: 50px;
-//  }
-//
-//
-//  &.dark {
-//    $dark-blue: #1e1f33;
-//    background-color: $dark-blue !important;
-//    color: var(--white);
-//
-//    &:hover {
-//      background-color: lighten($dark-blue, 10%) !important;
-//    }
-//  }
-//
-//  &.mat-flat-button {
-//    &.mat-primary {
-//      &:hover {
-//        $color: mat-color($edu-help-primary-palette, 400);
-//        background: $color !important;
-//      }
-//    }
-//  }
-//
-//  &.mat-mini-fab {
-//    color: var(--dark-blue) !important;
-//    background-color: transparent;
-//
-//    .mat-button-wrapper {
-//      display: flex;
-//    }
-//
-//    &:hover {
-//      $darkBlue: var(--dark-blue);
-//      background: rgba(0,0,0, 0.1) !important;
-//    }
-//  }
-//
-//  &.mat-stroked-button {
-//    color: var(--white);
-//    border-color: var(--white);
-//
-//    &:hover {
-//      background: rgba(255,255,255,0.1) !important;
-//    }
-//
-//    &.mat-primary {
-//      color: var(--light-blue);
-//      border-color: var(--light-blue);
-//
-//      &:hover {
-//        $color: mat-color($edu-help-primary-palette, 500);
-//        background: rgba($color, 0.05) !important;
-//      }
-//    }
-//  }
-//
-//  //&:hover {
-//  //  &.mat-primary.mat-flat-button:not(.transparent) {
-//  //    background-color: mat-color($edu-help-primary-palette, 400) !important;
-//  //  }
-//  //}
-//
-//
-//}
-
 .emoji-icon {
   font-size: 90px;
 }
-
-//a {
-//  cursor: pointer;
-//  text-decoration: none;
-//  color: mat-color($edu-help-primary-palette);
-//
-//  &:hover {
-//    text-decoration: underline;
-//  }
-//
-//  &.menu-link {
-//    text-decoration: none !important;
-//    color: var(--dark-blue);
-//    font-weight: 500;
-//  }
-//}
 
 
 .cdk-overlay-container {
@@ -291,15 +151,9 @@ h4 {
   margin-bottom: 0;
 }
 
-
-
-
-
-
-
-
 .menu-link {
   text-decoration: none;
+  display: flex;
 }
 
 .social-icon {
