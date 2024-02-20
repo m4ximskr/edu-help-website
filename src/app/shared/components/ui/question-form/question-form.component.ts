@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
+import { FormControl, FormGroup, UntypedFormBuilder, Validators} from "@angular/forms";
 import {SendMailService} from '../../../services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {EmailNotificationComponent, EmailStatus, EmailType} from '../../modals/email-notification/email-notification.component';
 import {NoopScrollStrategy} from '@angular/cdk/overlay';
+import {RequestQuestionData} from "../../../interfaces/request-data";
 
+interface QuestionForm {
+  email: FormControl<string>;
+  question: FormControl<string>;
+}
 @Component({
   selector: 'edu-question-form',
   templateUrl: './question-form.component.html',
@@ -12,7 +17,7 @@ import {NoopScrollStrategy} from '@angular/cdk/overlay';
 })
 export class QuestionFormComponent implements OnInit {
 
-  questionForm: UntypedFormGroup;
+  questionForm: FormGroup<QuestionForm>;
 
   constructor(private formBuilder: UntypedFormBuilder,
               private sendMailService: SendMailService,
@@ -45,7 +50,8 @@ export class QuestionFormComponent implements OnInit {
 
   sendMail() {
     if (this.questionForm.valid) {
-      this.sendMailService.sendQuestionMail(this.questionForm.value).subscribe(res => {
+      const data: RequestQuestionData = this.questionForm.value as RequestQuestionData
+      this.sendMailService.sendQuestionMail(data).subscribe(() => {
         this.createNotificationModal(EmailStatus.SUCCESS);
       }, err => {
         this.createNotificationModal(EmailStatus.ERROR);

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {UntypedFormBuilder, UntypedFormGroup, NgForm, Validators} from '@angular/forms';
+import {UntypedFormBuilder, NgForm, Validators, FormControl, FormGroup} from '@angular/forms';
 import {SendMailService} from '../../../services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -15,6 +15,15 @@ import {
   telephoneNumberFieldErrorText,
   workDescriptionFormFieldPlaceholder
 } from "../../../form-constants";
+import {RequestOrderData} from "../../../interfaces/request-data";
+
+interface OrderForm {
+  name: FormControl<string>;
+  email: FormControl<string>;
+  number: FormControl<number>;
+  description: FormControl<string>;
+  files: FormControl<{filename: string, path: string}[]>;
+}
 
 @Component({
   selector: 'order-form',
@@ -24,27 +33,27 @@ import {
 })
 export class OrderFormComponent implements OnInit {
 
-  clientForm: UntypedFormGroup;
+  orderForm: FormGroup<OrderForm>;
   workDescriptionPlaceholder = workDescriptionFormFieldPlaceholder;
   busy = false;
 
   get getNameErrorMessage(): string {
-    return this.clientForm.controls.name.hasError('required') ? requiredFieldErrorText : '';
+    return this.orderForm.controls.name.hasError('required') ? requiredFieldErrorText : '';
   }
 
   get getEmailErrorMessage(): string {
-    return this.clientForm.controls.email.hasError('email') ? emailFieldErrorText : '';
+    return this.orderForm.controls.email.hasError('email') ? emailFieldErrorText : '';
   }
 
   get getNumberErrorMessage(): string {
-    if (this.clientForm.controls.number.hasError('required')) {
+    if (this.orderForm.controls.number.hasError('required')) {
       return requiredFieldErrorText;
     }
-    return this.clientForm.controls.number.hasError('pattern') ? telephoneNumberFieldErrorText : '';
+    return this.orderForm.controls.number.hasError('pattern') ? telephoneNumberFieldErrorText : '';
   }
 
   get getDescErrorMessage(): string {
-    return this.clientForm.controls.description.hasError('required') ? requiredFieldErrorText : '';
+    return this.orderForm.controls.description.hasError('required') ? requiredFieldErrorText : '';
   }
 
   @ViewChild('ngForm', {static: false}) ngForm: NgForm;
@@ -59,13 +68,14 @@ export class OrderFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.listenPhoneChanges();
+    this.listenPhoneChanges();
   }
 
   onFormSubmit() {
-    if (this.clientForm.valid) {
+    if (this.orderForm.valid) {
       this.busy = true;
-      this.sendMailService.sendOrderMail(this.clientForm.value).subscribe(res => {
+      const data: RequestOrderData = this.orderForm.value as RequestOrderData;
+      this.sendMailService.sendOrderMail(data).subscribe(res => {
         this.createNotificationModal(EmailStatus.SUCCESS);
         this.busy = false;
         this.ngForm.resetForm();
@@ -79,7 +89,7 @@ export class OrderFormComponent implements OnInit {
   }
 
   private createForm() {
-    this.clientForm = this.formBuilder.group({
+    this.orderForm = this.formBuilder.group({
       name: [''],
       email: ['', [Validators.email]],
       number: ['', [Validators.pattern('[0-9]{8}')]],
@@ -89,11 +99,11 @@ export class OrderFormComponent implements OnInit {
   }
 
   private listenPhoneChanges() {
-    this.clientForm.controls.number.valueChanges.pipe(distinctUntilChanged()).subscribe(value => {
+    this.orderForm.controls.number.valueChanges.pipe(distinctUntilChanged()).subscribe((value) => {
       if (value) {
-        this.clientForm.controls.number.setValidators([Validators.pattern('[0-9]{8}')])
+        this.orderForm.controls.number.setValidators([Validators.pattern('[0-9]{8}')])
       } else {
-        this.clientForm.controls.number.clearValidators();
+        this.orderForm.controls.number.clearValidators();
       }
     })
   }

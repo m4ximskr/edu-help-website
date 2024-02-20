@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {UntypedFormBuilder, UntypedFormGroup, NgForm, Validators} from '@angular/forms';
+import {UntypedFormBuilder, NgForm, Validators, FormControl, FormGroup} from '@angular/forms';
 import {SendMailService} from '../../../../shared/services/send-mail.service';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -11,6 +11,13 @@ import {
   aboutYourselfFormFieldPlaceholder,
   requiredFieldErrorText, telephoneNumberFieldErrorText
 } from "../../../../shared/form-constants";
+import {RequestTutoringData} from "../../../../shared/interfaces/request-data";
+
+interface JoinTeamForm {
+  name: FormControl<string>;
+  number: FormControl<number>;
+  message: FormControl<string>;
+}
 
 @Component({
   selector: 'edu-join-team',
@@ -34,7 +41,7 @@ export class JoinTeamComponent {
     }
   ]
 
-  joinTeamForm: UntypedFormGroup;
+  joinTeamForm: FormGroup<JoinTeamForm>;
 
   aboutYourselfPlaceholder = aboutYourselfFormFieldPlaceholder;
 
@@ -68,7 +75,8 @@ export class JoinTeamComponent {
 
   onFormSubmit() {
     if (this.joinTeamForm.valid) {
-      this.sendMailService.sendTutoringOrderMail(this.joinTeamForm.value).subscribe(res => {
+      const data: RequestTutoringData = this.joinTeamForm.value as RequestTutoringData
+      this.sendMailService.sendTutoringOrderMail(data).subscribe(res => {
         this.createNotificationModal(EmailStatus.SUCCESS);
         this.ngForm.resetForm()
       }, err => {

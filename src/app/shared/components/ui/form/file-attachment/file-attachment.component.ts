@@ -4,11 +4,10 @@ import {
   Component,
   ElementRef,
   forwardRef,
-  Input,
   OnInit,
   ViewChild
 } from '@angular/core';
-import {ControlValueAccessor, FormArray, FormControl, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
@@ -25,9 +24,6 @@ import {MatSnackBar} from "@angular/material/snack-bar";
   ]
 })
 export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
-
-  // @Input() formControl: FormControl
-
   @ViewChild('fileUploadInput') fileUploadInput: ElementRef;
 
   loadingFile = false;
@@ -52,27 +48,28 @@ export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any): void {
   }
 
-  writeValue(files): void {
+  writeValue(files: {filename: string, path: string}[]): void {
     this.files = files || [];
     this.cdr.markForCheck();
   }
 
-  removeFile(index:number) {
+  removeFile(index :number) {
     this.files.splice(index, 1)
     this.propagateChange(this.files)
   }
 
-  uploadFile(e) {
+  uploadFile(e: Event) {
     e.stopPropagation();
     e.preventDefault();
     this.fileUploadInput.nativeElement.click();
   }
 
-  fileUploaded(e) {
+  fileUploaded(e: Event) {
     e.stopPropagation();
     e.preventDefault();
-    if (e.target.files && e.target.files.length) {
-      const [file] = e.target.files;
+    const target = <HTMLInputElement>e.target
+    if (target.files && target.files.length) {
+      const file = target.files[0];
       const fileSize = file.size/1024/1024;
       if (fileSize < 10) {
         this.getFileUrl(file)
@@ -86,7 +83,7 @@ export class FileAttachmentComponent implements OnInit, ControlValueAccessor {
     }
   }
 
-  getFileUrl(file) {
+  getFileUrl(file: File) {
     this.loadingFile = true;
     const reader = new FileReader();
     reader.readAsDataURL(file);

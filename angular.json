@@ -103,24 +103,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "edu-help:build"
+            "buildTarget": "edu-help:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "edu-help:build:production"
+              "buildTarget": "edu-help:build:production"
             },
             "lv": {
-              "browserTarget": "edu-help:build:lv"
+              "buildTarget": "edu-help:build:lv"
             },
             "ru": {
-              "browserTarget": "edu-help:build:ru"
+              "buildTarget": "edu-help:build:ru"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "edu-help:build"
+            "buildTarget": "edu-help:build"
           }
         },
         "test": {

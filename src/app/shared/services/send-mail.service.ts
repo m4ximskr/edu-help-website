@@ -1,38 +1,34 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {of, throwError, timer} from 'rxjs';
+import {
+  RequestOrderData,
+  RequestQuestionData, RequestTutoringData,
+} from "../interfaces/request-data";
+import {timer} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SendMailService {
 
-  headers = { 'Content-Type': 'application/json' };
+  private headers = { 'Content-Type': 'application/json' };
+  private apiUrl = 'https://api.eduhelp.lv'
+  // private apiUrl = 'http://localhost:3000'
 
   constructor(private http: HttpClient) { }
 
-  // http://localhost:3000/send-mail
-  // https://api.eduhelp.lv/send-mail
-  // http://localhost:3000/send-order-mail
-
-  sendOrderMail(data) {
-    // return of(null)
-
-    return this.http.post('https://api.eduhelp.lv/send-order-mail', {params: data, headers: this.headers});
+  sendOrderMail(data: RequestOrderData) {
+    return this.http.post(`${this.apiUrl}/send-order-mail`, {params: data, headers: this.headers});
     // return timer(2000);
   }
 
-  sendQuestionMail(data) {
-    // return of(null)
-    // return throwError('ee')
-    return this.http.post('https://api.eduhelp.lv/send-question-mail', {params: data});
+  sendQuestionMail(data: RequestQuestionData) {
+    return this.http.post(`${this.apiUrl}/send-question-mail`, {params: data, headers: this.headers});
     // return timer(2000);
   }
 
-  sendTutoringOrderMail(data) {
-    return this.http.post('https://api.eduhelp.lv/send-tutoring-mail', {params: data, headers: this.headers});
-    // console.log(data);
-    // return of(null);
+  sendTutoringOrderMail(data: RequestTutoringData) {
+    return this.http.post(`${this.apiUrl}/send-tutoring-mail`, {params: data, headers: this.headers});
     // return timer(2000);
   }
 

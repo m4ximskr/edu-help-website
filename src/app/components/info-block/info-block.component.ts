@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {interval} from "rxjs";
 import {map} from "rxjs/operators";
 import * as moment from "moment";
+import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'edu-info-block',
@@ -17,10 +18,11 @@ export class InfoBlockComponent implements OnInit {
     seconds: number
   } = null
 
-  private endDate: Date = new Date('Dec 18, 2022');
+  private endDate: Date = new Date('Dec 18, 2023');
 
   constructor() {
     interval(1000).pipe(
+      takeUntilDestroyed(),
       map(() => Math.floor((this.endDate.getTime() - new Date().getTime())))
     ).subscribe((diff) => {
       this.time = {
@@ -35,20 +37,20 @@ export class InfoBlockComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getDays(t) {
-    return Math.floor( t / (1000 * 60 * 60 * 24) );
+  private getDays(time: number) {
+    return Math.floor( time / (1000 * 60 * 60 * 24) );
   }
 
-  getHours(t) {
-    return Math.floor( (t / (1000 * 60 * 60)) % 24 );
+  private getHours(time: number) {
+    return Math.floor( (time / (1000 * 60 * 60)) % 24 );
   }
 
-  getMinutes(t) {
-    return Math.floor( (t / 1000 / 60) % 60 );
+  private getMinutes(time: number) {
+    return Math.floor( (time / 1000 / 60) % 60 );
   }
 
-  getSeconds(t) {
-    return Math.floor( (t / 1000) % 60 );
+  private getSeconds(time: number) {
+    return Math.floor( (time / 1000) % 60 );
   }
 
 }

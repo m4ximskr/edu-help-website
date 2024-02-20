@@ -109,7 +109,7 @@ export class Intro2Component implements OnInit {
   onFormSubmit() {
     if (this.questionForm.valid) {
       this.formBusy = true;
-      this.sendMailService.sendQuestionMail(this.questionForm.value).subscribe(res => {
+      this.sendMailService.sendQuestionMail(this.questionForm.value).subscribe(() => {
         this.formBusy = false;
         this.createNotificationModal(EmailStatus.SUCCESS);
         this.ngForm.resetForm();
